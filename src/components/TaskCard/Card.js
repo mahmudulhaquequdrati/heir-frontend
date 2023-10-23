@@ -11,7 +11,7 @@ const Card = ({ task = {} }) => {
   } = task;
 
   return (
-    <div className="flex flex-col justify-between w-full rounded-lg p-6 shadow">
+    <div className="grow flex flex-col justify-between w-full rounded-lg p-6 shadow">
       <div className="flex justify-between gap-4">
         <h4 className="text-lg font-semibold">{taskName}</h4>
         <p className="text-[22px] font-bold text-[#006590]">{`$${price}`}</p>
