@@ -4,19 +4,21 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className=" flex flex-col items-center justify-between p-2 md:p-8 lg:p-24">
-      <div class="max-w-full lg:max-w-7xl mx-2 md:mx-8 p-4 lg:p-8 text-center lg:text-left  bg-white rounded-lg flex flex-col lg:flex-row justify-between items-center h-full gap-4 md:gap-8">
-        <div class="w-full lg:w-1/2">
+      <div className="max-w-full lg:max-w-7xl mx-2 md:mx-8 p-4 lg:p-8 text-center lg:text-left  bg-white rounded-lg flex flex-col lg:flex-row justify-between items-center h-full gap-4 md:gap-8">
+        <div className="w-full lg:w-1/2">
           <div
             href="#"
-            class="inline-flex justify-between items-center py-1 px-1 pr-4 mb-4 text-sm text-gray-700 bg-gray-100 rounded-full hover:bg-gray-200 "
+            className="inline-flex justify-between items-center py-1 px-1 pr-4 mb-4 text-sm text-gray-700 bg-gray-100 rounded-full hover:bg-gray-200 "
             role="alert"
           >
-            <span class="text-xs bg-primary-600 rounded-full text-white bg-blue-400 px-4 py-1.5 mr-3">
+            <span className="text-xs bg-primary-600 rounded-full text-white bg-blue-400 px-4 py-1.5 mr-3">
               New
             </span>{" "}
-            <span class="text-sm font-medium">Daily Task is being added</span>
+            <span className="text-sm font-medium">
+              Daily Task is being added
+            </span>
             <svg
-              class="ml-2 w-5 h-5"
+              className="ml-2 w-5 h-5"
               fill="currentColor"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
@@ -28,55 +30,55 @@ export default function Home() {
               ></path>
             </svg>
           </div>
-          <h1 class="text-6xl font-bold text-gray-700 mb-7 capitalize">
+          <h1 className="text-6xl font-bold text-gray-700 mb-7 capitalize">
             Get more done.
           </h1>
-          <p class="text-gray-500 mb-8 ">
+          <p className="text-gray-500 mb-8 ">
             This book covers the latest design principles and techniques,
             including responsive design, mobile interface design, and user
             research methodologies.
           </p>
-          <div class="flex space-x-4 mb-6 justify-center lg:justify-start">
+          <div className="flex space-x-4 mb-6 justify-center lg:justify-start">
             <a
               href="#"
-              class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md flex items-center text-sm md:text-base"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md flex items-center text-sm md:text-base"
             >
-              <span class="mr-2">Post Your Task </span>
+              <span className="mr-2">Post Your Task </span>
             </a>
             <a
               href="#"
-              class=" hover:bg-blue-50 border border-gray-300 px-4 py-2 rounded-md flex items-center text-gray-700 text-sm md:text-base"
+              className=" hover:bg-blue-50 border border-gray-300 px-4 py-2 rounded-md flex items-center text-gray-700 text-sm md:text-base"
             >
-              <span class="mr-2">Earn Money as Tasker</span>
-              <span class="text-xl text-gray-500">➜</span>
+              <span className="mr-2">Earn Money as Tasker</span>
+              <span className="text-xl text-gray-500">➜</span>
             </a>
           </div>
           <div className="mt-6 lg:mt-12 flex gap-6">
-            <div class="flex items-center -space-x-4">
+            <div className="flex items-center -space-x-4">
               <img
                 alt="user 1"
                 src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1480&amp;q=80"
-                class="relative inline-block h-10 w-10 rounded-full border-2 border-white object-cover object-center hover:z-10 focus:z-10"
+                className="relative inline-block h-10 w-10 rounded-full border-2 border-white object-cover object-center hover:z-10 focus:z-10"
               />
               <img
                 alt="user 2"
                 src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1061&amp;q=80"
-                class="relative inline-block h-10 w-10 rounded-full border-2 border-white object-cover object-center hover:z-10 focus:z-10"
+                className="relative inline-block h-10 w-10 rounded-full border-2 border-white object-cover object-center hover:z-10 focus:z-10"
               />
               <img
                 alt="user 3"
                 src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1288&amp;q=80"
-                class="relative inline-block h-10 w-10 rounded-full border-2 border-white object-cover object-center hover:z-10 focus:z-10"
+                className="relative inline-block h-10 w-10 rounded-full border-2 border-white object-cover object-center hover:z-10 focus:z-10"
               />
               <img
                 alt="user 4"
                 src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1287&amp;q=80"
-                class="relative inline-block h-10 w-10 rounded-full border-2 border-white object-cover object-center hover:z-10 focus:z-10"
+                className="relative inline-block h-10 w-10 rounded-full border-2 border-white object-cover object-center hover:z-10 focus:z-10"
               />
               <img
                 alt="user 5"
                 src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1760&amp;q=80"
-                class="relative inline-block h-10 w-10 rounded-full border-2 border-white object-cover object-center hover:z-10 focus:z-10"
+                className="relative inline-block h-10 w-10 rounded-full border-2 border-white object-cover object-center hover:z-10 focus:z-10"
               />
             </div>
             <div className="text-sm">
@@ -85,7 +87,7 @@ export default function Home() {
                   width={20}
                   height={20}
                   aria-hidden="true"
-                  class="eUuXwBkW5W4__eatjSfd RRXFBumaW2SHdseZaWm6 boXknXpUJpd4EFsKw7Be"
+                  className="eUuXwBkW5W4__eatjSfd RRXFBumaW2SHdseZaWm6 boXknXpUJpd4EFsKw7Be"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
                   fill="currentColor"
@@ -96,7 +98,7 @@ export default function Home() {
                   width={20}
                   height={20}
                   aria-hidden="true"
-                  class="eUuXwBkW5W4__eatjSfd RRXFBumaW2SHdseZaWm6 boXknXpUJpd4EFsKw7Be"
+                  className="eUuXwBkW5W4__eatjSfd RRXFBumaW2SHdseZaWm6 boXknXpUJpd4EFsKw7Be"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
                   fill="currentColor"
@@ -107,7 +109,7 @@ export default function Home() {
                   width={20}
                   height={20}
                   aria-hidden="true"
-                  class="eUuXwBkW5W4__eatjSfd RRXFBumaW2SHdseZaWm6 boXknXpUJpd4EFsKw7Be"
+                  className="eUuXwBkW5W4__eatjSfd RRXFBumaW2SHdseZaWm6 boXknXpUJpd4EFsKw7Be"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
                   fill="currentColor"
@@ -118,7 +120,7 @@ export default function Home() {
                   width={20}
                   height={20}
                   aria-hidden="true"
-                  class="eUuXwBkW5W4__eatjSfd RRXFBumaW2SHdseZaWm6 boXknXpUJpd4EFsKw7Be"
+                  className="eUuXwBkW5W4__eatjSfd RRXFBumaW2SHdseZaWm6 boXknXpUJpd4EFsKw7Be"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
                   fill="currentColor"
@@ -129,7 +131,7 @@ export default function Home() {
                   width={20}
                   height={20}
                   aria-hidden="true"
-                  class="eUuXwBkW5W4__eatjSfd RRXFBumaW2SHdseZaWm6 boXknXpUJpd4EFsKw7Be"
+                  className="eUuXwBkW5W4__eatjSfd RRXFBumaW2SHdseZaWm6 boXknXpUJpd4EFsKw7Be"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
                   fill="currentColor"
@@ -142,11 +144,11 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div class="w-full lg:w-1/2 mt-12 lg:mt-0">
+        <div className="w-full lg:w-1/2 mt-12 lg:mt-0">
           <img
             src="https://images.unsplash.com/photo-1554774853-7f03caeb4b15?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2153&q=80"
             alt="Task Completion"
-            class="w-full mx-auto h-auto rounded-lg"
+            className="w-full mx-auto h-auto rounded-lg"
           />
         </div>
       </div>
