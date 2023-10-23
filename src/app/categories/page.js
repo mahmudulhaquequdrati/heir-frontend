@@ -200,7 +200,7 @@ export default function Category() {
           </div>
         </div>
         <div>
-          <button class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-8 rounded-lg mt-12 border border-green-600 focus:outline-none focus:border-green-700 active:bg-green-700">
+          <button className="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-8 rounded-lg mt-12 border border-green-600 focus:outline-none focus:border-green-700 active:bg-green-700">
             Load More
           </button>
         </div>

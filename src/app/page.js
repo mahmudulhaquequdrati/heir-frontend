@@ -2,12 +2,11 @@
 import Footer from "@/components/Footer/Footer";
 import Blogs from "@/components/blog/Blogs";
 import Featured from "@/components/featured/Featured";
-import Image from "next/image";
 
 export default function Home() {
   return (
     <main>
-      <section className=" flex flex-col items-center justify-between p-2 md:p-8 lg:p-24">
+      <section className="flex flex-col items-center justify-between p-2 md:p-8 lg:p-24">
         <div className="max-w-full lg:max-w-7xl mx-2 md:mx-8 p-4 lg:p-8 text-center lg:text-left  bg-white rounded-lg flex flex-col lg:flex-row justify-between items-center h-full gap-4 md:gap-8">
           <div className="w-full lg:w-1/2">
             <div
