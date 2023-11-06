@@ -1,5 +1,3 @@
-import Card from "@/components/TaskCard/Card";
-
 const page = () => {
   const tasks = [
     {
@@ -88,62 +86,7 @@ const page = () => {
     },
   ];
 
-  return (
-    <div className="container mx-auto">
-      <div className="flex flex-col items-center p-5 md:flex-row gap-12 mt-12 md:items-start">
-        <div className="w-full md:max-w-[320px] rounded-lg p-6 shadow">
-          <div className="mb-4">
-            <h3 className="text-black text-[22px] font-bold mb-3">
-              Categories
-            </h3>
-            <div className="flex gap-2 py-1">
-              <input type="checkbox" />
-              <label htmlFor="">Baked good(8)</label>
-            </div>
-            <div className="flex gap-2 py-1">
-              <input type="checkbox" />
-              <label htmlFor="">Baked good(8)</label>
-            </div>
-            <div className="flex gap-2 py-1">
-              <input type="checkbox" />
-              <label htmlFor="">Baked good(8)</label>
-            </div>
-          </div>
-
-          <div>
-            <h3 className="text-black text-[22px] font-bold mb-3">Dietary</h3>
-            <div className="flex gap-2 py-1">
-              <input type="checkbox" />
-              <label htmlFor="">Eco firnedly(2)</label>
-            </div>
-            <div className="flex gap-2 py-1">
-              <input type="checkbox" />
-              <label htmlFor="">Gluten Free (4)</label>
-            </div>
-            <div className="flex gap-2 py-1">
-              <input type="checkbox" />
-              <label htmlFor="">Nutt free(2)</label>
-            </div>
-            <div className="flex gap-2 py-1">
-              <input type="checkbox" />
-              <label htmlFor="">Nutt free(2)</label>
-            </div>
-            <div className="flex gap-2 py-1">
-              <input type="checkbox" />
-              <label htmlFor="">Nutt free(2)</label>
-            </div>
-          </div>
-        </div>
-        <div className="">
-          <div className="w-full grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-7">
-            {tasks?.map((task) => (
-              <Card task={task} />
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+  return <div>Find Tasks</div>;
 };
 
 export default page;
