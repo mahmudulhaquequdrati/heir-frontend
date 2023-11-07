@@ -1,4 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable jsx-a11y/alt-text */
 import React from "react";
+import bg from "../../assets/bg.png";
+import Image from "next/image";
 
 export default function Review() {
   return (
@@ -70,10 +74,10 @@ export default function Review() {
           </div>
         </div>
       </div>{" "}
-      <div className="items-start self-stretch flex flex-col mt-56 pr-11 max-md:max-w-full max-md:mt-10 max-md:pr-5">
+      <div className="items-start self-stretch flex flex-col mt-56  max-md:max-w-full max-md:mt-10 ">
         <div className="items-center self-center flex w-[924px] max-w-full flex-col">
           <div className="items-center self-stretch flex flex-col max-md:max-w-full">
-            <div className="text-cyan-900 text-4xl font-semibold tracking-wider self-stretch whitespace-nowrap max-md:max-w-full">
+            <div className="text-cyan-900 text-4xl font-semibold tracking-wider  max-md:max-w-full">
               Are you ready to make your life easier?
             </div>{" "}
             <div className="text-cyan-900 text-center text-base leading-6 self-center whitespace-nowrap mt-2 max-md:max-w-full">
@@ -82,8 +86,8 @@ export default function Review() {
           </div>{" "}
           <div className="bg-orange-400 self-center flex w-[329px] h-[9px] flex-col mt-4 rounded-[50px]" />
         </div>{" "}
-        <div className="self-stretch mt-24 pr-32 max-md:max-w-full max-md:mt-10 max-md:pr-5">
-          <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
+        <div className="self-stretch mt-24  max-md:max-w-full max-md:mt-10 ">
+          <div className="gap-8 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
             <div className="flex flex-col items-stretch w-[48%] max-md:w-full max-md:ml-0">
               <img
                 loading="lazy"
@@ -134,30 +138,31 @@ export default function Review() {
                       Connect with the right person to get it done.
                     </div>
                   </div>
+                  <div className=" flex gap-4 mt-12 ">
+                    <div className=" bg-orange-400 px-20 py-5 rounded-[50px] max-md:px-5">
+                      <div className="text-white text-base font-bold ">
+                        Post a task
+                      </div>
+                    </div>
+                    <div className="text-orange-400 text-base font-medium  bg-orange-400 bg-opacity-10  pl-20 pr-20 py-5 rounded-[500px] max-md:px-5">
+                      Become a tasker
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="flex-col overflow-hidden self-stretch relative flex min-h-[926px] grow pt-2 pb-4 max-md:max-w-full">
-        <img
+      <div className="flex-col mb-60 mt-48 my-12 relative flex  pt-2 pb-4 max-md:max-w-full">
+        <Image
           loading="lazy"
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/78c9ed75-0858-4620-83db-36b6bff7bb1f?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&"
-          className="absolute z-[-1] h-full w-full object-cover object-center inset-0"
+          src={bg}
+          className="absolute z-[-1] w-full object-cover object-center inset-0"
         />
-        <div className="relative self-center flex w-full max-w-[1129px] flex-col px-5 max-md:max-w-full">
-          <div className="items-start flex w-[694px] max-w-full gap-5 -mr-5 pr-32 self-end max-md:flex-wrap max-md:pr-5">
-            <div className="justify-center items-center bg-orange-400 flex flex-col grow shrink-0 basis-auto flex-1 px-20 py-5 rounded-[50px] max-md:px-5">
-              <div className="text-white text-base font-bold self-center whitespace-nowrap">
-                Post a task
-              </div>
-            </div>
-            <div className="text-orange-400 text-base font-medium self-stretch whitespace-nowrap justify-center items-center bg-orange-400 bg-opacity-10 grow basis-auto flex-1 pl-20 pr-20 py-5 rounded-[500px] max-md:px-5">
-              Become a tasker
-            </div>
-          </div>
-          <div className="text-white text-center text-4xl font-semibold self-stretch -mr-5 mt-64 max-md:max-w-full max-md:mt-10">
+        <div className="relative  flex justify-center items-center w-full  flex-col px-5 max-md:max-w-full py-24">
+          {/* f */}
+          <div className="text-white text-center text-4xl font-semibold    max-md:max-w-full max-md:mt-10">
             Don’t find your task category?
             <br />
             or interested to start with new skills to prove?
@@ -165,16 +170,17 @@ export default function Review() {
           <div className="text-white text-center text-lg leading-8 self-center ml-0 max-w-[831px] mt-4 max-md:max-w-full">
             Subscribe here, we’ll let you know when we added them.
           </div>
-          <div className="items-start flex w-[917px] max-w-full gap-0 ml-9 mt-11 pr-32 rounded-[500px] self-start max-md:flex-wrap max-md:mt-10 max-md:pr-5">
-            <div className="text-cyan-900 text-base self-stretch whitespace-nowrap items-center bg-white grow basis-auto pl-9 pr-20 py-6 max-md:max-w-full max-md:px-5">
-              Enter your mail here..
-            </div>
-            <div className="text-white text-xl font-semibold tracking-wide self-stretch whitespace-nowrap justify-center items-center bg-cyan-900 w-[188px] max-w-full pl-11 pr-10 py-6 max-md:px-5">
+          <div className=" flex  w-[70%] gap-0  mt-11 rounded-[500px]  overflow-hidden max-md:mt-10 ">
+            <input
+              className="text-cyan-900 text-base items-center bg-white grow basis-auto pl-9 pr-20 py-6 max-md:max-w-full max-md:px-5 outline-none"
+              placeholder="Enter your mail here.."
+            ></input>
+            <button className="text-white text-xl font-semibold tracking-wide   bg-cyan-900 w-[188px] max-w-full pl-11 pr-10 py-6 max-md:px-5">
               Subscribe
-            </div>
+            </button>
           </div>
         </div>
-        <div className="relative self-center flex w-full items-start justify-between gap-5 mt-80 px-5 max-md:max-w-full max-md:flex-wrap max-md:mt-10">
+        {/* <div className="relative self-center flex w-full items-start justify-between gap-5 mt-80 px-5 max-md:max-w-full max-md:flex-wrap max-md:mt-10">
           <div className="self-stretch flex w-[376px] max-w-full items-start justify-between gap-5">
             <div className="text-white text-xl font-semibold self-stretch">
               Discover
@@ -183,7 +189,7 @@ export default function Review() {
               Company
             </div>
           </div>
-          <div className="self-stretch flex w-[795px] max-w-full items-start justify-between gap-5 pr-20 max-md:flex-wrap max-md:pr-5">
+          <div className="self-stretch flex w-[795px] max-w-full items-start justify-between gap-5 pr-20 max-md:flex-wrap ">
             <div className="text-white text-xl font-semibold flex-1">
               Existing Members
             </div>
@@ -194,7 +200,7 @@ export default function Review() {
               Popular Locations
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

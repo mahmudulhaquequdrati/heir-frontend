@@ -180,14 +180,11 @@ export default function Home() {
                 />
                 <input className="text-cyan-900 text-xl self-center whitespace-nowrap my-auto w-full  outline-none focus:outline-none active:outline-none"></input>
               </div>
-              <div className="text-white text-xl font-semibold tracking-wide self-stretch whitespace-nowrap justify-center items-center bg-orange-400 w-[188px] max-w-full px-14 py-6 max-md:px-5 rounded-r-full">
+              <button className="text-white text-xl font-semibold tracking-wide self-stretch whitespace-nowrap justify-center items-center bg-orange-400 w-[188px] max-w-full px-14 py-6 max-md:px-5 rounded-r-full">
                 Search
-              </div>
+              </button>
             </div>
             <div className="items-start self-center flex w-[700px] max-w-full gap-4 mt-4 max-md:flex-wrap">
-              <div className="text-cyan-900 text-base font-medium self-center my-auto">
-                Popular:
-              </div>
               <div className="items-start self-stretch flex grow shrink basis-auto gap-2 max-md:max-w-full max-md:flex-wrap max-md:justify-center">
                 <div className="text-cyan-900 text-sm font-medium self-stretch whitespace-nowrap justify-center items-center bg-white w-[106px] max-w-full px-4 py-2 rounded-[500px]">
                   UX DESIGN
@@ -544,7 +541,7 @@ export default function Home() {
           <div className="items-center self-center flex w-[947px] max-w-full flex-col">
             <div className="items-center self-center flex w-[677px] max-w-full flex-col">
               <div className="items-center self-stretch flex flex-col px-5 max-md:max-w-full">
-                <div className="text-cyan-900 text-4xl font-semibold tracking-wider self-stretch whitespace-nowrap -mr-5 max-md:max-w-full">
+                <div className="text-cyan-900 text-4xl font-semibold tracking-wider  -mr-5 max-md:max-w-full">
                   See what others are getting done
                 </div>{" "}
                 <div className="text-cyan-900 text-center text-base leading-6 self-center whitespace-nowrap mt-2">
