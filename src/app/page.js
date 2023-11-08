@@ -159,8 +159,8 @@ export default function Home() {
             />
           </div>
         </div>
-      </section>
-      <Featured />
+      </section> */}
+      {/* <Featured />
       <Blogs />
       <Footer /> */}
       <div className="bg-white flex flex-col">
@@ -184,6 +184,21 @@ export default function Home() {
                 Search
               </button>
             </div>
+            {/* <div className="flex space-x-4 mb-6 justify-center lg:justify-center">
+              <a
+                href="#"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md flex items-center text-sm md:text-base"
+              >
+                <span className="mr-2">Post Your Task </span>
+              </a>
+              <a
+                href="#"
+                className=" hover:bg-blue-50 border border-gray-300 px-4 py-2 rounded-md flex items-center text-gray-700 text-sm md:text-base"
+              >
+                <span className="mr-2">Earn Money as Tasker</span>
+                <span className="text-xl text-gray-500">➜</span>
+              </a>
+            </div> */}
             <div className="items-start self-center flex w-[700px] max-w-full gap-4 mt-4 max-md:flex-wrap">
               <div className="items-start self-stretch flex grow shrink basis-auto gap-2 max-md:max-w-full max-md:flex-wrap max-md:justify-center">
                 <div className="text-cyan-900 text-sm font-medium self-stretch whitespace-nowrap justify-center items-center bg-white w-[106px] max-w-full px-4 py-2 rounded-[500px]">
