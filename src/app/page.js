@@ -1,8 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
+import BoostBusiness from "@/components/BoostYourBusiness/BoostBusiness";
 import Footer from "@/components/Footer/Footer";
-import Blogs from "@/components/blog/Blogs";
-import Featured from "@/components/featured/Featured";
 import Review from "@/components/review/Review";
 import VerifiedTalents from "@/components/verifiedTalents/VerifiedTalents";
 import ChooseUs from "@/components/whyChoose/ChooseUs";
@@ -551,6 +550,9 @@ export default function Home() {
             </div>
           </div>
         </div>
+        {/* See what others are getting done */}
+        <BoostBusiness />
+
         <ChooseUs />
         <div className="items-center self-center flex w-full max-w-[1199px] flex-col mt-32 max-md:max-w-full max-md:mt-10">
           <div className="items-center self-center flex w-[947px] max-w-full flex-col">
@@ -829,7 +831,8 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>{" "}
+        </div>
+
         <VerifiedTalents />
         <Review />
         <Footer />
