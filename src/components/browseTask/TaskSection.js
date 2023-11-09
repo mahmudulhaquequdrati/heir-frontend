@@ -1,6 +1,7 @@
 import React from 'react';
 import MyMap from './Map';
 import Card from '../TaskCard/Card';
+import Link from 'next/link';
 
 
 const TaskSection = () => {
@@ -21,11 +22,18 @@ const TaskSection = () => {
                 </div>
             </div>
             <div className='rounded-xl shadow mt-10'>
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
+                <Link href="/browse-tasks/1">
+                    <Card />
+                </Link>
+                <Link href="/browse-tasks/2">
+                    <Card />
+                </Link>
+                <Link href="/browse-tasks/3">
+                    <Card />
+                </Link>
+                <Link href="/browse-tasks/4">
+                    <Card />
+                </Link>
             </div>
         </div>
     );
