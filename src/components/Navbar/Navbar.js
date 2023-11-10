@@ -1,8 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable jsx-a11y/alt-text */
 "use client";
+import Image from "next/image";
 import Link from "next/link";
-
+import DropdownImage from '../../assets/clientImage/arrow_drop_down.svg'
 const Navbar = () => {
   return (
     <nav className=" p-4 shadow-sm bg-[#213F61] ">
@@ -19,10 +20,13 @@ const Navbar = () => {
               <Link href="/categories" className="  pl-4 py-2 rounded-lg">
                 Find talent
               </Link>
-              <img
+              <Image
                 loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/4a5c1f85-37e9-4c16-937e-bf1235bf3707?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&"
-                className="w-6"
+                width={100}
+                height={100}
+                src={DropdownImage}
+                alt="dropicon"
+                className="w-4 ml-1"
               />
             </li>
             <li>

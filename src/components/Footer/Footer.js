@@ -1,6 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
-
+import FacebookIcon from '../../assets/clientImage/facebook.svg'
+import LinkdinIcon from '../../assets/clientImage/linkedin.svg'
+import TweeterIcon from '../../assets/clientImage/twetter.svg'
+import Image from "next/image";
 export default function Footer() {
   return (
     <div className="items-center bg-cyan-900 self-stretch flex mt-0 w-full flex-col pt-16 pb-5 px-20 max-md:max-w-full max-md:px-5">
@@ -121,19 +124,28 @@ export default function Footer() {
               Heir Pty. Ltd 2011-2023 ©, All rights reserved
             </div>
             <div className="items-start flex gap-4 self-start max-md:justify-center">
-              <img
+              <Image
                 loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/cc8663a5-f83e-4027-8f74-3ef965581c7e?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&"
+                width={100}
+                height={100}
+                src={LinkdinIcon}
+                alt="Linkdin"
                 className="aspect-square object-contain object-center w-full overflow-hidden flex-1"
               />
-              <img
+              <Image
                 loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/c322da03-002b-4696-8a6a-51d4b86bd400?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&"
+                width={100}
+                height={100}
+                src={FacebookIcon}
+                alt="Facebook"
                 className="aspect-square object-contain object-center w-full overflow-hidden flex-1"
               />
-              <img
+              <Image
                 loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/9e1d6e4e-7c6e-4f6a-8ea4-569439db7b59?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&"
+                width={100}
+                height={100}
+                src={TweeterIcon}
+                alt="Tweeter"
                 className="aspect-square object-contain object-center w-full overflow-hidden flex-1"
               />
             </div>

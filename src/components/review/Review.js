@@ -3,6 +3,9 @@
 import React from "react";
 import bg from "../../assets/bg.png";
 import Image from "next/image";
+import Stars from '../../assets/clientImage/starts.svg'
+import BG from '../../assets/clientImage/BG.svg'
+import Checked from '../../assets/clientImage/Checked.svg'
 
 export default function Review() {
   return (
@@ -19,9 +22,11 @@ export default function Review() {
           <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
             <div className="flex flex-col items-stretch w-[35%] max-md:w-full max-md:ml-0">
               <div className="flex grow flex-col max-md:mt-10">
-                <img
+                <Image
                   loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/7c63cee5-e6bd-48bd-8442-34e18fcbcb14?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&"
+                  width={100}
+                  height={100}
+                  src={Stars}
                   className="aspect-[6] object-contain object-center w-[168px] overflow-hidden self-center max-w-full"
                 />{" "}
                 <div className="text-slate-900 text-center text-lg leading-8 self-stretch mt-7">
@@ -37,9 +42,11 @@ export default function Review() {
             </div>{" "}
             <div className="flex flex-col items-stretch w-[35%] ml-5 max-md:w-full max-md:ml-0">
               <div className="flex grow flex-col max-md:mt-10">
-                <img
+                <Image
                   loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/920ae869-cd2a-4e94-9220-54135203b19e?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&"
+                  width={100}
+                  height={100}
+                  src={Stars}
                   className="aspect-[6] object-contain object-center w-[168px] overflow-hidden self-center max-w-full"
                 />{" "}
                 <div className="text-slate-900 text-center text-lg leading-8 self-stretch mt-7">
@@ -55,9 +62,11 @@ export default function Review() {
             </div>{" "}
             <div className="flex flex-col items-stretch w-[31%] ml-5 max-md:w-full max-md:ml-0">
               <div className="flex grow flex-col max-md:mt-10">
-                <img
+                <Image
                   loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/ac229539-02f0-40e2-b708-8b8b84b5007a?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&"
+                  width={100}
+                  height={100}
+                  src={Stars}
                   className="aspect-[6] object-contain object-center w-[168px] overflow-hidden self-center max-w-full"
                 />{" "}
                 <div className="text-slate-900 text-center text-lg leading-8 self-stretch mt-7">
@@ -89,9 +98,11 @@ export default function Review() {
         <div className="self-stretch mt-24  max-md:max-w-full max-md:mt-10 ">
           <div className="gap-8 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
             <div className="flex flex-col items-stretch w-[48%] max-md:w-full max-md:ml-0">
-              <img
+              <Image
                 loading="lazy"
-                srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/66e877de-5953-4b18-a16e-de6f1c92a4be?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/66e877de-5953-4b18-a16e-de6f1c92a4be?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/66e877de-5953-4b18-a16e-de6f1c92a4be?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/66e877de-5953-4b18-a16e-de6f1c92a4be?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/66e877de-5953-4b18-a16e-de6f1c92a4be?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/66e877de-5953-4b18-a16e-de6f1c92a4be?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/66e877de-5953-4b18-a16e-de6f1c92a4be?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/66e877de-5953-4b18-a16e-de6f1c92a4be?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&"
+                width={100}
+                height={100}
+                src={BG}
                 className="aspect-[1.16] object-contain object-center w-full overflow-hidden grow max-md:max-w-full max-md:mt-10"
               />
             </div>{" "}
@@ -109,9 +120,11 @@ export default function Review() {
                 </div>
                 <div className="items-start self-stretch flex flex-col mt-10 max-md:max-w-full max-md:mt-10">
                   <div className="flex w-[326px] max-w-full items-start gap-3 self-start">
-                    <img
+                    <Image
                       loading="lazy"
-                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/6e7a35a8-54f9-435f-8181-6264655b4cc7?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&"
+                      width={100}
+                      height={100}
+                      src={Checked}
                       className="aspect-square object-contain object-center w-4 overflow-hidden max-w-full self-start"
                     />
                     <div className="text-cyan-900 text-lg font-medium leading-8 whitespace-nowrap grow shrink basis-auto self-start">
@@ -119,9 +132,11 @@ export default function Review() {
                     </div>
                   </div>
                   <div className="flex w-[570px] max-w-full items-start gap-3 mt-7 self-start max-md:flex-wrap">
-                    <img
+                    <Image
                       loading="lazy"
-                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/85005047-b723-4502-a2bb-0ea4626035f4?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&"
+                      width={100}
+                      height={100}
+                      src={Checked}
                       className="aspect-square object-contain object-center w-4 overflow-hidden max-w-full self-start"
                     />
                     <div className="text-cyan-900 text-lg font-medium leading-8 whitespace-nowrap grow shrink basis-auto self-start max-md:max-w-full">
@@ -129,9 +144,11 @@ export default function Review() {
                     </div>
                   </div>
                   <div className="flex w-[570px] max-w-full items-start gap-3 mt-7 self-start max-md:flex-wrap">
-                    <img
+                    <Image
                       loading="lazy"
-                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/b601f9b6-4579-44d7-9848-5643b0147622?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&"
+                      width={100}
+                      height={100}
+                      src={Checked}
                       className="aspect-square object-contain object-center w-4 overflow-hidden max-w-full self-start"
                     />
                     <div className="text-cyan-900 text-lg font-medium leading-8 whitespace-nowrap grow shrink basis-auto self-start max-md:max-w-full">

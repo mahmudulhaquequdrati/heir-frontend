@@ -5,6 +5,17 @@ import Footer from "@/components/Footer/Footer";
 import Review from "@/components/review/Review";
 import VerifiedTalents from "@/components/verifiedTalents/VerifiedTalents";
 import ChooseUs from "@/components/whyChoose/ChooseUs";
+import JobIcon from '../assets/clientImage/portfolio 1.svg'
+import PeopleGroup from '../assets/clientImage/user 1.svg'
+import Invoices from '../assets/clientImage/invoice 1.svg'
+import Satisfaction from '../assets/clientImage/satisfaction 1.svg'
+import Trophy from '../assets/clientImage/Component 97.svg'
+import Currency from '../assets/clientImage/Component 99.svg'
+import WorkDone from '../assets/clientImage/Group.svg'
+import Image from "next/image";
+import Fillstartfrom from '../assets/clientImage/fillstart.svg'
+import SearchIcon from '../assets/clientImage/searchicon.svg'
+
 
 export default function Home() {
   return (
@@ -172,9 +183,11 @@ export default function Home() {
             </div>
             <div className="items-start self-center flex w-[793px] max-w-full gap-0 mt-14  max-md:flex-wrap max-md:mt-10 rounded-lg">
               <div className="items-start bg-white self-stretch flex grow shrink basis-auto justify-between gap-2.5 pl-8 pr-4  w-full max-md:flex-wrap max-md:px-5 rounded-l-full">
-                <img
+                <Image
                   loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/66e75b01-012c-44a4-aad4-f78fc2d5c8e8?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&"
+                  width={100}
+                  height={100}
+                  src={SearchIcon}
                   className="aspect-square object-contain object-center w-6  self-stretch "
                 />
                 <input className="text-cyan-900 text-xl self-center whitespace-nowrap my-auto w-full  outline-none focus:outline-none active:outline-none"></input>
@@ -482,9 +495,11 @@ export default function Home() {
           <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
             <div className="flex flex-col items-stretch w-1/5 max-md:w-full max-md:ml-0">
               <div className="flex items-start gap-5 my-auto max-md:mt-10">
-                <img
+                <Image
                   loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/7cc168e6-1561-45f7-a0ab-9bf1ccce7109?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&"
+                  width={100}
+                  height={100}
+                  src={JobIcon}
                   className="aspect-square object-contain object-center w-[50px] overflow-hidden max-w-full self-start"
                 />
                 <div className="flex flex-col mt-1 self-start">
@@ -499,9 +514,11 @@ export default function Home() {
             </div>
             <div className="flex flex-col items-stretch w-[24%] ml-5 max-md:w-full max-md:ml-0">
               <div className="flex items-start gap-5 my-auto max-md:mt-10">
-                <img
+                <Image
                   loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/c2873562-f843-4e59-a0d1-485f1bd0bba7?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&"
+                  width={100}
+                  height={100}
+                  src={PeopleGroup}
                   className="aspect-square object-contain object-center w-[55px] overflow-hidden max-w-full self-start"
                 />
                 <div className="flex flex-col mt-2.5 self-start">
@@ -516,9 +533,11 @@ export default function Home() {
             </div>
             <div className="flex flex-col items-stretch w-[24%] ml-5 max-md:w-full max-md:ml-0">
               <div className="flex w-full max-w-[181px] items-start justify-between gap-5 my-auto max-md:mt-10">
-                <img
+                <Image
                   loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/ed4e70e8-e83c-4e69-ad2a-3045c268462f?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&"
+                  width={100}
+                  height={100}
+                  src={Invoices}
                   className="aspect-square object-contain object-center w-[61px] overflow-hidden self-stretch max-w-full"
                 />
                 <div className="self-center flex flex-col my-auto">
@@ -533,9 +552,11 @@ export default function Home() {
             </div>
             <div className="flex flex-col items-stretch w-[32%] ml-5 max-md:w-full max-md:ml-0">
               <div className="flex items-start gap-3 my-auto max-md:mt-10">
-                <img
+                <Image
                   loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/08bb166a-176f-495e-a792-619218ec1f69?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&"
+                  width={100}
+                  height={100}
+                  src={Satisfaction}
                   className="aspect-square object-contain object-center w-[68px] overflow-hidden self-stretch max-w-full"
                 />
                 <div className="self-center flex flex-col my-auto">
@@ -603,9 +624,11 @@ export default function Home() {
                         $50
                       </div>{" "}
                       <div className="items-start self-center flex gap-1 my-auto">
-                        <img
+                        <Image
                           loading="lazy"
-                          src="https://cdn.builder.io/api/v1/image/assets/TEMP/0c4dccdd-da0f-423f-af9a-252400b2f298?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&"
+                          width={100}
+                          height={100}
+                          src={Trophy}
                           className="aspect-square object-contain object-center w-5 overflow-hidden self-stretch max-w-full"
                         />{" "}
                         <div className="text-cyan-900 text-opacity-60 text-sm font-medium leading-5 self-center whitespace-nowrap my-auto">
@@ -630,9 +653,11 @@ export default function Home() {
                         $450
                       </div>{" "}
                       <div className="items-start self-center flex gap-1 my-auto">
-                        <img
+                        <Image
                           loading="lazy"
-                          src="https://cdn.builder.io/api/v1/image/assets/TEMP/55aa7d9a-c789-4774-a0f5-4a05e4f815d9?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&"
+                          width={100}
+                          height={100}
+                          src={Currency}
                           className="aspect-square object-contain object-center w-5 overflow-hidden self-stretch max-w-full"
                         />{" "}
                         <div className="text-cyan-900 text-opacity-60 text-sm font-medium leading-5 self-center whitespace-nowrap my-auto">
@@ -656,9 +681,11 @@ export default function Home() {
                         $360
                       </div>{" "}
                       <div className="items-start self-center flex gap-1 my-auto">
-                        <img
+                        <Image
                           loading="lazy"
-                          src="https://cdn.builder.io/api/v1/image/assets/TEMP/feaa59f2-dfb6-425a-a911-0bd7e2e3a293?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&"
+                          width={100}
+                          height={100}
+                          src={WorkDone}
                           className="aspect-square object-contain object-center w-5 overflow-hidden self-stretch max-w-full"
                         />{" "}
                         <div className="text-cyan-900 text-opacity-60 text-sm font-medium leading-5 self-center whitespace-nowrap my-auto">
@@ -685,9 +712,11 @@ export default function Home() {
                         $963
                       </div>{" "}
                       <div className="items-start self-center flex gap-1 my-auto">
-                        <img
+                        <Image
                           loading="lazy"
-                          src="https://cdn.builder.io/api/v1/image/assets/TEMP/9327a7e6-eb21-4c8b-a849-918286bcf274?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&"
+                          width={100}
+                          height={100}
+                          src={Fillstartfrom}
                           className="aspect-square object-contain object-center w-5 overflow-hidden self-stretch max-w-full"
                         />{" "}
                         <div className="text-cyan-900 text-opacity-60 text-sm font-medium leading-5 self-center whitespace-nowrap my-auto">
@@ -710,9 +739,11 @@ export default function Home() {
                         $758
                       </div>{" "}
                       <div className="items-start self-center flex gap-1 my-auto">
-                        <img
+                        <Image
                           loading="lazy"
-                          src="https://cdn.builder.io/api/v1/image/assets/TEMP/112a8cd4-79d9-45d9-a691-983eab7c3fea?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&"
+                          width={100}
+                          height={100}
+                          src={Fillstartfrom}
                           className="aspect-square object-contain object-center w-5 overflow-hidden self-stretch max-w-full"
                         />{" "}
                         <div className="text-cyan-900 text-opacity-60 text-sm font-medium leading-5 self-center whitespace-nowrap my-auto">
@@ -735,9 +766,11 @@ export default function Home() {
                         $1800
                       </div>{" "}
                       <div className="items-start self-center flex gap-1 my-auto">
-                        <img
+                        <Image
                           loading="lazy"
-                          src="https://cdn.builder.io/api/v1/image/assets/TEMP/ec23abcb-ce2b-4263-b7bb-f891bc711853?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&"
+                          width={100}
+                          height={100}
+                          src={Fillstartfrom}
                           className="aspect-square object-contain object-center w-5 overflow-hidden self-stretch max-w-full"
                         />{" "}
                         <div className="text-cyan-900 text-opacity-60 text-sm font-medium leading-5 self-center whitespace-nowrap my-auto">
@@ -764,9 +797,11 @@ export default function Home() {
                         $150
                       </div>{" "}
                       <div className="items-start self-center flex gap-1 my-auto">
-                        <img
+                        <Image
                           loading="lazy"
-                          src="https://cdn.builder.io/api/v1/image/assets/TEMP/4699db09-2a34-4205-b8b7-4fcdb9feab44?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&"
+                          width={100}
+                          height={100}
+                          src={Fillstartfrom}
                           className="aspect-square object-contain object-center w-5 overflow-hidden self-stretch max-w-full"
                         />{" "}
                         <div className="text-cyan-900 text-opacity-60 text-sm font-medium leading-5 self-center whitespace-nowrap my-auto">
@@ -789,9 +824,11 @@ export default function Home() {
                         $30
                       </div>{" "}
                       <div className="items-start self-center flex gap-1 my-auto">
-                        <img
+                        <Image
                           loading="lazy"
-                          src="https://cdn.builder.io/api/v1/image/assets/TEMP/d9aabd8f-ee93-4c58-ba55-c0a0266e27ef?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&"
+                          width={100}
+                          height={100}
+                          src={Fillstartfrom}
                           className="aspect-square object-contain object-center w-5 overflow-hidden self-stretch max-w-full"
                         />{" "}
                         <div className="text-cyan-900 text-opacity-60 text-sm font-medium leading-5 self-center whitespace-nowrap my-auto">
@@ -816,9 +853,11 @@ export default function Home() {
                         $500
                       </div>{" "}
                       <div className="items-start self-center flex gap-1 my-auto">
-                        <img
+                        <Image
                           loading="lazy"
-                          src="https://cdn.builder.io/api/v1/image/assets/TEMP/9a300d1f-3f20-49aa-a7c2-0b11bbab15ee?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&"
+                          width={100}
+                          height={100}
+                          src={Fillstartfrom}
                           className="aspect-square object-contain object-center w-5 overflow-hidden self-stretch max-w-full"
                         />{" "}
                         <div className="text-cyan-900 text-opacity-60 text-sm font-medium leading-5 self-center whitespace-nowrap my-auto">

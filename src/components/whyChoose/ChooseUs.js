@@ -1,7 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
-
+import CooseUs from '../../assets/clientImage/cooseus.svg'
+import Image from "next/image";
 export default function ChooseUs() {
   return (
     <div className="container mx-auto">
@@ -19,9 +20,11 @@ export default function ChooseUs() {
       <div className="self-center  w-full max-w-[1203px] mx-auto mt-16 px-5 max-md:max-w-full max-md:mt-10">
         <div className="gap-5  flex max-md:flex-col max-md:items-stretch max-md:gap-0 mx-auto">
           <div className="flex flex-col items-stretch w-[41%] max-md:w-full max-md:ml-0">
-            <img
+            <Image
               loading="lazy"
-              srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/a4c306c6-a562-4cd9-88c7-c72b2d4c7688?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/a4c306c6-a562-4cd9-88c7-c72b2d4c7688?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/a4c306c6-a562-4cd9-88c7-c72b2d4c7688?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/a4c306c6-a562-4cd9-88c7-c72b2d4c7688?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/a4c306c6-a562-4cd9-88c7-c72b2d4c7688?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/a4c306c6-a562-4cd9-88c7-c72b2d4c7688?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/a4c306c6-a562-4cd9-88c7-c72b2d4c7688?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/a4c306c6-a562-4cd9-88c7-c72b2d4c7688?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&"
+              height={100}
+              width={100}
+              src={CooseUs}
               className="aspect-[0.81] object-contain object-center w-full overflow-hidden grow max-md:max-w-full max-md:mt-7"
             />
           </div>
