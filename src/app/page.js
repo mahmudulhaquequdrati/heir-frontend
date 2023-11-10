@@ -565,7 +565,6 @@ export default function Home() {
         <VerifiedTalents />
         <Review />
         <LifeEasier />
-
         <Subscribe />
         <Footer />
       </div>

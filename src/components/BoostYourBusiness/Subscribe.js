@@ -7,7 +7,7 @@ const Subscribe = () => {
   return (
     <div>
       <div className="container mx-auto">
-        <div className="flex-col my-9 md:mt-48 my-6 relative flex  pt-2 pb-4 w-11/12 mx-auto rounded-3xl overflow-hidden">
+        <div className="flex-col my-9 md:mt-48 relative flex  pt-2 pb-4 w-11/12 mx-auto rounded-3xl overflow-hidden">
           <Image
             loading="lazy"
             src={bg}
