@@ -1,17 +1,14 @@
+import SectionTitle from "../RegularCMP/SectionTitle";
+
 export default function BoostBusiness() {
   return (
     <div className="container mx-auto">
-      <div className="flex items-center justify-center   w-10/12  max-w-full flex-col mt-24 max-md:mt-10 mx-auto mb-24">
-        <div className="items-center  flex flex-col px-5">
-          <div className="text-cyan-900 text-4xl font-semibold tracking-wider">
-            Boost Your business by connecting quality talents
-          </div>
-          <div className="text-cyan-900 text-center text-base leading-6 mt-4 ">
-            Connect with unlimited quality talents to get any help
-          </div>
-        </div>
-        <div className="bg-orange-400  flex w-[205px] h-[9px] flex-col mt-4 rounded-[50px]" />
-      </div>
+      {/* Section Title */}
+      <SectionTitle
+        title="Boost Your business by connecting quality talents"
+        paragraph="Connect with unlimited quality talents to get any help."
+        styleBody="mb-14"
+      />
 
       <div className="bg-[#213F61] px-3 rounded-3xl">
         <div className="grid justify-start items-end grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-white">
@@ -42,7 +39,7 @@ export default function BoostBusiness() {
               </p>
             </div>
           </div>
-          <div className="px-5 pt-28 mt-4 pb-12 rounded-t-3xl rounded-b-3xl sm:rounded-b-none bg-[#E78C3B] sm:mx-3">
+          <div className="px-5 pt-28 mt-4 pb-12 rounded-3xl rounded-b-3xl bg-[#E78C3B] sm:mx-3 lg:rounded-b-none">
             <figure className="mb-8 w-14 h-14">
               <svg
                 className="w-full h-full"
@@ -275,6 +272,21 @@ export default function BoostBusiness() {
                 graphic design, publishing, and typesetting. It is an
                 industry-standard mock-up text, which is primarily.{" "}
               </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div className="items-start self-stretch flex justify-between gap-5 mt-10 md:mt-14 max-w-3xl mx-auto max-md:flex-wrap max-md:mt-10">
+          <div className="justify-center items-center bg-orange-400 flex flex-col grow shrink-0 basis-auto flex-1 px-20 py-5 rounded-[50px] max-md:px-5">
+            <div className="text-white text-base font-bold self-center whitespace-nowrap">
+              Post a task
+            </div>
+          </div>{" "}
+          <div className="justify-center items-center bg-orange-400 bg-opacity-10 flex flex-col grow shrink-0 basis-auto flex-1 px-20 py-5 rounded-[500px] max-md:px-5">
+            <div className="text-orange-400 text-base font-medium self-center whitespace-nowrap">
+              Become a tasker
             </div>
           </div>
         </div>

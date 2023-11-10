@@ -5,6 +5,18 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+    @apply transition duration-300;
+}
+
+footer a {
+ @apply hover:underline hover:text-white;
+}
+
+.container {
+    @apply px-5 sm:px-0;
+}
+
 .mapfortask {
     width: 100%;
     height: 50vh;

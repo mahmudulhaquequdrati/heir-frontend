@@ -1,7 +1,10 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 import BoostBusiness from "@/components/BoostYourBusiness/BoostBusiness";
+import Subscribe from "@/components/BoostYourBusiness/Subscribe";
 import Footer from "@/components/Footer/Footer";
+import GettingDone from "@/components/GettingDone/GettingDone";
+import LifeEasier from "@/components/LifeEasier/LifeEasier";
 import Review from "@/components/review/Review";
 import VerifiedTalents from "@/components/verifiedTalents/VerifiedTalents";
 import ChooseUs from "@/components/whyChoose/ChooseUs";
@@ -163,15 +166,15 @@ export default function Home() {
       <Blogs />
       <Footer /> */}
       <div className="bg-white flex flex-col">
-        <div className="bg-[#213F61] self-stretch flex w-full pb-48 flex-col pt-8 px-20 max-md:max-w-full max-md:px-5">
+        <div className="bg-[#213F61] self-stretch flex w-full pb-72 md:pb-52 lg:pb-48 flex-col pt-8 px-20 max-md:max-w-full max-md:px-5">
           <div className="self-center z-[1] flex w-full max-w-[1201px] flex-col max-md:max-w-full">
             <div className="text-white text-center text-5xl font-semibold leading-[68.16px] capitalize self-center max-w-[793px] mt-24 max-md:max-w-full max-md:text-4xl max-md:mt-10">
               Find the quality
               <br />
               talents to makes your life easier
             </div>
-            <div className="items-start self-center flex w-[793px] max-w-full gap-0 mt-14  max-md:flex-wrap max-md:mt-10 rounded-lg">
-              <div className="items-start bg-white self-stretch flex grow shrink basis-auto justify-between gap-2.5 pl-8 pr-4  w-full max-md:flex-wrap max-md:px-5 rounded-l-full">
+            <div className="items-start self-center flex w-[793px] max-w-full gap-0 mt-14 max-md:mt-10 rounded-lg">
+              <div className="items-start bg-white self-stretch flex grow shrink basis-auto justify-between gap-2.5 pl-8 pr-4  w-full max-md:px-5 rounded-l-full">
                 <img
                   loading="lazy"
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/66e75b01-012c-44a4-aad4-f78fc2d5c8e8?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&"
@@ -179,7 +182,7 @@ export default function Home() {
                 />
                 <input className="text-cyan-900 text-xl self-center whitespace-nowrap my-auto w-full  outline-none focus:outline-none active:outline-none"></input>
               </div>
-              <button className="text-white text-xl font-semibold tracking-wide self-stretch whitespace-nowrap justify-center items-center bg-orange-400 w-[188px] max-w-full px-14 py-6 max-md:px-5 rounded-r-full">
+              <button className="text-white text-xl font-semibold tracking-wide self-stretch whitespace-nowrap justify-center items-center bg-orange-400 w-[188px] max-w-full px-14 py-3 md:py-6 max-md:px-5 rounded-r-full">
                 Search
               </button>
             </div>
@@ -478,71 +481,71 @@ export default function Home() {
             </div>
           </div>
         </div> */}
-        <div className="container mx-auto shadow-2xl bg-white self-stretch -translate-y-2/4 pl-28 pr-16 py-12 rounded-[500px] max-md:max-w-full max-md:mt-10 max-md:px-5">
-          <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-            <div className="flex flex-col items-stretch w-1/5 max-md:w-full max-md:ml-0">
-              <div className="flex items-start gap-5 my-auto max-md:mt-10">
+        <div className="container md:mx-auto shadow-2xl bg-white self-stretch -translate-y-2/4 pl-28 pr-16 py-12 rounded-[500px] max-md:max-w-full w-11/12 max-md:mt-10 max-md:px-5 mx-5">
+          <div className="gap-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-md:gap-0">
+            <div className="flex flex-col items-stretch max-md:ml-0">
+              <div className="flex items-start gap-5 my-auto mx-auto max-md:mt-10">
                 <img
                   loading="lazy"
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/7cc168e6-1561-45f7-a0ab-9bf1ccce7109?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&"
-                  className="aspect-square object-contain object-center w-[50px] overflow-hidden max-w-full self-start"
+                  className="aspect-square object-contain object-center w-[40px] md:w-[50px] overflow-hidden max-w-full self-start"
                 />
                 <div className="flex flex-col mt-1 self-start">
-                  <div className="text-cyan-900 text-center text-2xl font-semibold leading-9 self-stretch whitespace-nowrap">
+                  <div className="text-cyan-900 text-center text-xl md:text-2xl font-semibold leading-9 self-stretch whitespace-nowrap">
                     500k
                   </div>
-                  <div className="text-cyan-900 text-center text-base font-medium leading-6 self-stretch whitespace-nowrap mt-3">
+                  <div className="text-cyan-900 text-center text-base font-medium leading-6 self-stretch whitespace-nowrap mt-1 md:mt-3">
                     Job posted
                   </div>
                 </div>
               </div>
             </div>
-            <div className="flex flex-col items-stretch w-[24%] ml-5 max-md:w-full max-md:ml-0">
-              <div className="flex items-start gap-5 my-auto max-md:mt-10">
+            <div className="flex flex-col items-stretch max-md:ml-0">
+              <div className="flex items-start gap-5 my-auto mx-auto max-md:mt-10">
                 <img
                   loading="lazy"
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/c2873562-f843-4e59-a0d1-485f1bd0bba7?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&"
-                  className="aspect-square object-contain object-center w-[55px] overflow-hidden max-w-full self-start"
+                  className="aspect-square object-contain object-center w-[40px] md:w-[50px] overflow-hidden max-w-full self-start"
                 />
-                <div className="flex flex-col mt-2.5 self-start">
-                  <div className="text-cyan-900 text-center text-2xl font-semibold leading-9 self-stretch whitespace-nowrap">
+                <div className="flex flex-col mt-1 self-start">
+                  <div className="text-cyan-900 text-center text-xl md:text-2xl font-semibold leading-9 self-stretch whitespace-nowrap">
                     1 Million
                   </div>
-                  <div className="text-cyan-900 text-center text-base font-medium leading-6 self-stretch whitespace-nowrap mt-3">
+                  <div className="text-cyan-900 text-center text-base font-medium leading-6 self-stretch whitespace-nowrap mt-1 md:mt-3">
                     Quality talents
                   </div>
                 </div>
               </div>
             </div>
-            <div className="flex flex-col items-stretch w-[24%] ml-5 max-md:w-full max-md:ml-0">
-              <div className="flex w-full max-w-[181px] items-start justify-between gap-5 my-auto max-md:mt-10">
+            <div className="flex flex-col items-stretch max-md:ml-0">
+              <div className="flex items-start gap-5 my-auto mx-auto max-md:mt-10">
                 <img
                   loading="lazy"
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/ed4e70e8-e83c-4e69-ad2a-3045c268462f?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&"
-                  className="aspect-square object-contain object-center w-[61px] overflow-hidden self-stretch max-w-full"
+                  className="aspect-square object-contain object-center w-[40px] md:w-[50px] overflow-hidden max-w-full self-start"
                 />
-                <div className="self-center flex flex-col my-auto">
-                  <div className="text-cyan-900 text-center text-2xl font-semibold leading-9 self-stretch whitespace-nowrap">
+                <div className="flex flex-col mt-1 self-start">
+                  <div className="text-cyan-900 text-center text-xl md:text-2xl font-semibold leading-9 self-stretch whitespace-nowrap">
                     8 Million
                   </div>
-                  <div className="text-cyan-900 text-center text-base font-medium leading-6 self-stretch whitespace-nowrap mt-3">
+                  <div className="text-cyan-900 text-center text-base font-medium leading-6 self-stretch whitespace-nowrap mt-1 md:mt-3">
                     Paid Invoices
                   </div>
                 </div>
               </div>
             </div>
-            <div className="flex flex-col items-stretch w-[32%] ml-5 max-md:w-full max-md:ml-0">
-              <div className="flex items-start gap-3 my-auto max-md:mt-10">
+            <div className="flex flex-col items-stretch max-md:ml-0">
+              <div className="flex items-start gap-5 my-auto mx-auto max-md:mt-10">
                 <img
                   loading="lazy"
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/08bb166a-176f-495e-a792-619218ec1f69?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&"
-                  className="aspect-square object-contain object-center w-[68px] overflow-hidden self-stretch max-w-full"
+                  className="aspect-square object-contain object-center w-[40px] md:w-[50px] overflow-hidden max-w-full self-start"
                 />
-                <div className="self-center flex flex-col my-auto">
-                  <div className="text-cyan-900 text-center text-2xl font-semibold leading-9 self-stretch whitespace-nowrap">
+                <div className="flex flex-col mt-1 self-start">
+                  <div className="text-cyan-900 text-center text-xl md:text-2xl font-semibold leading-9 self-stretch whitespace-nowrap">
                     99%
                   </div>
-                  <div className="text-cyan-900 text-center text-base font-medium leading-6 self-stretch whitespace-nowrap mt-3">
+                  <div className="text-cyan-900 text-center text-base font-medium leading-6 self-stretch whitespace-nowrap mt-1 md:mt-3">
                     Customer satisfaction
                   </div>
                 </div>
@@ -550,291 +553,20 @@ export default function Home() {
             </div>
           </div>
         </div>
-        {/* See what others are getting done */}
+
+        {/* Boost Your business by connecting quality talents */}
         <BoostBusiness />
 
         <ChooseUs />
-        <div className="items-center self-center flex w-full max-w-[1199px] flex-col mt-32 max-md:max-w-full max-md:mt-10">
-          <div className="items-center self-center flex w-[947px] max-w-full flex-col">
-            <div className="items-center self-center flex w-[677px] max-w-full flex-col">
-              <div className="items-center self-stretch flex flex-col px-5 max-md:max-w-full">
-                <div className="text-cyan-900 text-4xl font-semibold tracking-wider  -mr-5 max-md:max-w-full">
-                  See what others are getting done
-                </div>{" "}
-                <div className="text-cyan-900 text-center text-base leading-6 self-center whitespace-nowrap mt-2">
-                  Connect with unlimited quality talents to get any help.
-                </div>
-              </div>{" "}
-              <div className="bg-orange-400 self-center flex w-[205px] h-[9px] flex-col mt-4 rounded-[50px]" />
-            </div>{" "}
-            <div className="justify-center items-start border border-[color:var(--Stoke,rgba(33,63,97,0.05))] shadow-2xl bg-white self-stretch flex gap-2 mt-10 px-5 py-2 rounded-[500px] border-solid max-md:max-w-full max-md:flex-wrap">
-              <div className="text-white text-center text-base font-medium self-stretch whitespace-nowrap justify-center items-center bg-cyan-900 flex-1 px-4 py-2.5 rounded-[50px]">
-                Starting a business
-              </div>{" "}
-              <div className="text-cyan-900 text-center text-base font-medium self-stretch whitespace-nowrap justify-center items-center bg-white flex-1 px-16 py-2.5 rounded-[50px] max-md:px-5">
-                Moving
-              </div>{" "}
-              <div className="text-cyan-900 text-center text-base font-medium self-stretch whitespace-nowrap justify-center items-center bg-white flex-1 pl-10 pr-10 py-2.5 rounded-[50px] max-md:px-5">
-                Maintenance
-              </div>{" "}
-              <div className="text-cyan-900 text-center text-base font-medium self-stretch whitespace-nowrap justify-center items-center bg-white flex-1 px-14 py-2.5 rounded-[50px] max-md:px-5">
-                Pretties
-              </div>{" "}
-              <div className="text-cyan-900 text-center text-base font-medium self-stretch whitespace-nowrap justify-center items-center bg-white flex-1 pl-16 pr-16 py-2.5 rounded-[50px] max-md:px-5">
-                others
-              </div>
-            </div>
-          </div>{" "}
-          <div className="items-start self-stretch flex grow flex-col mt-16 max-md:max-w-full max-md:mt-10">
-            <div className="self-stretch px-5 max-md:max-w-full">
-              <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-                <div className="flex flex-col items-stretch w-[33%] max-md:w-full max-md:ml-0">
-                  <div className="items-center self-stretch border border-[color:var(--Stoke,rgba(33,63,97,0.05))] shadow-2xl bg-white flex w-full max-w-[386px] grow flex-col mx-auto p-6 rounded-2xl border-solid max-md:mt-5 max-md:px-5">
-                    <div className="text-cyan-900 text-center text-xl font-medium leading-7 self-stretch justify-center items-center bg-blue-300 w-full p-4 rounded-xl">
-                      Logo designer for
-                      <br />
-                      photography business
-                    </div>{" "}
-                    <div className="justify-between items-start self-stretch flex w-full gap-5 mt-4 max-md:justify-center">
-                      <div className="text-cyan-900 text-opacity-60 text-center text-base font-medium leading-5 self-center my-auto">
-                        Design
-                      </div>{" "}
-                      <div className="text-orange-400 text-xl font-semibold leading-7 self-stretch">
-                        $50
-                      </div>{" "}
-                      <div className="items-start self-center flex gap-1 my-auto">
-                        <img
-                          loading="lazy"
-                          src="https://cdn.builder.io/api/v1/image/assets/TEMP/0c4dccdd-da0f-423f-af9a-252400b2f298?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&"
-                          className="aspect-square object-contain object-center w-5 overflow-hidden self-stretch max-w-full"
-                        />{" "}
-                        <div className="text-cyan-900 text-opacity-60 text-sm font-medium leading-5 self-center whitespace-nowrap my-auto">
-                          4.6(1K+)
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>{" "}
-                <div className="flex flex-col items-stretch w-[33%] ml-5 max-md:w-full max-md:ml-0">
-                  <div className="items-center self-stretch border border-[color:var(--Stoke,rgba(33,63,97,0.05))] shadow-2xl bg-white flex w-full max-w-[387px] grow flex-col mx-auto p-6 rounded-2xl border-solid max-md:mt-5 max-md:px-5">
-                    <div className="text-cyan-900 text-center text-xl font-medium leading-7 self-stretch justify-center items-center bg-blue-300 w-full p-4 rounded-xl">
-                      Couch moved
-                      <br />
-                      1km down the road
-                    </div>{" "}
-                    <div className="justify-between items-start self-stretch flex w-full gap-5 mt-4 max-md:justify-center">
-                      <div className="text-cyan-900 text-opacity-60 text-center text-base font-medium leading-5 self-center my-auto">
-                        Design
-                      </div>{" "}
-                      <div className="text-orange-400 text-xl font-semibold leading-7 self-stretch">
-                        $450
-                      </div>{" "}
-                      <div className="items-start self-center flex gap-1 my-auto">
-                        <img
-                          loading="lazy"
-                          src="https://cdn.builder.io/api/v1/image/assets/TEMP/55aa7d9a-c789-4774-a0f5-4a05e4f815d9?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&"
-                          className="aspect-square object-contain object-center w-5 overflow-hidden self-stretch max-w-full"
-                        />{" "}
-                        <div className="text-cyan-900 text-opacity-60 text-sm font-medium leading-5 self-center whitespace-nowrap my-auto">
-                          4.6(1K+)
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>{" "}
-                <div className="flex flex-col items-stretch w-[33%] ml-5 max-md:w-full max-md:ml-0">
-                  <div className="items-center self-stretch border border-[color:var(--Stoke,rgba(33,63,97,0.05))] shadow-2xl bg-white flex w-full max-w-[386px] grow flex-col mx-auto p-6 rounded-2xl border-solid max-md:mt-5 max-md:px-5">
-                    <div className="text-cyan-900 text-center text-xl font-medium leading-7 self-stretch justify-center items-center bg-blue-300 w-full p-4 rounded-xl">
-                      Pick up & deliver
-                      <br />a medium size fridge
-                    </div>{" "}
-                    <div className="justify-between items-start self-stretch flex w-full gap-5 mt-4 max-md:justify-center">
-                      <div className="text-cyan-900 text-opacity-60 text-center text-base font-medium leading-5 self-center my-auto">
-                        Design
-                      </div>{" "}
-                      <div className="text-orange-400 text-xl font-semibold leading-7 self-stretch">
-                        $360
-                      </div>{" "}
-                      <div className="items-start self-center flex gap-1 my-auto">
-                        <img
-                          loading="lazy"
-                          src="https://cdn.builder.io/api/v1/image/assets/TEMP/feaa59f2-dfb6-425a-a911-0bd7e2e3a293?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&"
-                          className="aspect-square object-contain object-center w-5 overflow-hidden self-stretch max-w-full"
-                        />{" "}
-                        <div className="text-cyan-900 text-opacity-60 text-sm font-medium leading-5 self-center whitespace-nowrap my-auto">
-                          4.6(1K+)
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>{" "}
-            <div className="self-stretch mt-5 px-5 max-md:max-w-full">
-              <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-                <div className="flex flex-col items-stretch w-[33%] max-md:w-full max-md:ml-0">
-                  <div className="items-center self-stretch border border-[color:var(--Stoke,rgba(33,63,97,0.05))] shadow-2xl bg-white flex w-full max-w-[386px] grow flex-col mx-auto p-6 rounded-2xl border-solid max-md:mt-5 max-md:px-5">
-                    <div className="text-cyan-900 text-center text-xl font-medium leading-7 self-stretch justify-center items-center bg-blue-300 w-full p-4 rounded-xl">
-                      Break down and take away boxes
-                    </div>{" "}
-                    <div className="justify-between items-start self-stretch flex w-full gap-5 mt-4 max-md:justify-center">
-                      <div className="text-cyan-900 text-opacity-60 text-center text-base font-medium leading-5 self-center my-auto">
-                        Design
-                      </div>{" "}
-                      <div className="text-orange-400 text-xl font-semibold leading-7 self-stretch">
-                        $963
-                      </div>{" "}
-                      <div className="items-start self-center flex gap-1 my-auto">
-                        <img
-                          loading="lazy"
-                          src="https://cdn.builder.io/api/v1/image/assets/TEMP/9327a7e6-eb21-4c8b-a849-918286bcf274?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&"
-                          className="aspect-square object-contain object-center w-5 overflow-hidden self-stretch max-w-full"
-                        />{" "}
-                        <div className="text-cyan-900 text-opacity-60 text-sm font-medium leading-5 self-center whitespace-nowrap my-auto">
-                          4.6(1K+)
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>{" "}
-                <div className="flex flex-col items-stretch w-[33%] ml-5 max-md:w-full max-md:ml-0">
-                  <div className="items-center self-stretch border border-[color:var(--Stoke,rgba(33,63,97,0.05))] shadow-2xl bg-white flex w-full max-w-[387px] grow flex-col mx-auto p-6 rounded-2xl border-solid max-md:mt-5 max-md:px-5">
-                    <div className="text-cyan-900 text-center text-xl font-medium leading-7 self-stretch justify-center items-center bg-blue-300 w-full px-4 py-7 rounded-xl">
-                      Help moving house
-                    </div>{" "}
-                    <div className="justify-between items-start self-stretch flex w-full gap-5 mt-4 max-md:justify-center">
-                      <div className="text-cyan-900 text-opacity-60 text-center text-base font-medium leading-5 self-center my-auto">
-                        Design
-                      </div>{" "}
-                      <div className="text-orange-400 text-xl font-semibold leading-7 self-stretch">
-                        $758
-                      </div>{" "}
-                      <div className="items-start self-center flex gap-1 my-auto">
-                        <img
-                          loading="lazy"
-                          src="https://cdn.builder.io/api/v1/image/assets/TEMP/112a8cd4-79d9-45d9-a691-983eab7c3fea?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&"
-                          className="aspect-square object-contain object-center w-5 overflow-hidden self-stretch max-w-full"
-                        />{" "}
-                        <div className="text-cyan-900 text-opacity-60 text-sm font-medium leading-5 self-center whitespace-nowrap my-auto">
-                          4.6(1K+)
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>{" "}
-                <div className="flex flex-col items-stretch w-[33%] ml-5 max-md:w-full max-md:ml-0">
-                  <div className="items-center self-stretch border border-[color:var(--Stoke,rgba(33,63,97,0.05))] shadow-2xl bg-white flex w-full max-w-[386px] grow flex-col mx-auto p-6 rounded-2xl border-solid max-md:mt-5 max-md:px-5">
-                    <div className="text-cyan-900 text-center text-xl font-medium leading-7 self-stretch justify-center items-center bg-blue-300 w-full px-4 py-7 rounded-xl">
-                      Sofa delivery
-                    </div>{" "}
-                    <div className="justify-between items-start self-stretch flex w-full gap-5 mt-4 max-md:justify-center">
-                      <div className="text-cyan-900 text-opacity-60 text-center text-base font-medium leading-5 self-center my-auto">
-                        Design
-                      </div>{" "}
-                      <div className="text-orange-400 text-xl font-semibold leading-7 self-stretch">
-                        $1800
-                      </div>{" "}
-                      <div className="items-start self-center flex gap-1 my-auto">
-                        <img
-                          loading="lazy"
-                          src="https://cdn.builder.io/api/v1/image/assets/TEMP/ec23abcb-ce2b-4263-b7bb-f891bc711853?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&"
-                          className="aspect-square object-contain object-center w-5 overflow-hidden self-stretch max-w-full"
-                        />{" "}
-                        <div className="text-cyan-900 text-opacity-60 text-sm font-medium leading-5 self-center whitespace-nowrap my-auto">
-                          4.6(1K+)
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>{" "}
-            <div className="self-stretch mt-5 px-5 max-md:max-w-full">
-              <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-                <div className="flex flex-col items-stretch w-[33%] max-md:w-full max-md:ml-0">
-                  <div className="items-center self-stretch border border-[color:var(--Stoke,rgba(33,63,97,0.05))] shadow-2xl bg-white flex w-full max-w-[386px] grow flex-col mx-auto p-6 rounded-2xl border-solid max-md:mt-5 max-md:px-5">
-                    <div className="text-cyan-900 text-center text-xl font-medium leading-7 self-stretch justify-center items-center bg-blue-300 w-full px-4 py-7 rounded-xl">
-                      End of lease Clean
-                    </div>{" "}
-                    <div className="justify-between items-start self-stretch flex w-full gap-5 mt-4 max-md:justify-center">
-                      <div className="text-cyan-900 text-opacity-60 text-center text-base font-medium leading-5 self-center my-auto">
-                        Design
-                      </div>{" "}
-                      <div className="text-orange-400 text-xl font-semibold leading-7 self-stretch">
-                        $150
-                      </div>{" "}
-                      <div className="items-start self-center flex gap-1 my-auto">
-                        <img
-                          loading="lazy"
-                          src="https://cdn.builder.io/api/v1/image/assets/TEMP/4699db09-2a34-4205-b8b7-4fcdb9feab44?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&"
-                          className="aspect-square object-contain object-center w-5 overflow-hidden self-stretch max-w-full"
-                        />{" "}
-                        <div className="text-cyan-900 text-opacity-60 text-sm font-medium leading-5 self-center whitespace-nowrap my-auto">
-                          4.6(1K+)
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>{" "}
-                <div className="flex flex-col items-stretch w-[33%] ml-5 max-md:w-full max-md:ml-0">
-                  <div className="items-center self-stretch border border-[color:var(--Stoke,rgba(33,63,97,0.05))] shadow-2xl bg-white flex w-full max-w-[387px] grow flex-col mx-auto p-6 rounded-2xl border-solid max-md:mt-5 max-md:px-5">
-                    <div className="text-cyan-900 text-center text-xl font-medium leading-7 self-stretch justify-center items-center bg-blue-300 w-full px-4 py-7 rounded-xl">
-                      Urgent removalist
-                    </div>{" "}
-                    <div className="justify-between items-start self-stretch flex w-full gap-5 mt-4 max-md:justify-center">
-                      <div className="text-cyan-900 text-opacity-60 text-center text-base font-medium leading-5 self-center my-auto">
-                        Design
-                      </div>{" "}
-                      <div className="text-orange-400 text-xl font-semibold leading-7 self-stretch">
-                        $30
-                      </div>{" "}
-                      <div className="items-start self-center flex gap-1 my-auto">
-                        <img
-                          loading="lazy"
-                          src="https://cdn.builder.io/api/v1/image/assets/TEMP/d9aabd8f-ee93-4c58-ba55-c0a0266e27ef?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&"
-                          className="aspect-square object-contain object-center w-5 overflow-hidden self-stretch max-w-full"
-                        />{" "}
-                        <div className="text-cyan-900 text-opacity-60 text-sm font-medium leading-5 self-center whitespace-nowrap my-auto">
-                          4.6(1K+)
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>{" "}
-                <div className="flex flex-col items-stretch w-[33%] ml-5 max-md:w-full max-md:ml-0">
-                  <div className="items-center self-stretch border border-[color:var(--Stoke,rgba(33,63,97,0.05))] shadow-2xl bg-white flex w-full max-w-[386px] grow flex-col mx-auto p-6 rounded-2xl border-solid max-md:mt-5 max-md:px-5">
-                    <div className="text-cyan-900 text-center text-xl font-medium leading-7 self-stretch justify-center items-center bg-blue-300 w-full p-4 rounded-xl">
-                      Break down
-                      <br />
-                      and take away boxes
-                    </div>{" "}
-                    <div className="justify-between items-start self-stretch flex w-full gap-5 mt-4 max-md:justify-center">
-                      <div className="text-cyan-900 text-opacity-60 text-center text-base font-medium leading-5 self-center my-auto">
-                        Design
-                      </div>{" "}
-                      <div className="text-orange-400 text-xl font-semibold leading-7 self-stretch">
-                        $500
-                      </div>{" "}
-                      <div className="items-start self-center flex gap-1 my-auto">
-                        <img
-                          loading="lazy"
-                          src="https://cdn.builder.io/api/v1/image/assets/TEMP/9a300d1f-3f20-49aa-a7c2-0b11bbab15ee?apiKey=8ebeea0f4ca14c9780c31fc1db4899ea&"
-                          className="aspect-square object-contain object-center w-5 overflow-hidden self-stretch max-w-full"
-                        />{" "}
-                        <div className="text-cyan-900 text-opacity-60 text-sm font-medium leading-5 self-center whitespace-nowrap my-auto">
-                          4.6(1K+)
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+
+        {/* See what others are getting done */}
+        <GettingDone />
 
         <VerifiedTalents />
         <Review />
+        <LifeEasier />
+
+        <Subscribe />
         <Footer />
       </div>
     </main>
