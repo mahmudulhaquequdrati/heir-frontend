@@ -1,10 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
-import BoostBusiness from "@/components/BoostYourBusiness/BoostBusiness";
-import Footer from "@/components/Footer/Footer";
-import Review from "@/components/review/Review";
-import VerifiedTalents from "@/components/verifiedTalents/VerifiedTalents";
-import ChooseUs from "@/components/whyChoose/ChooseUs";
+import Footer from "@/components/shareableComponents/Footer";
 import JobIcon from "../assets/clientImage/portfolio 1.svg";
 import PeopleGroup from "../assets/clientImage/user 1.svg";
 import Invoices from "../assets/clientImage/invoice 1.svg";
@@ -16,6 +12,10 @@ import Image from "next/image";
 import Fillstartfrom from "../assets/clientImage/fillstart.svg";
 import SearchIcon from "../assets/clientImage/searchicon.svg";
 import Hero from "../assets/h.png";
+import BoostBusiness from "@/components/homeComponents/BoostBusiness";
+import ChooseUs from "@/components/homeComponents/ChooseUs";
+import VerifiedTalents from "@/components/homeComponents/VerifiedTalents";
+import Review from "@/components/homeComponents/Review";
 
 export default function Home() {
   return (

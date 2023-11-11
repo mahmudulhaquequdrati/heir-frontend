@@ -43,12 +43,12 @@ const Navbar = () => {
         </div>
         <div className="hidden lg:flex">
           <div className="items-start self-stretch flex gap-2.5 max-md:justify-center">
-            <button className="text-white text-base font-medium self-center my-auto">
+            <Link href="/signin" className="text-white text-base font-medium self-center my-auto">
               Sign in
-            </button>
-            <button className="text-orange-400 text-base font-medium self-stretch whitespace-nowrap justify-center items-center bg-orange-400 bg-opacity-10 w-[170px] max-w-full px-5 py-2.5 rounded-[500px]">
+            </Link>
+            <Link href="/signup" className="text-orange-400 text-base font-medium self-stretch whitespace-nowrap justify-center items-center bg-orange-400 bg-opacity-10 w-[170px] max-w-full px-5 py-2.5 rounded-[500px]">
               Become a tasker
-            </button>
+            </Link>
             <button className="text-white text-base font-bold self-stretch whitespace-nowrap justify-center items-center bg-orange-400 w-[170px] max-w-full pl-11 pr-10 py-2.5 rounded-[50px] max-md:px-5">
               Post a task
             </button>

@@ -1,4 +1,4 @@
-import Footer from "@/components/Footer/Footer";
+import Footer from "@/components/shareableComponents/Footer";
 import React from "react";
 
 export default function Category() {

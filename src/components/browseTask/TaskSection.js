@@ -1,17 +1,10 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import MyMap from "./Map";
-import Card from "../TaskCard/Card";
+import Card from "./Card";
 import Link from "next/link";
-import dynamic from "next/dynamic";
 
 const TaskSection = () => {
-  // const [map, setMap] = useState(false);
-  // useEffect(() => {
-  //   if (typeof window !== "undefined") {
-  //     setMap(true);
-  //   }
-  // }, [map]);
 
   return (
     <div>

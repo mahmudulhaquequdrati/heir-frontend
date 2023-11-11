@@ -1,5 +1,5 @@
 "use client";
-import Footer from "@/components/Footer/Footer";
+import Footer from "@/components/shareableComponents/Footer";
 import Comments from "@/components/taskDetails/Comments";
 import Details from "@/components/taskDetails/Details";
 import React from "react";
