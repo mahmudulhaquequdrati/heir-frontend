@@ -11,6 +11,10 @@ module.exports = {
         primary: "#213F61",
         secondary: "#E78C3B",
       },
+      fontFamily: {
+        clashDisplay: ["var(--font-clashDisplay)"],
+        DM_Sans: "DM Sans, sans-seri",
+      },
     },
   },
   plugins: [],

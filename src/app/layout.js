@@ -1,8 +1,42 @@
 import Navbar from "@/components/Navbar/Navbar";
-import "./globals.css";
 import { Inter } from "next/font/google";
+import localFont from "next/font/local";
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+// const DMsans = DM_Sans({
+//   subsets: ["latin"],
+//   weight: ["400", "500", "600", "700"],
+//   variable: "--font-DM_Sans",
+// });
+
+// const clashDisplay = localFont({
+//   src: "../Fonts/ClashDisplay/fonts/ClashDisplay-Regular.ttf",
+// });
+const clashDisplay = localFont({
+  src: [
+    {
+      path: "../Fonts/ClashDisplay/fonts/ClashDisplay-Light.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../Fonts/ClashDisplay/fonts/ClashDisplay-Regular.woff2",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../Fonts/ClashDisplay/fonts/ClashDisplay-Semibold.woff2",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../Fonts/ClashDisplay/fonts/ClashDisplay-Bold.woff2",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -12,7 +46,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className}`}>
         <Navbar />
         {children}
       </body>
