@@ -18,9 +18,9 @@ const Map = ({ children, className, width, height, ...rest }) => {
     (async function init() {
       delete Leaflet.Icon.Default.prototype._getIconUrl;
       Leaflet.Icon.Default.mergeOptions({
-        iconRetinaUrl: 'images/marker-icon-2x.png',
-        iconUrl: 'images/marker-icon.png',
-        shadowUrl: 'images/marker-shadow.png',
+        iconRetinaUrl: 'marker-icon-2x.png',
+        iconUrl: 'marker-icon.png',
+        shadowUrl: 'marker-shadow.png',
       });
     })();
   }, []);

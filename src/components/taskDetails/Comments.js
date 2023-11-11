@@ -1,31 +1,29 @@
 "use client";
 import React from "react";
-// import { MapContainer, Marker, Popup, TileLayer, Tooltip } from "react-leaflet";
-// import "leaflet/dist/leaflet.css";
-// import "leaflet-defaulticon-compatibility";
-// import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
 import User from "../../assets/logo/user.svg";
 import Report from "../../assets/logo/report.svg";
 import Upload from "../../assets/logo/upload.svg";
 import Image from "next/image";
+import Map from "../Map";
 
 const Comments = () => {
   const position = [51.505, -0.09];
   return (
     <div>
-      {/* <MapContainer
-        className="mapfortaskdetails"
-        center={position}
-        zoom={13}
-        scrollWheelZoom={false}
-      >
-        <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-        <Marker position={position}>
-          <Popup>
-            A pretty CSS3 popup. <br /> Easily customizable.
-          </Popup>
-        </Marker>
-      </MapContainer> */}
+      <Map className="mapfortaskdetails" width="800" height="400" center={position} zoom={12}>
+        {({ TileLayer, Marker, Popup }) => (
+          <>
+            <TileLayer
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+            <Marker position={position}>
+              <Popup>
+                A pretty CSS3 popup. <br /> Easily customizable.
+              </Popup>
+            </Marker>
+          </>
+        )}
+      </Map>
       <div className="flex flex-col  items-start gap-[16px] relative mt-10">
         <div className="inline-flex items-center gap-[8px] relative flex-[0_0_auto]">
           <div className="relative w-fit [font-family:'Clash_Display-Semibold',Helvetica] font-normal text-primary text-[20px] tracking-[0] leading-[normal]">
