@@ -24,6 +24,7 @@ export default function ChooseUs() {
               loading="lazy"
               height={100}
               width={100}
+              alt="coose-us"
               src={CooseUs}
               className="aspect-[0.81] object-contain object-center w-full overflow-hidden grow max-md:max-w-full max-md:mt-7"
             />

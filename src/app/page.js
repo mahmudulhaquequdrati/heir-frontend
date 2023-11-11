@@ -45,7 +45,7 @@ export default function Home() {
             </div>
           </div>
           <div className="w-[38%] mx-auto">
-            <Image src={Hero} className="w-full" />
+            <Image src={Hero} className="w-full" alt="hero" />
           </div>
         </div>
 
@@ -58,6 +58,7 @@ export default function Home() {
                   width={100}
                   height={100}
                   src={JobIcon}
+                  alt="jobicon"
                   className="aspect-square object-contain object-center w-[50px] overflow-hidden max-w-full self-start"
                 />
                 <div className="flex flex-col mt-1 self-start">
@@ -76,6 +77,7 @@ export default function Home() {
                   loading="lazy"
                   width={100}
                   height={100}
+                  alt="people-group"
                   src={PeopleGroup}
                   className="aspect-square object-contain object-center w-[55px] overflow-hidden max-w-full self-start"
                 />
@@ -96,6 +98,7 @@ export default function Home() {
                   width={100}
                   height={100}
                   src={Invoices}
+                  alt="invoices"
                   className="aspect-square object-contain object-center w-[61px] overflow-hidden self-stretch max-w-full"
                 />
                 <div className="self-center flex flex-col my-auto">
@@ -115,6 +118,7 @@ export default function Home() {
                   width={100}
                   height={100}
                   src={Satisfaction}
+                  alt="satisfaction"
                   className="aspect-square object-contain object-center w-[68px] overflow-hidden self-stretch max-w-full"
                 />
                 <div className="self-center flex flex-col my-auto">
@@ -187,6 +191,7 @@ export default function Home() {
                           width={100}
                           height={100}
                           src={Trophy}
+                          alt="trophy"
                           className="aspect-square object-contain object-center w-5 overflow-hidden self-stretch max-w-full"
                         />{" "}
                         <div className="text-cyan-900 text-opacity-60 text-sm font-medium leading-5 self-center whitespace-nowrap my-auto">
@@ -216,6 +221,7 @@ export default function Home() {
                           width={100}
                           height={100}
                           src={Currency}
+                          alt="currency"
                           className="aspect-square object-contain object-center w-5 overflow-hidden self-stretch max-w-full"
                         />{" "}
                         <div className="text-cyan-900 text-opacity-60 text-sm font-medium leading-5 self-center whitespace-nowrap my-auto">
@@ -244,6 +250,7 @@ export default function Home() {
                           width={100}
                           height={100}
                           src={WorkDone}
+                          alt="work-done"
                           className="aspect-square object-contain object-center w-5 overflow-hidden self-stretch max-w-full"
                         />{" "}
                         <div className="text-cyan-900 text-opacity-60 text-sm font-medium leading-5 self-center whitespace-nowrap my-auto">
@@ -275,6 +282,7 @@ export default function Home() {
                           width={100}
                           height={100}
                           src={Fillstartfrom}
+                          alt="filterstartfrom"
                           className="aspect-square object-contain object-center w-5 overflow-hidden self-stretch max-w-full"
                         />{" "}
                         <div className="text-cyan-900 text-opacity-60 text-sm font-medium leading-5 self-center whitespace-nowrap my-auto">
@@ -302,6 +310,7 @@ export default function Home() {
                           width={100}
                           height={100}
                           src={Fillstartfrom}
+                          alt="filterstartfrom"
                           className="aspect-square object-contain object-center w-5 overflow-hidden self-stretch max-w-full"
                         />{" "}
                         <div className="text-cyan-900 text-opacity-60 text-sm font-medium leading-5 self-center whitespace-nowrap my-auto">
@@ -329,6 +338,7 @@ export default function Home() {
                           width={100}
                           height={100}
                           src={Fillstartfrom}
+                          alt="filterstartfrom"
                           className="aspect-square object-contain object-center w-5 overflow-hidden self-stretch max-w-full"
                         />{" "}
                         <div className="text-cyan-900 text-opacity-60 text-sm font-medium leading-5 self-center whitespace-nowrap my-auto">
@@ -360,6 +370,7 @@ export default function Home() {
                           width={100}
                           height={100}
                           src={Fillstartfrom}
+                          alt="filterstartfrom"
                           className="aspect-square object-contain object-center w-5 overflow-hidden self-stretch max-w-full"
                         />{" "}
                         <div className="text-cyan-900 text-opacity-60 text-sm font-medium leading-5 self-center whitespace-nowrap my-auto">
@@ -387,6 +398,7 @@ export default function Home() {
                           width={100}
                           height={100}
                           src={Fillstartfrom}
+                          alt="filterstartfrom"
                           className="aspect-square object-contain object-center w-5 overflow-hidden self-stretch max-w-full"
                         />{" "}
                         <div className="text-cyan-900 text-opacity-60 text-sm font-medium leading-5 self-center whitespace-nowrap my-auto">
@@ -415,6 +427,7 @@ export default function Home() {
                           loading="lazy"
                           width={100}
                           height={100}
+                          alt="filterstartfrom"
                           src={Fillstartfrom}
                           className="aspect-square object-contain object-center w-5 overflow-hidden self-stretch max-w-full"
                         />{" "}

@@ -18,6 +18,7 @@ export default function VerifiedTalents() {
                     width={100}
                     height={100}
                     src={Start1}
+                    alt="star-icon"
                     className="aspect-square object-contain object-center w-[122px] fill-orange-400 overflow-hidden max-w-full my-auto max-md:mt-10"
                   />
                 </div>{" "}
@@ -29,6 +30,7 @@ export default function VerifiedTalents() {
                         height={100}
                         loading="lazy"
                         src={Talents}
+                        alt="talents-icon"
                         className="aspect-[2.81] object-contain object-center w-[596px] overflow-hidden self-center max-w-full"
                       />{" "}
                       <div className="text-cyan-900 text-center text-5xl font-semibold leading-[51.84px] self-center max-w-[578px] ml-6 mt-11 max-md:max-w-full max-md:text-4xl max-md:mt-10">
@@ -57,6 +59,7 @@ export default function VerifiedTalents() {
                       width={100}
                       height={100}
                       src={Start1}
+                      alt="star-icon"
                       className="aspect-square object-contain object-center w-11 fill-orange-400 overflow-hidden max-w-full grow mt-5 self-start"
                     />
                   </div>
@@ -70,6 +73,7 @@ export default function VerifiedTalents() {
               width={100}
               height={100}
               src={Start1}
+              alt="star-icon"
               className="aspect-square object-contain object-center w-11 fill-orange-400 overflow-hidden max-w-full max-md:mt-5"
             />
           </div>{" "}
@@ -79,6 +83,7 @@ export default function VerifiedTalents() {
               width={100}
               height={100}
               src={Start1}
+              alt="star-icon"
               className="aspect-square object-contain object-center w-[122px] fill-orange-400 overflow-hidden max-w-full my-auto max-md:mt-10"
             />
           </div>

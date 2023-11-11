@@ -27,6 +27,7 @@ export default function Review() {
                   width={100}
                   height={100}
                   src={Stars}
+                  alt="stars icon"
                   className="aspect-[6] object-contain object-center w-[168px] overflow-hidden self-center max-w-full"
                 />{" "}
                 <div className="text-slate-900 text-center text-lg leading-8 self-stretch mt-7">
@@ -47,6 +48,7 @@ export default function Review() {
                   width={100}
                   height={100}
                   src={Stars}
+                  alt="stars icon"
                   className="aspect-[6] object-contain object-center w-[168px] overflow-hidden self-center max-w-full"
                 />{" "}
                 <div className="text-slate-900 text-center text-lg leading-8 self-stretch mt-7">
@@ -67,6 +69,7 @@ export default function Review() {
                   width={100}
                   height={100}
                   src={Stars}
+                  alt="stars icon"
                   className="aspect-[6] object-contain object-center w-[168px] overflow-hidden self-center max-w-full"
                 />{" "}
                 <div className="text-slate-900 text-center text-lg leading-8 self-stretch mt-7">
@@ -103,6 +106,7 @@ export default function Review() {
                 width={100}
                 height={100}
                 src={BG}
+                alt="bg icon"
                 className="aspect-[1.16] object-contain object-center w-full overflow-hidden grow max-md:max-w-full max-md:mt-10"
               />
             </div>{" "}
@@ -125,6 +129,7 @@ export default function Review() {
                       width={100}
                       height={100}
                       src={Checked}
+                      alt="checked icon"
                       className="aspect-square object-contain object-center w-4 overflow-hidden max-w-full self-start"
                     />
                     <div className="text-cyan-900 text-lg font-medium leading-8 whitespace-nowrap grow shrink basis-auto self-start">
@@ -137,6 +142,7 @@ export default function Review() {
                       width={100}
                       height={100}
                       src={Checked}
+                      alt="checked icon"
                       className="aspect-square object-contain object-center w-4 overflow-hidden max-w-full self-start"
                     />
                     <div className="text-cyan-900 text-lg font-medium leading-8 whitespace-nowrap grow shrink basis-auto self-start max-md:max-w-full">
@@ -149,6 +155,7 @@ export default function Review() {
                       width={100}
                       height={100}
                       src={Checked}
+                      alt="checked icon"
                       className="aspect-square object-contain object-center w-4 overflow-hidden max-w-full self-start"
                     />
                     <div className="text-cyan-900 text-lg font-medium leading-8 whitespace-nowrap grow shrink basis-auto self-start max-md:max-w-full">
@@ -175,6 +182,7 @@ export default function Review() {
         <Image
           loading="lazy"
           src={bg}
+          alt="bg icon"
           className="absolute z-[-1] w-full object-cover object-center inset-0"
         />
         <div className="relative  flex justify-center items-center w-full  flex-col px-5 max-md:max-w-full py-24">
