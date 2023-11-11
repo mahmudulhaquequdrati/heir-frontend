@@ -1,8 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
-import FacebookIcon from '../../assets/clientImage/facebook.svg'
-import LinkdinIcon from '../../assets/clientImage/linkedin.svg'
-import TweeterIcon from '../../assets/clientImage/twetter.svg'
+import FacebookIcon from "../../assets/clientImage/facebook.svg";
+import LinkdinIcon from "../../assets/clientImage/linkedin.svg";
+import TweeterIcon from "../../assets/clientImage/twetter.svg";
 import Image from "next/image";
 export default function Footer() {
   return (
@@ -15,7 +15,7 @@ export default function Footer() {
                 <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
                   <div className="flex flex-col items-stretch w-[49%] max-md:w-full max-md:ml-0">
                     <div className="text-white text-opacity-60 text-base leading-8 self-stretch items-start grow pt-16 max-md:mt-10">
-                      How it works
+                      <span className="font-bold block">How it works</span>
                       <br />
                       Airtasker for business
                       <br />
@@ -38,8 +38,8 @@ export default function Footer() {
                     </div>
                   </div>
                   <div className="flex flex-col items-stretch w-[51%] ml-5 max-md:w-full max-md:ml-0">
-                    <div className="text-white text-opacity-60 text-base leading-8 flex-1 my-auto max-md:mt-10">
-                      About us
+                    <div className="text-white text-opacity-60 text-base leading-8 flex-1 my-auto max-md:mt-10 pt-16">
+                      <span className="font-bold block">About us</span>
                       <br />
                       Careers
                       <br />
@@ -65,7 +65,7 @@ export default function Footer() {
             </div>
             <div className="flex flex-col items-stretch w-[17%] ml-5 max-md:w-full max-md:ml-0">
               <div className="text-white text-opacity-60 text-base leading-8 self-stretch items-start pr-16 pt-16 max-md:mt-10 max-md:pr-5">
-                Post a task
+                <span className="font-bold block">Post a task</span>
                 <br />
                 Browse tasks
                 <br />
@@ -79,7 +79,7 @@ export default function Footer() {
                 <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
                   <div className="flex flex-col items-stretch w-[52%] max-md:w-full max-md:ml-0">
                     <div className="text-white text-opacity-60 text-base leading-8 self-stretch items-start grow pr-11 pt-16 max-md:mt-10 max-md:pr-5">
-                      Handyman Services
+                      <span className="font-bold block">Handyman Services</span>
                       <br />
                       Cleaning Services
                       <br />
@@ -98,7 +98,7 @@ export default function Footer() {
                   </div>
                   <div className="flex flex-col items-stretch w-[48%] ml-5 max-md:w-full max-md:ml-0">
                     <div className="text-white text-opacity-60 text-base leading-8 self-stretch items-start pt-16 max-md:mt-10">
-                      Sydney
+                      <span className="font-bold block">Sydney</span>
                       <br />
                       Melbourne
                       <br />
