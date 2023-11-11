@@ -15,53 +15,37 @@ import WorkDone from "../assets/clientImage/Group.svg";
 import Image from "next/image";
 import Fillstartfrom from "../assets/clientImage/fillstart.svg";
 import SearchIcon from "../assets/clientImage/searchicon.svg";
+import Hero from "../assets/h.png";
 
 export default function Home() {
   return (
     <main>
       <div className="bg-white flex flex-col">
-        <div className="bg-[#213F61] self-stretch flex w-full pb-48 flex-col pt-8 px-20 max-md:max-w-full max-md:px-5">
-          <div className="self-center z-[1] flex w-full max-w-[1201px] flex-col max-md:max-w-full">
-            <div className="text-white text-center text-5xl font-semibold leading-[68.16px] capitalize self-center max-w-[793px] mt-24 max-md:max-w-full max-md:text-4xl max-md:mt-10">
-              Find the quality
+        <div className="bg-[#213F61]  flex w-full pb-48 min-h-[75vh] items-center  px-20 mx-auto md:px-48 pt-16">
+          <div className="w-2/4 ">
+            <p className=" text-5xl text-white leading-[4rem] font-clash font-medium">
+              Find work or want
               <br />
-              talents to makes your life easier
-            </div>
-            <div className="items-start self-center flex w-[793px] max-w-full gap-0 mt-14  max-md:flex-wrap max-md:mt-10 rounded-lg">
-              <div className="items-start bg-white self-stretch flex grow shrink basis-auto justify-between gap-2.5 pl-8 pr-4  w-full max-md:flex-wrap max-md:px-5 rounded-l-full">
-                <Image
-                  loading="lazy"
-                  width={100}
-                  height={100}
-                  src={SearchIcon}
-                  className="aspect-square object-contain object-center w-6  self-stretch "
-                />
-                <input className="text-cyan-900 text-xl self-center whitespace-nowrap my-auto w-full  outline-none focus:outline-none active:outline-none"></input>
-              </div>
-              <button className="text-white text-xl font-semibold tracking-wide self-stretch whitespace-nowrap justify-center items-center bg-orange-400 w-[188px] max-w-full px-14 py-6 max-md:px-5 rounded-r-full">
-                Search
-              </button>
-            </div>
+              to get it done, you will find
+              <br />
+              everything here
+            </p>
 
-            <div className="items-start self-center flex w-[700px] max-w-full gap-4 mt-4 max-md:flex-wrap">
-              <div className="items-start self-stretch flex grow shrink basis-auto gap-2 max-md:max-w-full max-md:flex-wrap max-md:justify-center">
-                <div className="text-cyan-900 text-sm font-medium self-stretch whitespace-nowrap justify-center items-center bg-white w-[106px] max-w-full px-4 py-2 rounded-[500px]">
-                  UX DESIGN
+            <div className="w-[50%]  flex justify-between gap-5 mt-16 ax-md:max-w-full max-md:flex-wrap max-md:mt-10">
+              <div className="justify-center items-center bg-orange-400 flex flex-col grow shrink-0 basis-auto flex-1 px-20 py-5 rounded-[50px] max-md:px-5">
+                <div className="text-white text-base font-bold self-center whitespace-nowrap">
+                  Post a task
                 </div>
-                <div className="text-cyan-900 text-sm font-medium self-stretch whitespace-nowrap justify-center items-center bg-white w-[136px] max-w-full px-4 py-2 rounded-[500px]">
-                  Product design
-                </div>
-                <div className="text-cyan-900 text-sm font-medium self-stretch whitespace-nowrap justify-center items-center bg-white w-[114px] max-w-full px-4 py-2 rounded-[500px]">
-                  Logo design
-                </div>
-                <div className="text-cyan-900 text-sm font-medium self-stretch whitespace-nowrap justify-center items-center bg-white w-[111px] max-w-full px-4 py-2 rounded-[500px]">
-                  Wordpress
-                </div>
-                <div className="text-cyan-900 text-sm font-medium self-stretch whitespace-nowrap justify-center items-center bg-white w-[121px] max-w-full px-4 py-2 rounded-[500px]">
-                  Photo editing
+              </div>{" "}
+              <div className="justify-center items-center bg-orange-400 bg-opacity-10 flex flex-col grow shrink-0 basis-auto flex-1 px-20 py-5 rounded-[500px] max-md:px-5">
+                <div className="text-orange-400 text-base font-medium self-center whitespace-nowrap">
+                  Become a tasker
                 </div>
               </div>
             </div>
+          </div>
+          <div className="w-[38%] mx-auto">
+            <Image src={Hero} className="w-full" />
           </div>
         </div>
 
@@ -185,7 +169,7 @@ export default function Home() {
               <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
                 <div className="flex flex-col items-stretch w-[33%] max-md:w-full max-md:ml-0">
                   <div className="items-center self-stretch border border-[color:var(--Stoke,rgba(33,63,97,0.05))] shadow-2xl bg-white flex w-full max-w-[386px] grow flex-col mx-auto p-6 rounded-2xl border-solid max-md:mt-5 max-md:px-5">
-                    <div className="text-cyan-900 text-center text-xl font-medium leading-7 self-stretch justify-center items-center bg-blue-300 w-full p-4 rounded-xl">
+                    <div className="text-white text-center text-xl font-medium leading-7 self-stretch justify-center items-center bg-[#213F61] w-full p-4 rounded-xl">
                       Logo designer for
                       <br />
                       photography business
@@ -214,7 +198,7 @@ export default function Home() {
                 </div>{" "}
                 <div className="flex flex-col items-stretch w-[33%] ml-5 max-md:w-full max-md:ml-0">
                   <div className="items-center self-stretch border border-[color:var(--Stoke,rgba(33,63,97,0.05))] shadow-2xl bg-white flex w-full max-w-[387px] grow flex-col mx-auto p-6 rounded-2xl border-solid max-md:mt-5 max-md:px-5">
-                    <div className="text-cyan-900 text-center text-xl font-medium leading-7 self-stretch justify-center items-center bg-blue-300 w-full p-4 rounded-xl">
+                    <div className="text-white text-center text-xl font-medium leading-7 self-stretch justify-center items-center bg-[#213F61] w-full p-4 rounded-xl">
                       Couch moved
                       <br />
                       1km down the road
@@ -243,7 +227,7 @@ export default function Home() {
                 </div>{" "}
                 <div className="flex flex-col items-stretch w-[33%] ml-5 max-md:w-full max-md:ml-0">
                   <div className="items-center self-stretch border border-[color:var(--Stoke,rgba(33,63,97,0.05))] shadow-2xl bg-white flex w-full max-w-[386px] grow flex-col mx-auto p-6 rounded-2xl border-solid max-md:mt-5 max-md:px-5">
-                    <div className="text-cyan-900 text-center text-xl font-medium leading-7 self-stretch justify-center items-center bg-blue-300 w-full p-4 rounded-xl">
+                    <div className="text-white text-center text-xl font-medium leading-7 self-stretch justify-center items-center bg-[#213F61] w-full p-4 rounded-xl">
                       Pick up & deliver
                       <br />a medium size fridge
                     </div>{" "}
@@ -275,7 +259,7 @@ export default function Home() {
               <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
                 <div className="flex flex-col items-stretch w-[33%] max-md:w-full max-md:ml-0">
                   <div className="items-center self-stretch border border-[color:var(--Stoke,rgba(33,63,97,0.05))] shadow-2xl bg-white flex w-full max-w-[386px] grow flex-col mx-auto p-6 rounded-2xl border-solid max-md:mt-5 max-md:px-5">
-                    <div className="text-cyan-900 text-center text-xl font-medium leading-7 self-stretch justify-center items-center bg-blue-300 w-full p-4 rounded-xl">
+                    <div className="text-white text-center text-xl font-medium leading-7 self-stretch justify-center items-center bg-[#213F61] w-full p-4 rounded-xl">
                       Break down and take away boxes
                     </div>{" "}
                     <div className="justify-between items-start self-stretch flex w-full gap-5 mt-4 max-md:justify-center">
@@ -302,7 +286,7 @@ export default function Home() {
                 </div>{" "}
                 <div className="flex flex-col items-stretch w-[33%] ml-5 max-md:w-full max-md:ml-0">
                   <div className="items-center self-stretch border border-[color:var(--Stoke,rgba(33,63,97,0.05))] shadow-2xl bg-white flex w-full max-w-[387px] grow flex-col mx-auto p-6 rounded-2xl border-solid max-md:mt-5 max-md:px-5">
-                    <div className="text-cyan-900 text-center text-xl font-medium leading-7 self-stretch justify-center items-center bg-blue-300 w-full px-4 py-7 rounded-xl">
+                    <div className="text-white text-center text-xl font-medium leading-7 self-stretch justify-center items-center bg-[#213F61] w-full p-4 rounded-xl">
                       Help moving house
                     </div>{" "}
                     <div className="justify-between items-start self-stretch flex w-full gap-5 mt-4 max-md:justify-center">
@@ -329,7 +313,7 @@ export default function Home() {
                 </div>{" "}
                 <div className="flex flex-col items-stretch w-[33%] ml-5 max-md:w-full max-md:ml-0">
                   <div className="items-center self-stretch border border-[color:var(--Stoke,rgba(33,63,97,0.05))] shadow-2xl bg-white flex w-full max-w-[386px] grow flex-col mx-auto p-6 rounded-2xl border-solid max-md:mt-5 max-md:px-5">
-                    <div className="text-cyan-900 text-center text-xl font-medium leading-7 self-stretch justify-center items-center bg-blue-300 w-full px-4 py-7 rounded-xl">
+                    <div className="text-white text-center text-xl font-medium leading-7 self-stretch justify-center items-center bg-[#213F61] w-full p-4 rounded-xl">
                       Sofa delivery
                     </div>{" "}
                     <div className="justify-between items-start self-stretch flex w-full gap-5 mt-4 max-md:justify-center">
@@ -360,7 +344,7 @@ export default function Home() {
               <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
                 <div className="flex flex-col items-stretch w-[33%] max-md:w-full max-md:ml-0">
                   <div className="items-center self-stretch border border-[color:var(--Stoke,rgba(33,63,97,0.05))] shadow-2xl bg-white flex w-full max-w-[386px] grow flex-col mx-auto p-6 rounded-2xl border-solid max-md:mt-5 max-md:px-5">
-                    <div className="text-cyan-900 text-center text-xl font-medium leading-7 self-stretch justify-center items-center bg-blue-300 w-full px-4 py-7 rounded-xl">
+                    <div className="text-white text-center text-xl font-medium leading-7 self-stretch justify-center items-center bg-[#213F61] w-full p-4 rounded-xl">
                       End of lease Clean
                     </div>{" "}
                     <div className="justify-between items-start self-stretch flex w-full gap-5 mt-4 max-md:justify-center">
@@ -387,7 +371,7 @@ export default function Home() {
                 </div>{" "}
                 <div className="flex flex-col items-stretch w-[33%] ml-5 max-md:w-full max-md:ml-0">
                   <div className="items-center self-stretch border border-[color:var(--Stoke,rgba(33,63,97,0.05))] shadow-2xl bg-white flex w-full max-w-[387px] grow flex-col mx-auto p-6 rounded-2xl border-solid max-md:mt-5 max-md:px-5">
-                    <div className="text-cyan-900 text-center text-xl font-medium leading-7 self-stretch justify-center items-center bg-blue-300 w-full px-4 py-7 rounded-xl">
+                    <div className="text-white text-center text-xl font-medium leading-7 self-stretch justify-center items-center bg-[#213F61] w-full p-4 rounded-xl">
                       Urgent removalist
                     </div>{" "}
                     <div className="justify-between items-start self-stretch flex w-full gap-5 mt-4 max-md:justify-center">
@@ -414,7 +398,7 @@ export default function Home() {
                 </div>{" "}
                 <div className="flex flex-col items-stretch w-[33%] ml-5 max-md:w-full max-md:ml-0">
                   <div className="items-center self-stretch border border-[color:var(--Stoke,rgba(33,63,97,0.05))] shadow-2xl bg-white flex w-full max-w-[386px] grow flex-col mx-auto p-6 rounded-2xl border-solid max-md:mt-5 max-md:px-5">
-                    <div className="text-cyan-900 text-center text-xl font-medium leading-7 self-stretch justify-center items-center bg-blue-300 w-full p-4 rounded-xl">
+                    <div className="text-white text-center text-xl font-medium leading-7 self-stretch justify-center items-center bg-[#213F61] w-full p-4 rounded-xl">
                       Break down
                       <br />
                       and take away boxes

@@ -9,7 +9,10 @@ module.exports = {
     extend: {
       colors: {
         primary: "#213F61",
-        secondery: '#E78C3B'
+        secondery: "#E78C3B",
+      },
+      fontFamily: {
+        clash: ["Clash Display", "sans-serif"],
       },
     },
   },

@@ -12,7 +12,7 @@ const page = ({ params }) => {
           <Details />
         </div>
         <div className="col-span-12 md:col-span-5 py-10">
-          {/* <Comments /> */}
+          <Comments />
         </div>
       </div>
       <Footer />
