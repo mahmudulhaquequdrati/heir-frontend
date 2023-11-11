@@ -18,7 +18,7 @@ const page = () => {
                     <svg
                       stroke="currentColor"
                       fill="currentColor"
-                      stroke-width="1px"
+                      strokeWidth="1px"
                       viewBox="0 0 1024 1024"
                       height="1em"
                       width="1em"

@@ -1,8 +1,6 @@
 "use client";
-import { MapContainer, Marker, Popup, TileLayer, Tooltip } from "react-leaflet";
-import "leaflet/dist/leaflet.css";
-import "leaflet-defaulticon-compatibility";
-import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
+
+import Map from "../Map";
 
 export default function MyMap() {
   const position = [51.505, -0.09];
@@ -18,18 +16,20 @@ export default function MyMap() {
     //   </GoogleMapReact>
     // </div>
 
-    <MapContainer
-      className="mapfortask"
-      center={position}
-      zoom={13}
-      scrollWheelZoom={false}
-    >
-      <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-      <Marker position={position}>
-        <Popup>
-          A pretty CSS3 popup. <br /> Easily customizable.
-        </Popup>
-      </Marker>
-    </MapContainer>
+    <Map width="800" height="400" center={position} zoom={12}>
+      {({ TileLayer, Marker, Popup }) => (
+        <>
+          <TileLayer
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
+          />
+          <Marker position={position}>
+            <Popup>
+              A pretty CSS3 popup. <br /> Easily customizable.
+            </Popup>
+          </Marker>
+        </>
+      )}
+    </Map>
   );
 }
