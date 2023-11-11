@@ -21,14 +21,14 @@ const SectionTitle = ({
 
         {paragraph && (
           <p
-            className={`text-cyan-900 text-center text-base leading-6 self-center w-full px-5 mt-2 ${styleParagraph}`}
+            className={`text-cyan-900 text-center text-base leading-6 self-center max-w-full px-5 mt-2 ${styleParagraph}`}
           >
             {paragraph}
           </p>
         )}
       </div>{" "}
       <div
-        className={`bg-orange-400 self-center flex w-[205px] h-[9px] flex-col mt-4 rounded-[50px] ${styleBorder}`}
+        className={`bg-orange-400 self-center flex min-w-[205px] w-5/12 h-[9px] flex-col mt-4 rounded-[50px] ${styleBorder}`}
       />
     </div>
   );

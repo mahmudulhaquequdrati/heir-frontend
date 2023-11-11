@@ -12,7 +12,7 @@ module.exports = {
         secondary: "#E78C3B",
       },
       fontFamily: {
-        clashDisplay: ["var(--font-clashDisplay)"],
+        clash: ["Clash Display", "sans-serif"],
         DM_Sans: "DM Sans, sans-seri",
       },
     },

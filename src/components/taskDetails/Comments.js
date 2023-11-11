@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import "leaflet-defaulticon-compatibility";
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
 import "leaflet/dist/leaflet.css";
@@ -6,6 +7,18 @@ import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import Report from "../../assets/logo/report.svg";
 import Upload from "../../assets/logo/upload.svg";
 import User from "../../assets/logo/user.svg";
+=======
+"use client";
+import React from "react";
+import { MapContainer, Marker, Popup, TileLayer, Tooltip } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
+import "leaflet-defaulticon-compatibility";
+import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
+import User from "../../assets/logo/user.svg";
+import Report from "../../assets/logo/report.svg";
+import Upload from "../../assets/logo/upload.svg";
+import Image from "next/image";
+>>>>>>> 81bcd9ec4c93100e05aeb17dab92dfa1b0c52ccc
 
 const Comments = () => {
   const position = [51.505, -0.09];
@@ -24,7 +37,11 @@ const Comments = () => {
           </Popup>
         </Marker>
       </MapContainer>
+<<<<<<< HEAD
       <div className="flex flex-col w-[452px] items-start gap-[16px] relative mt-10">
+=======
+      <div className="flex flex-col  items-start gap-[16px] relative mt-10">
+>>>>>>> 81bcd9ec4c93100e05aeb17dab92dfa1b0c52ccc
         <div className="inline-flex items-center gap-[8px] relative flex-[0_0_auto]">
           <div className="relative w-fit [font-family:'Clash_Display-Semibold',Helvetica] font-normal text-primary text-[20px] tracking-[0] leading-[normal]">
             Offers
@@ -66,7 +83,11 @@ const Comments = () => {
               looking to do anything to make Xtra money to buy me a ute and can
               start ASAP thanks
             </p>
+<<<<<<< HEAD
             <div className="inline-flex items-center justify-center gap-[10px] px-[20px] py-[8px] bg-secondary rounded-[50px] relative flex-[0_0_auto]">
+=======
+            <div className="inline-flex items-center justify-center gap-[10px] px-[20px] py-[8px] bg-secondery rounded-[50px] relative flex-[0_0_auto]">
+>>>>>>> 81bcd9ec4c93100e05aeb17dab92dfa1b0c52ccc
               <div className="relative w-fit mt-[-1.00px] [font-family:'Clash_Display-Semibold',Helvetica] font-normal text-[#ffffff] text-[16px] tracking-[0] leading-[normal]">
                 Reply
               </div>
@@ -74,7 +95,11 @@ const Comments = () => {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
       <div className="flex flex-col w-[452px] items-start gap-[12px] relative mt-5">
+=======
+      <div className="flex flex-col  items-start gap-[12px] relative mt-5">
+>>>>>>> 81bcd9ec4c93100e05aeb17dab92dfa1b0c52ccc
         <div className="inline-flex items-center gap-[8px] relative flex-[0_0_auto]">
           <div className="relative w-fit [font-family:'Clash_Display-Semibold',Helvetica] font-normal text-primary text-[20px] tracking-[0] leading-[normal]">
             Questions
@@ -108,7 +133,11 @@ const Comments = () => {
                   alt="Frame"
                   src={Upload}
                 />
+<<<<<<< HEAD
                 <div className="inline-flex items-center justify-center gap-[10px] px-[20px] py-[8px] bg-secondary rounded-[50px] relative flex-[0_0_auto]">
+=======
+                <div className="inline-flex items-center justify-center gap-[10px] px-[20px] py-[8px] bg-secondery rounded-[50px] relative flex-[0_0_auto]">
+>>>>>>> 81bcd9ec4c93100e05aeb17dab92dfa1b0c52ccc
                   <div className="relative w-fit mt-[-1.00px] [font-family:'Clash_Display-Semibold',Helvetica] font-normal text-[#ffffff] text-[16px] tracking-[0] leading-[normal]">
                     Reply
                   </div>
@@ -159,7 +188,11 @@ const Comments = () => {
                 alt="Frame"
                 src={Report}
               />
+<<<<<<< HEAD
               <div className="inline-flex items-center justify-center gap-[10px] px-[20px] py-[8px] bg-secondary rounded-[50px] relative flex-[0_0_auto]">
+=======
+              <div className="inline-flex items-center justify-center gap-[10px] px-[20px] py-[8px] bg-secondery rounded-[50px] relative flex-[0_0_auto]">
+>>>>>>> 81bcd9ec4c93100e05aeb17dab92dfa1b0c52ccc
                 <div className="relative w-fit mt-[-1.00px] [font-family:'Clash_Display-Semibold',Helvetica] font-normal text-[#ffffff] text-[16px] tracking-[0] leading-[normal]">
                   Reply
                 </div>
@@ -206,7 +239,11 @@ const Comments = () => {
                 alt="Frame"
                 src={Report}
               />
+<<<<<<< HEAD
               <div className="inline-flex items-center justify-center gap-[10px] px-[20px] py-[8px] bg-secondary rounded-[50px] relative flex-[0_0_auto]">
+=======
+              <div className="inline-flex items-center justify-center gap-[10px] px-[20px] py-[8px] bg-secondery rounded-[50px] relative flex-[0_0_auto]">
+>>>>>>> 81bcd9ec4c93100e05aeb17dab92dfa1b0c52ccc
                 <div className="relative w-fit mt-[-1.00px] [font-family:'Clash_Display-Semibold',Helvetica] font-normal text-[#ffffff] text-[16px] tracking-[0] leading-[normal]">
                   Reply
                 </div>
