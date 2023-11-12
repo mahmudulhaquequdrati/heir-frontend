@@ -21,8 +21,8 @@ export default function Home() {
   return (
     <main>
       <div className="bg-white flex flex-col">
-        <div className="bg-[#213F61]  flex w-full pb-48 min-h-[75vh] items-center  px-20 mx-auto md:px-48 pt-16">
-          <div className="w-2/4 ">
+        <div className="bg-[#213F61] md:flex w-full pb-48 md:min-h-[75vh] items-center px-10 mx-auto md:px-48 pt-10 md:pt-16">
+          <div className="w-full md:w-2/4 ">
             <p className=" text-5xl text-white leading-[4rem] font-clash font-medium">
               Find work or want
               <br />
@@ -44,12 +44,12 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="w-[38%] mx-auto">
-            <Image src={Hero} className="w-full" alt="hero" />
+          <div className="w-full md:w-[38%] mx-auto mt-10 md:mt-0">
+            <Image height={100} width={100} src={Hero} className="w-full" alt="hero" />
           </div>
         </div>
 
-        <div className="container mx-auto shadow-2xl bg-white self-stretch -translate-y-2/4 pl-28 pr-16 py-12 rounded-[500px] max-md:max-w-full max-md:mt-10 max-md:px-5">
+        <div className="container flex justify-center items-center mx-auto md:shadow-2xl bg-white md:self-stretch md:-translate-y-2/4 pl-28 pr-16 md:py-12 md:rounded-[500px] max-md:max-w-full max-md:mt-10 max-md:px-5">
           <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
             <div className="flex flex-col items-stretch w-1/5 max-md:w-full max-md:ml-0">
               <div className="flex items-start gap-5 my-auto max-md:mt-10">
@@ -138,19 +138,19 @@ export default function Home() {
 
         <ChooseUs />
         <div className="items-center self-center flex w-full max-w-[1199px] flex-col mt-32 max-md:max-w-full max-md:mt-10">
-          <div className="items-center self-center flex w-[947px] max-w-full flex-col">
-            <div className="items-center self-center flex w-[677px] max-w-full flex-col">
+          <div className="items-center self-center flex w-full md:w-[947px] max-w-full flex-col">
+            <div className="items-center self-center flex w-full md:w-[677px] max-w-full flex-col">
               <div className="items-center self-stretch flex flex-col px-5 max-md:max-w-full">
                 <div className="text-cyan-900 text-4xl font-semibold tracking-wider  -mr-5 max-md:max-w-full">
                   See what others are getting done
                 </div>{" "}
-                <div className="text-cyan-900 text-center text-base leading-6 self-center whitespace-nowrap mt-2">
+                <div className="text-cyan-900 text-center text-base leading-6 self-center md:whitespace-nowrap mt-2">
                   Connect with unlimited quality talents to get any help.
                 </div>
               </div>{" "}
               <div className="bg-orange-400 self-center flex w-[205px] h-[9px] flex-col mt-4 rounded-[50px]" />
             </div>{" "}
-            <div className="justify-center items-start border border-[color:var(--Stoke,rgba(33,63,97,0.05))] shadow-2xl bg-white self-stretch flex gap-2 mt-10 px-5 py-2 rounded-[500px] border-solid max-md:max-w-full max-md:flex-wrap">
+            <div className="justify-center items-start border border-[color:var(--Stoke,rgba(33,63,97,0.05))] md:shadow-2xl bg-white self-stretch flex gap-2 mt-10 px-5 py-2 md:rounded-[500px] border-solid max-md:max-w-full max-md:flex-wrap">
               <div className="text-white text-center text-base font-medium self-stretch whitespace-nowrap justify-center items-center bg-cyan-900 flex-1 px-4 py-2.5 rounded-[50px]">
                 Starting a business
               </div>{" "}

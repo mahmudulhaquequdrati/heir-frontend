@@ -123,7 +123,7 @@ export default function Review() {
                   </div>
                 </div>
                 <div className="items-start self-stretch flex flex-col mt-10 max-md:max-w-full max-md:mt-10">
-                  <div className="flex w-[326px] max-w-full items-start gap-3 self-start">
+                  <div className="flex w-full md:w-[326px] max-w-full items-start gap-3 self-start">
                     <Image
                       loading="lazy"
                       width={100}
@@ -132,11 +132,11 @@ export default function Review() {
                       alt="checked icon"
                       className="aspect-square object-contain object-center w-4 overflow-hidden max-w-full self-start"
                     />
-                    <div className="text-cyan-900 text-lg font-medium leading-8 whitespace-nowrap grow shrink basis-auto self-start">
+                    <div className="text-cyan-900 text-lg font-medium leading-8 md:whitespace-nowrap grow shrink basis-auto self-start">
                       Sign up for free.
                     </div>
                   </div>
-                  <div className="flex w-[570px] max-w-full items-start gap-3 mt-7 self-start max-md:flex-wrap">
+                  <div className="flex w-full md:w-[570px] max-w-full items-start gap-3 mt-7 self-start max-md:flex-wrap">
                     <Image
                       loading="lazy"
                       width={100}
@@ -145,11 +145,11 @@ export default function Review() {
                       alt="checked icon"
                       className="aspect-square object-contain object-center w-4 overflow-hidden max-w-full self-start"
                     />
-                    <div className="text-cyan-900 text-lg font-medium leading-8 whitespace-nowrap grow shrink basis-auto self-start max-md:max-w-full">
+                    <div className="text-cyan-900 text-lg font-medium leading-8 md:whitespace-nowrap grow shrink basis-auto self-start max-md:max-w-full">
                       Post your task or service need.
                     </div>
                   </div>
-                  <div className="flex w-[570px] max-w-full items-start gap-3 mt-7 self-start max-md:flex-wrap">
+                  <div className="flex w-full items-center md:w-[570px] max-w-full gap-3 mt-7 self-start max-md:flex-wrap">
                     <Image
                       loading="lazy"
                       width={100}
@@ -158,7 +158,7 @@ export default function Review() {
                       alt="checked icon"
                       className="aspect-square object-contain object-center w-4 overflow-hidden max-w-full self-start"
                     />
-                    <div className="text-cyan-900 text-lg font-medium leading-8 whitespace-nowrap grow shrink basis-auto self-start max-md:max-w-full">
+                    <div className="text-cyan-900 text-lg font-medium leading-8 md:whitespace-nowrap grow shrink basis-auto self-start max-md:max-w-full">
                       Connect with the right person to get it done.
                     </div>
                   </div>
@@ -183,7 +183,7 @@ export default function Review() {
           loading="lazy"
           src={bg}
           alt="bg icon"
-          className="absolute z-[-1] w-full object-cover object-center inset-0"
+          className="absolute z-[-1] w-full h-full object-cover object-center inset-0"
         />
         <div className="relative  flex justify-center items-center w-full  flex-col px-5 max-md:max-w-full py-24">
           {/* f */}
@@ -195,37 +195,16 @@ export default function Review() {
           <div className="text-white text-center text-lg leading-8 self-center ml-0 max-w-[831px] mt-4 max-md:max-w-full">
             Subscribe here, we’ll let you know when we added them.
           </div>
-          <div className=" flex  w-[70%] gap-0  mt-11 rounded-[500px]  overflow-hidden max-md:mt-10 ">
+          <div className=" flex items-center w-full md:w-[70%] gap-0  mt-11 md:rounded-[500px]  overflow-hidden max-md:mt-10 ">
             <input
-              className="text-cyan-900 text-base items-center bg-white grow basis-auto pl-9 pr-20 py-6 max-md:max-w-full max-md:px-5 outline-none"
+              className="text-cyan-900 text-base items-center bg-white grow basis-auto pl-9 pr-20 py-2 rounded md:py-6 max-md:max-w-full max-md:px-5 outline-none"
               placeholder="Enter your mail here.."
             ></input>
-            <button className="text-white text-xl font-semibold tracking-wide   bg-cyan-900 w-[188px] max-w-full pl-11 pr-10 py-6 max-md:px-5">
+            <button className="text-white  md:text-xl font-semibold tracking-wide   bg-cyan-900 w-full md:w-[188px] max-w-full  md:pl-11 md:pr-10 py-2 md:py-6 max-md:px-2">
               Subscribe
             </button>
           </div>
         </div>
-        {/* <div className="relative self-center flex w-full items-start justify-between gap-5 mt-80 px-5 max-md:max-w-full max-md:flex-wrap max-md:mt-10">
-          <div className="self-stretch flex w-[376px] max-w-full items-start justify-between gap-5">
-            <div className="text-white text-xl font-semibold self-stretch">
-              Discover
-            </div>
-            <div className="text-white text-xl font-semibold self-center whitespace-nowrap my-auto">
-              Company
-            </div>
-          </div>
-          <div className="self-stretch flex w-[795px] max-w-full items-start justify-between gap-5 pr-20 max-md:flex-wrap ">
-            <div className="text-white text-xl font-semibold flex-1">
-              Existing Members
-            </div>
-            <div className="text-white text-xl font-semibold flex-1">
-              Popular Categories
-            </div>
-            <div className="text-white text-xl font-semibold self-stretch whitespace-nowrap">
-              Popular Locations
-            </div>
-          </div>
-        </div> */}
       </div>
     </div>
   );
