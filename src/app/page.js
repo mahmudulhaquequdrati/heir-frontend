@@ -45,7 +45,7 @@ export default function Home() {
             </div>
           </div>
           <div className="w-full md:w-[38%] mx-auto mt-10 md:mt-0">
-            <Image height={100} width={100} src={Hero} className="w-full" alt="hero" />
+            <Image src={Hero} className="w-full" alt="hero" />
           </div>
         </div>
 
