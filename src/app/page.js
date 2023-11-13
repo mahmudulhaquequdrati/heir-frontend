@@ -21,14 +21,12 @@ export default function Home() {
   return (
     <main>
       <div className="bg-white flex flex-col">
-        <div className="bg-[#213F61] md:flex w-full pb-48 md:min-h-[75vh] items-center px-10 mx-auto md:px-48 pt-10 md:pt-16">
+        <div className="bg-[#213F61] md:flex w-full pb-48 md:min-h-[75vh] items-center px-10 mx-auto md:px-24 pt-10 md:pt-16">
           <div className="w-full md:w-2/4 ">
             <p className=" text-5xl text-white leading-[4rem] font-clash font-medium">
               Find work or want
               <br />
-              to get it done, you will find
-              <br />
-              everything here
+              to get it done, you will <br /> find everything here
             </p>
 
             <div className="w-[50%]  flex justify-between gap-5 mt-16 ax-md:max-w-full max-md:flex-wrap max-md:mt-10">
