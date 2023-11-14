@@ -1,11 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable jsx-a11y/alt-text */
-import React from "react";
-import bg from "../../assets/bg.png";
 import Image from "next/image";
-import Stars from '../../assets/clientImage/starts.svg'
-import BG from '../../assets/clientImage/BG.svg'
-import Checked from '../../assets/clientImage/Checked.svg'
+import bg from "../../assets/bg.png";
+import BG from "../../assets/clientImage/BG.svg";
+import Checked from "../../assets/clientImage/Checked.svg";
+import Stars from "../../assets/clientImage/starts.svg";
 
 export default function Review() {
   return (
@@ -185,9 +184,9 @@ export default function Review() {
           alt="bg icon"
           className="absolute z-[-1] w-full h-full object-cover object-center inset-0"
         />
-        <div className="relative  flex justify-center items-center w-full  flex-col px-5 max-md:max-w-full py-24">
+        <div className="relative flex justify-center items-center w-full  flex-col px-5 max-md:max-w-full py-24">
           {/* f */}
-          <div className="text-white text-center text-4xl font-semibold    max-md:max-w-full max-md:mt-10">
+          <div className="text-white text-center text-4xl font-semibold rounded max-md:max-w-full max-md:mt-10">
             Don’t find your task category?
             <br />
             or interested to start with new skills to prove?

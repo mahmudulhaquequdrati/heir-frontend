@@ -1,21 +1,20 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
+import BoostBusiness from "@/components/homeComponents/BoostBusiness";
+import ChooseUs from "@/components/homeComponents/ChooseUs";
+import Review from "@/components/homeComponents/Review";
+import VerifiedTalents from "@/components/homeComponents/VerifiedTalents";
 import Footer from "@/components/shareableComponents/Footer";
-import JobIcon from "../assets/clientImage/portfolio 1.svg";
-import PeopleGroup from "../assets/clientImage/user 1.svg";
-import Invoices from "../assets/clientImage/invoice 1.svg";
-import Satisfaction from "../assets/clientImage/satisfaction 1.svg";
+import Image from "next/image";
 import Trophy from "../assets/clientImage/Component 97.svg";
 import Currency from "../assets/clientImage/Component 99.svg";
 import WorkDone from "../assets/clientImage/Group.svg";
-import Image from "next/image";
 import Fillstartfrom from "../assets/clientImage/fillstart.svg";
-import SearchIcon from "../assets/clientImage/searchicon.svg";
+import Invoices from "../assets/clientImage/invoice 1.svg";
+import JobIcon from "../assets/clientImage/portfolio 1.svg";
+import Satisfaction from "../assets/clientImage/satisfaction 1.svg";
+import PeopleGroup from "../assets/clientImage/user 1.svg";
 import Hero from "../assets/h.png";
-import BoostBusiness from "@/components/homeComponents/BoostBusiness";
-import ChooseUs from "@/components/homeComponents/ChooseUs";
-import VerifiedTalents from "@/components/homeComponents/VerifiedTalents";
-import Review from "@/components/homeComponents/Review";
 
 export default function Home() {
   return (
@@ -48,8 +47,8 @@ export default function Home() {
         </div>
 
         <div className="container flex justify-center items-center mx-auto md:shadow-2xl bg-white md:self-stretch md:-translate-y-2/4 pl-28 pr-16 md:py-12 md:rounded-[500px] max-md:max-w-full max-md:mt-10 max-md:px-5">
-          <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-            <div className="flex flex-col items-stretch w-1/5 max-md:w-full max-md:ml-0">
+          <div className="gap-5 flex max-md:flex-col max-md:gap-0">
+            <div className="flex flex-col w-1/5 max-md:w-full max-md:ml-0">
               <div className="flex items-start gap-5 my-auto max-md:mt-10">
                 <Image
                   loading="lazy"
@@ -69,7 +68,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col items-stretch w-[24%] ml-5 max-md:w-full max-md:ml-0">
+            <div className="flex flex-col w-[24%] ml-5 max-md:w-full max-md:ml-0">
               <div className="flex items-start gap-5 my-auto max-md:mt-10">
                 <Image
                   loading="lazy"
@@ -89,7 +88,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col items-stretch w-[24%] ml-5 max-md:w-full max-md:ml-0">
+            <div className="flex flex-col w-[24%] ml-5 max-md:w-full max-md:ml-0">
               <div className="flex w-full max-w-[181px] items-start justify-between gap-5 my-auto max-md:mt-10">
                 <Image
                   loading="lazy"
@@ -109,7 +108,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col items-stretch w-[32%] ml-5 max-md:w-full max-md:ml-0">
+            <div className="flex flex-col w-[32%] ml-5 max-md:w-full max-md:ml-0">
               <div className="flex items-start gap-3 my-auto max-md:mt-10">
                 <Image
                   loading="lazy"
@@ -168,8 +167,8 @@ export default function Home() {
           </div>{" "}
           <div className="items-start self-stretch flex grow flex-col mt-16 max-md:max-w-full max-md:mt-10">
             <div className="self-stretch px-5 max-md:max-w-full">
-              <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-                <div className="flex flex-col items-stretch w-[33%] max-md:w-full max-md:ml-0">
+              <div className="gap-5 flex max-md:flex-col max-md:gap-0">
+                <div className="flex flex-col w-[33%] max-md:w-full max-md:ml-0">
                   <div className="items-center self-stretch border border-[color:var(--Stoke,rgba(33,63,97,0.05))] shadow-2xl bg-white flex w-full max-w-[386px] grow flex-col mx-auto p-6 rounded-2xl border-solid max-md:mt-5 max-md:px-5">
                     <div className="text-white text-center text-xl font-medium leading-7 self-stretch justify-center items-center bg-[#213F61] w-full p-4 rounded-xl">
                       Logo designer for
@@ -199,7 +198,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>{" "}
-                <div className="flex flex-col items-stretch w-[33%] ml-5 max-md:w-full max-md:ml-0">
+                <div className="flex flex-col w-[33%] ml-5 max-md:w-full max-md:ml-0">
                   <div className="items-center self-stretch border border-[color:var(--Stoke,rgba(33,63,97,0.05))] shadow-2xl bg-white flex w-full max-w-[387px] grow flex-col mx-auto p-6 rounded-2xl border-solid max-md:mt-5 max-md:px-5">
                     <div className="text-white text-center text-xl font-medium leading-7 self-stretch justify-center items-center bg-[#213F61] w-full p-4 rounded-xl">
                       Couch moved
@@ -229,7 +228,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>{" "}
-                <div className="flex flex-col items-stretch w-[33%] ml-5 max-md:w-full max-md:ml-0">
+                <div className="flex flex-col w-[33%] ml-5 max-md:w-full max-md:ml-0">
                   <div className="items-center self-stretch border border-[color:var(--Stoke,rgba(33,63,97,0.05))] shadow-2xl bg-white flex w-full max-w-[386px] grow flex-col mx-auto p-6 rounded-2xl border-solid max-md:mt-5 max-md:px-5">
                     <div className="text-white text-center text-xl font-medium leading-7 self-stretch justify-center items-center bg-[#213F61] w-full p-4 rounded-xl">
                       Pick up & deliver
@@ -261,8 +260,8 @@ export default function Home() {
               </div>
             </div>{" "}
             <div className="self-stretch mt-5 px-5 max-md:max-w-full">
-              <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-                <div className="flex flex-col items-stretch w-[33%] max-md:w-full max-md:ml-0">
+              <div className="gap-5 flex max-md:flex-col max-md max-md:gap-0">
+                <div className="flex flex-col w-[33%] max-md:w-full max-md:ml-0">
                   <div className="items-center self-stretch border border-[color:var(--Stoke,rgba(33,63,97,0.05))] shadow-2xl bg-white flex w-full max-w-[386px] grow flex-col mx-auto p-6 rounded-2xl border-solid max-md:mt-5 max-md:px-5">
                     <div className="text-white text-center text-xl font-medium leading-7 self-stretch justify-center items-center bg-[#213F61] w-full p-4 rounded-xl">
                       Break down and take away boxes
@@ -290,7 +289,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>{" "}
-                <div className="flex flex-col items-stretch w-[33%] ml-5 max-md:w-full max-md:ml-0">
+                <div className="flex flex-col w-[33%] ml-5 max-md:w-full max-md:ml-0">
                   <div className="items-center self-stretch border border-[color:var(--Stoke,rgba(33,63,97,0.05))] shadow-2xl bg-white flex w-full max-w-[387px] grow flex-col mx-auto p-6 rounded-2xl border-solid max-md:mt-5 max-md:px-5">
                     <div className="text-white text-center text-xl font-medium leading-7 self-stretch justify-center items-center bg-[#213F61] w-full p-4 rounded-xl">
                       Help moving house
@@ -318,7 +317,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>{" "}
-                <div className="flex flex-col items-stretch w-[33%] ml-5 max-md:w-full max-md:ml-0">
+                <div className="flex flex-col w-[33%] ml-5 max-md:w-full max-md:ml-0">
                   <div className="items-center self-stretch border border-[color:var(--Stoke,rgba(33,63,97,0.05))] shadow-2xl bg-white flex w-full max-w-[386px] grow flex-col mx-auto p-6 rounded-2xl border-solid max-md:mt-5 max-md:px-5">
                     <div className="text-white text-center text-xl font-medium leading-7 self-stretch justify-center items-center bg-[#213F61] w-full p-4 rounded-xl">
                       Sofa delivery
@@ -349,8 +348,8 @@ export default function Home() {
               </div>
             </div>{" "}
             <div className="self-stretch mt-5 px-5 max-md:max-w-full">
-              <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-                <div className="flex flex-col items-stretch w-[33%] max-md:w-full max-md:ml-0">
+              <div className="gap-5 flex max-md:flex-col max-md:gap-0">
+                <div className="flex flex-col w-[33%] max-md:w-full max-md:ml-0">
                   <div className="items-center self-stretch border border-[color:var(--Stoke,rgba(33,63,97,0.05))] shadow-2xl bg-white flex w-full max-w-[386px] grow flex-col mx-auto p-6 rounded-2xl border-solid max-md:mt-5 max-md:px-5">
                     <div className="text-white text-center text-xl font-medium leading-7 self-stretch justify-center items-center bg-[#213F61] w-full p-4 rounded-xl">
                       End of lease Clean
@@ -378,7 +377,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>{" "}
-                <div className="flex flex-col items-stretch w-[33%] ml-5 max-md:w-full max-md:ml-0">
+                <div className="flex flex-col w-[33%] ml-5 max-md:w-full max-md:ml-0">
                   <div className="items-center self-stretch border border-[color:var(--Stoke,rgba(33,63,97,0.05))] shadow-2xl bg-white flex w-full max-w-[387px] grow flex-col mx-auto p-6 rounded-2xl border-solid max-md:mt-5 max-md:px-5">
                     <div className="text-white text-center text-xl font-medium leading-7 self-stretch justify-center items-center bg-[#213F61] w-full p-4 rounded-xl">
                       Urgent removalist
@@ -406,7 +405,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>{" "}
-                <div className="flex flex-col items-stretch w-[33%] ml-5 max-md:w-full max-md:ml-0">
+                <div className="flex flex-col w-[33%] ml-5 max-md:w-full max-md:ml-0">
                   <div className="items-center self-stretch border border-[color:var(--Stoke,rgba(33,63,97,0.05))] shadow-2xl bg-white flex w-full max-w-[386px] grow flex-col mx-auto p-6 rounded-2xl border-solid max-md:mt-5 max-md:px-5">
                     <div className="text-white text-center text-xl font-medium leading-7 self-stretch justify-center items-center bg-[#213F61] w-full p-4 rounded-xl">
                       Break down
