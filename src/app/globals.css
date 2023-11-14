@@ -5,9 +5,9 @@
 @tailwind components;
 @tailwind utilities;
 
-.leaflet-container {
+/* .leaflet-container {
     z-index: -10;
-}
+} */
 input {
     @apply focus:outline-none;
 }
