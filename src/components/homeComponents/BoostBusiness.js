@@ -3,7 +3,7 @@ export default function BoostBusiness() {
     <div className="container mx-auto">
       <div className="flex items-center justify-center   w-10/12  max-w-full flex-col mt-24 max-md:mt-10 mx-auto mb-24">
         <div className="items-center  flex flex-col px-5">
-          <div className="text-cyan-900 text-4xl font-semibold tracking-wider">
+          <div className="text-cyan-900 text-2xl sm:text-4xl text-center font-semibold tracking-wider">
             Boost Your business by connecting quality talents
           </div>
           <div className="text-cyan-900 text-center text-base leading-6 mt-4 ">

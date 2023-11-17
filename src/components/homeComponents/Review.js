@@ -11,11 +11,11 @@ export default function Review() {
     <div className="self-center z-[1] flex w-full max-w-[1324px] flex-col mt-40 max-md:max-w-full max-md:mt-10">
       <div className="items-center self-stretch flex flex-col max-md:max-w-full">
         <div className="items-center self-center flex w-[930px] max-w-full flex-col px-5">
-          <div className="text-cyan-900 text-center text-5xl font-semibold leading-[57.96px] self-stretch -mr-5 max-md:max-w-full max-md:text-4xl">
+          <div className="text-cyan-900 text-center text-2xl sm:text-5xl font-semibold">
             Trusted by millions <br />
             of worldwide customers
           </div>{" "}
-          <div className="bg-orange-400 self-center flex w-80 h-[9px] flex-col mt-4 rounded-[50px]" />
+          <div className="bg-orange-400 self-center flex max-w-[250px] sm:max-w-[329px] w-full h-[5px] sm:h-[9px] flex-col mt-4 rounded-[50px]" />
         </div>{" "}
         <div className="self-stretch mt-16 px-5 max-md:max-w-full max-md:mt-10">
           <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
@@ -85,19 +85,19 @@ export default function Review() {
           </div>
         </div>
       </div>{" "}
-      <div className="items-start self-stretch flex flex-col mt-56  max-md:max-w-full max-md:mt-10 ">
-        <div className="items-center self-center flex w-[924px] max-w-full flex-col">
-          <div className="items-center self-stretch flex flex-col max-md:max-w-full">
-            <div className="text-cyan-900 text-4xl font-semibold tracking-wider  max-md:max-w-full">
+      <div className="items-start self-stretch flex flex-col mt-56 max-md:mt-10 ">
+        <div className="items-center self-center flex max-w-[924px] w-full flex-col">
+          <div className="items-center self-stretch flex flex-col px-4">
+            <div className="text-cyan-900 text-center text-2xl sm:text-4xl font-semibold tracking-wider">
               Are you ready to make your life easier?
             </div>{" "}
-            <div className="text-cyan-900 text-center text-base leading-6 self-center whitespace-nowrap mt-2 max-md:max-w-full">
+            <p className="text-cyan-900 text-center text-base leading-6 self-center mt-2">
               Connect with unlimited quality talents to get any help.
-            </div>
+            </p>
           </div>{" "}
-          <div className="bg-orange-400 self-center flex w-[329px] h-[9px] flex-col mt-4 rounded-[50px]" />
+          <div className="bg-orange-400 self-center flex max-w-[250px] sm:max-w-[329px] w-full h-[5px] sm:h-[9px] flex-col mt-4 rounded-[50px]" />
         </div>{" "}
-        <div className="self-stretch mt-24  max-md:max-w-full max-md:mt-10 ">
+        <div className="self-stretch mt-24  max-md:max-w-full max-md:mt-10 px-4">
           <div className="gap-8 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
             <div className="flex flex-col items-stretch w-[48%] max-md:w-full max-md:ml-0">
               <Image
@@ -112,7 +112,7 @@ export default function Review() {
             <div className="flex flex-col items-stretch w-[52%] ml-5 max-md:w-full max-md:ml-0">
               <div className="items-start flex flex-col pb-24 max-md:max-w-full max-md:mt-10">
                 <div className="items-start self-stretch flex flex-col max-md:max-w-full">
-                  <div className="text-cyan-900 text-4xl font-semibold leading-[52.02px] self-stretch max-md:max-w-full">
+                  <div className="text-cyan-900 text-2xl sm:text-4xl font-semibold leading-[32.02px] self-stretch max-md:max-w-full">
                     Join Hier Today and <br />
                     Experience the Difference
                   </div>{" "}
@@ -122,53 +122,53 @@ export default function Review() {
                   </div>
                 </div>
                 <div className="items-start self-stretch flex flex-col mt-10 max-md:max-w-full max-md:mt-10">
-                  <div className="flex w-full md:w-[326px] max-w-full items-start gap-3 self-start">
+                  <div className="flex w-full items-center gap-3">
                     <Image
                       loading="lazy"
                       width={100}
                       height={100}
                       src={Checked}
                       alt="checked icon"
-                      className="aspect-square object-contain object-center w-4 overflow-hidden max-w-full self-start"
+                      className="aspect-square object-contain object-center w-4 h-4 overflow-hidden max-w-full"
                     />
-                    <div className="text-cyan-900 text-lg font-medium leading-8 md:whitespace-nowrap grow shrink basis-auto self-start">
+                    <p className="text-cyan-900 text-[16px] sm:text-lg font-medium leading-8">
                       Sign up for free.
-                    </div>
+                    </p>
                   </div>
-                  <div className="flex w-full md:w-[570px] max-w-full items-start gap-3 mt-7 self-start max-md:flex-wrap">
+                  <div className="flex w-full items-center gap-3">
                     <Image
                       loading="lazy"
                       width={100}
                       height={100}
                       src={Checked}
                       alt="checked icon"
-                      className="aspect-square object-contain object-center w-4 overflow-hidden max-w-full self-start"
+                      className="aspect-square object-contain object-center w-4 overflow-hidden max-w-full"
                     />
-                    <div className="text-cyan-900 text-lg font-medium leading-8 md:whitespace-nowrap grow shrink basis-auto self-start max-md:max-w-full">
+                    <div className="text-cyan-900 text-[16px] sm:text-lg font-medium leading-8 md:whitespace-nowrap grow shrink basis-auto self-start max-md:max-w-full">
                       Post your task or service need.
                     </div>
                   </div>
-                  <div className="flex w-full items-center md:w-[570px] max-w-full gap-3 mt-7 self-start max-md:flex-wrap">
+                  <div className="flex w-full items-center gap-3">
                     <Image
                       loading="lazy"
                       width={100}
                       height={100}
                       src={Checked}
                       alt="checked icon"
-                      className="aspect-square object-contain object-center w-4 overflow-hidden max-w-full self-start"
+                      className="aspect-square object-contain object-center w-4 overflow-hidden max-w-full"
                     />
-                    <div className="text-cyan-900 text-lg font-medium leading-8 md:whitespace-nowrap grow shrink basis-auto self-start max-md:max-w-full">
+                    <div className="text-cyan-900 text-[16px] sm:text-lg font-medium leading-8 md:whitespace-nowrap grow shrink basis-auto self-start max-md:max-w-full">
                       Connect with the right person to get it done.
                     </div>
                   </div>
-                  <div className=" flex gap-4 mt-12 ">
-                    <div className=" bg-orange-400 px-20 py-5 rounded-[50px] max-md:px-5">
-                      <div className="text-white text-base font-bold ">
+                  <div className="w-full flex items-center flex-col sm:flex-row gap-4 mt-12">
+                    <div className="max-w-[300px] w-full bg-orange-400 px-8 sm:px-20 py-4 sm:py-5 rounded-[50px] max-md:px-5 flex justify-center items-center">
+                      <p className="text-white text-base font-bold ">
                         Post a task
-                      </div>
+                      </p>
                     </div>
-                    <div className="text-orange-400 text-base font-medium  bg-orange-400 bg-opacity-10  pl-20 pr-20 py-5 rounded-[500px] max-md:px-5">
-                      Become a tasker
+                    <div className="max-w-[300px] w-full text-orange-400 text-[14px] sm:text-base font-medium bg-orange-400 bg-opacity-10 py-4 sm:py-5 px-8 sm:px-20 rounded-[500px] flex justify-center items-center">
+                      <p>Become a tasker</p>
                     </div>
                   </div>
                 </div>
@@ -177,7 +177,7 @@ export default function Review() {
           </div>
         </div>
       </div>
-      <div className="flex-col mb-60 mt-48 my-12 relative flex  pt-2 pb-4 max-md:max-w-full">
+      <div className="flex-col my-[100px] relative flex pt-2 pb-4 max-md:max-w-full mx-4 rounded-2xl overflow-hidden">
         <Image
           loading="lazy"
           src={bg}
@@ -186,7 +186,7 @@ export default function Review() {
         />
         <div className="relative flex justify-center items-center w-full  flex-col px-5 max-md:max-w-full py-24">
           {/* f */}
-          <div className="text-white text-center text-4xl font-semibold rounded max-md:max-w-full max-md:mt-10">
+          <div className="text-white text-center text-2xl sm:text-4xl font-semibold rounded max-md:max-w-full max-md:mt-10">
             Don’t find your task category?
             <br />
             or interested to start with new skills to prove?
@@ -194,12 +194,12 @@ export default function Review() {
           <div className="text-white text-center text-lg leading-8 self-center ml-0 max-w-[831px] mt-4 max-md:max-w-full">
             Subscribe here, we’ll let you know when we added them.
           </div>
-          <div className=" flex items-center w-full md:w-[70%] gap-0  mt-11 md:rounded-[500px]  overflow-hidden max-md:mt-10 ">
+          <div className="flex flex-col sm:flex-row items-center w-full md:w-[70%] gap-0  mt-11 md:rounded-[500px] overflow-hidden max-md:mt-10 ">
             <input
-              className="text-cyan-900 text-base items-center bg-white grow basis-auto pl-9 pr-20 py-2 rounded md:py-6 max-md:max-w-full max-md:px-5 outline-none"
+              className="w-full text-cyan-900 text-base items-center bg-white grow basis-auto pl-9 pr-20 py-2 rounded md:py-6 max-md:max-w-full max-md:px-5 outline-none"
               placeholder="Enter your mail here.."
             ></input>
-            <button className="text-white  md:text-xl font-semibold tracking-wide   bg-cyan-900 w-full md:w-[188px] max-w-full  md:pl-11 md:pr-10 py-2 md:py-6 max-md:px-2">
+            <button className="text-white  md:text-xl font-semibold tracking-wide bg-cyan-900 w-full md:w-[188px] max-w-full rounded sm:rounded-none md:pl-11 md:pr-10 py-2 md:py-6 max-md:px-2 mt-2 sm:m-0">
               Subscribe
             </button>
           </div>
