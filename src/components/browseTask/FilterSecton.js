@@ -1,8 +1,10 @@
+import { taskData } from "@/components/GlobalComponents/TaskData";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Checkbox from "../../assets/logo/checkbox 1.svg";
 import Checked from "../../assets/logo/checked.svg";
-const FilterSecton = () => {
+
+const FilterSecton = ({ originalData, setOriginalData }) => {
   const [isChecked, setIsChecked] = useState([]);
   const [toBeDone, setToBeDone] = useState("all");
   const [category, setCategory] = useState("available");
@@ -22,6 +24,25 @@ const FilterSecton = () => {
       setDataSorting([...datasorting, data]);
     }
   };
+
+  console.log("originalData ", originalData);
+
+  // To Be Done
+  useEffect(() => {
+    if (toBeDone === "all") {
+      setOriginalData(taskData);
+    } else if (toBeDone === "in_person") {
+      const filtered = originalData.filter(
+        (item) => item.workType === "Remote"
+      );
+      setOriginalData(filtered); // Update the state after filtering
+    } else if (toBeDone === "remotely") {
+      // Handle other cases
+    } else {
+      // Handle other cases
+    }
+  }, [toBeDone, originalData, setOriginalData]);
+
   return (
     <div className="w-full">
       <div className="flex justify-between items-center w-full">

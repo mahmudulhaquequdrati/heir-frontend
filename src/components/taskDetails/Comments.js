@@ -1,12 +1,69 @@
 "use client";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 import Report from "../../assets/logo/report.svg";
 import Upload from "../../assets/logo/upload.svg";
 import User from "../../assets/logo/user.svg";
+import { taskData } from "../GlobalComponents/TaskData";
 import Map from "../Map";
 
-const Comments = () => {
+const Comments = ({ id }) => {
   const position = [51.505, -0.09];
+  const [taskDetails, setTaskDetails] = useState({});
+
+  useEffect(() => {
+    const foundTask = taskData.find((item) => item?._id == id);
+    setTaskDetails(foundTask || {});
+  }, [id]);
+
+  const {
+    _id,
+    taskTitle,
+    amount,
+    details,
+    taskStatus,
+    offered,
+    follow,
+    carl_category_name,
+    workType,
+    location,
+    mapLocation,
+    created_at,
+    deadline,
+    postedUser,
+    questions,
+    workTime,
+  } = taskDetails;
+
+  // get hours
+  const timeCalculation = (time) => {
+    const today = new Date();
+    const createdDate = new Date(time);
+    const todayTime = today - createdDate;
+    const newData = new Date(todayTime);
+    const getHour = newData.getHours();
+    return getHour;
+  };
+
+  // Comments Reply
+  const handleCommentReply = (id) => {
+    console.log("id -> ", id);
+    // your function
+  };
+
+  //
+  const replySubmitHere = (id) => {
+    console.log("id -> ", id);
+    // your function
+  };
+
+  // upload files
+  const handleUpload = (id) => {
+    console.log("id -> ", id);
+    // your function
+  };
+
   return (
     <div>
       <Map
@@ -34,7 +91,7 @@ const Comments = () => {
           </div>
           <div className="inline-flex items-start gap-[10px] px-[13px] py-py-1.5 bg-[#94b6ef] rounded-[500px] overflow-hidden relative flex-[0_0_auto]">
             <div className="relative w-fit mt-[-1.00px] [font-family:'Clash_Display-Semibold',Helvetica] font-normal text-white text-4 tracking-normal leading-normal">
-              2 OFFERS
+              {offered?.length} OFFERS
             </div>
           </div>
         </div>
@@ -50,30 +107,31 @@ const Comments = () => {
               />
               <div className="inline-flex flex-col items-start gap-1 relative flex-[0_0_auto]">
                 <div className="relative w-fit mt-[-1.00px] [font-family:'Clash_Display-Semibold',Helvetica] font-normal text-primary text-xl tracking-normal leading-normal">
-                  Md Manjurul...
+                  {postedUser?.name}
                 </div>
                 <div className="inline-flex items-center justify-center gap-[10px] px-[10px] py-1 bg-primary rounded-[50px] overflow-hidden relative flex-[0_0_auto]">
                   <div className="relative w-fit mt-[-1.00px] [font-family:'DM_Sans-Bold',Helvetica] font-bold text-white text-[10px] tracking-normal leading-normal">
-                    PRO MEMBER
+                    {postedUser?.label}
                   </div>
                 </div>
               </div>
             </div>
             <div className="relative w-fit mt-[-1.00px] [font-family:'DM_Sans-Medium',Helvetica] font-medium text-primary text-4 text-right tracking-normal leading-[34px] whitespace-nowrap">
-              2 hours ago
+              {timeCalculation(postedUser?.created_at)} hours ago
             </div>
           </div>
           <div className="flex flex-col items-start gap-[14px]  w-full relative flex-[0_0_auto]">
             <p className="relative  mt-[-1.00px] [font-family:'DM_Sans-Regular',Helvetica] font-normal text-primary text-4 tracking-normal leading-normal">
-              If you have tools and equipment would love to come help as I&#39;m
-              looking to do anything to make Xtra money to buy me a ute and can
-              start ASAP thanks
+              {postedUser?.text}
             </p>
-            <div className="inline-flex items-center justify-center gap-[10px] px-5 py-2 bg-secondery rounded-[50px] relative flex-[0_0_auto]">
+            <button
+              onClick={() => handleCommentReply(postedUser?._id)}
+              className="inline-flex items-center justify-center gap-[10px] px-5 py-2 bg-secondery rounded-[50px] relative flex-[0_0_auto]"
+            >
               <div className="relative w-fit mt-[-1.00px] [font-family:'Clash_Display-Semibold',Helvetica] font-normal text-white text-4 tracking-normal leading-normal">
                 Reply
               </div>
-            </div>
+            </button>
           </div>
         </div>
       </div>
@@ -84,7 +142,7 @@ const Comments = () => {
           </div>
           <div className="inline-flex items-start gap-[10px] px-[13px] py-1.5 bg-[#e78c3b] rounded-[500px] overflow-hidden relative flex-[0_0_auto]">
             <div className="relative w-fit mt-[-1.00px] [font-family:'Clash_Display-Semibold',Helvetica] text-white text-4 font-normal tracking-normal leading-normal">
-              5 QUESTIONS
+              {questions?.length} QUESTIONS
             </div>
           </div>
         </div>
@@ -106,13 +164,17 @@ const Comments = () => {
               <div className="flex flex-col-reverse md:flex-col-reverse sm:flex-row lg:flex-row justify-between items-start w-full gap-2">
                 <div className="inline-flex items-start gap-2 relative flex-[0_0_auto]">
                   <Image
+                    onClick={() => handleUpload(_id)}
                     width={100}
                     height={100}
                     className="relative flex-[0_0_auto] w-[35px] h-[35px]"
                     alt="Frame"
                     src={Upload}
                   />
-                  <div className="inline-flex items-center justify-center gap-[10px] px-5 py-2 bg-secondery rounded-[50px] relative flex-[0_0_auto]">
+                  <div
+                    onClick={() => replySubmitHere(_id)}
+                    className="inline-flex items-center justify-center gap-[10px] px-5 py-2 bg-secondery rounded-[50px] relative flex-[0_0_auto]"
+                  >
                     <div className="relative w-fit mt-[-1.00px] [font-family:'Clash_Display-Semibold',Helvetica] font-normal text-white text-4 tracking-normal leading-normal">
                       Reply
                     </div>
@@ -137,24 +199,22 @@ const Comments = () => {
               />
               <div className="inline-flex flex-col items-start gap-1 relative flex-[0_0_auto]">
                 <div className="relative w-fit mt-[-1.00px] [font-family:'Clash_Display-Semibold',Helvetica] font-normal text-primary text-xl tracking-normal leading-normal">
-                  Md Manjurul...
+                  {postedUser?.name}
                 </div>
                 <div className="inline-flex items-center justify-center gap-[10px] px-[10px] py-1 bg-primary rounded-[50px] overflow-hidden relative flex-[0_0_auto]">
                   <div className="relative w-fit mt-[-1.00px] [font-family:'DM_Sans-Bold',Helvetica] font-bold text-white text-[10px] tracking-normal leading-normal">
-                    PRO MEMBER
+                    {postedUser?.label}
                   </div>
                 </div>
               </div>
             </div>
             <div className="relative w-fit mt-[-1.00px] [font-family:'DM_Sans-Medium',Helvetica] font-medium text-primary text-4 text-right tracking-normal leading-[34px] whitespace-nowrap">
-              2 hours ago
+              {timeCalculation(postedUser?.created_at)} hours ago
             </div>
           </div>
           <div className="flex flex-col items-start gap-[14px]  w-full relative flex-[0_0_auto]">
             <p className="relative  mt-[-1.00px] [font-family:'DM_Sans-Regular',Helvetica] font-normal text-primary text-4 tracking-normal leading-normal">
-              If you have tools and equipment would love to come help as I&#39;m
-              looking to do anything to make Xtra money to buy me a ute and can
-              start ASAP thanks
+              {postedUser?.text}
             </p>
             <div className="inline-flex items-center gap-2 relative flex-[0_0_auto]">
               <Image
@@ -165,9 +225,12 @@ const Comments = () => {
                 src={Report}
               />
               <div className="inline-flex items-center justify-center gap-[10px] px-5 py-2 bg-secondery rounded-[50px] relative flex-[0_0_auto]">
-                <div className="relative w-fit mt-[-1.00px] [font-family:'Clash_Display-Semibold',Helvetica] font-normal text-white text-4 tracking-normal leading-normal">
+                <button
+                  onClick={() => replySubmitHere(_id)}
+                  className="relative w-fit mt-[-1.00px] [font-family:'Clash_Display-Semibold',Helvetica] font-normal text-white text-4 tracking-normal leading-normal"
+                >
                   Reply
-                </div>
+                </button>
               </div>
             </div>
           </div>
@@ -184,24 +247,22 @@ const Comments = () => {
               />
               <div className="inline-flex flex-col items-start gap-1 relative flex-[0_0_auto]">
                 <div className="relative w-fit mt-[-1.00px] [font-family:'Clash_Display-Semibold',Helvetica] font-normal text-primary text-xl tracking-normal leading-normal">
-                  Md Manjurul...
+                  {postedUser?.name}
                 </div>
                 <div className="inline-flex items-center justify-center gap-[10px] px-[10px] py-1 bg-primary rounded-[50px] overflow-hidden relative flex-[0_0_auto]">
                   <div className="relative w-fit mt-[-1.00px] [font-family:'DM_Sans-Bold',Helvetica] font-bold text-white text-[10px] tracking-normal leading-normal">
-                    PRO MEMBER
+                    {postedUser?.label}
                   </div>
                 </div>
               </div>
             </div>
             <div className="relative w-fit mt-[-1.00px] [font-family:'DM_Sans-Medium',Helvetica] font-medium text-primary text-4 text-right tracking-normal leading-[34px] whitespace-nowrap">
-              2 hours ago
+              {timeCalculation(postedUser?.created_at)} hours ago
             </div>
           </div>
           <div className="flex flex-col items-start gap-[14px]  w-full relative flex-[0_0_auto]">
             <p className="relative  mt-[-1.00px] [font-family:'DM_Sans-Regular',Helvetica] font-normal text-primary text-4 tracking-normal leading-normal">
-              If you have tools and equipment would love to come help as I&#39;m
-              looking to do anything to make Xtra money to buy me a ute and can
-              start ASAP thanks
+              {postedUser?.text}
             </p>
             <div className="inline-flex items-start gap-2 relative flex-[0_0_auto]">
               <Image
@@ -212,9 +273,12 @@ const Comments = () => {
                 src={Report}
               />
               <div className="inline-flex items-center justify-center gap-[10px] px-5 py-2 bg-secondery rounded-[50px] relative flex-[0_0_auto]">
-                <div className="relative w-fit mt-[-1.00px] [font-family:'Clash_Display-Semibold',Helvetica] font-normal text-white text-4 tracking-normal leading-normal">
+                <button
+                  onClick={() => replySubmitHere(_id)}
+                  className="relative w-fit mt-[-1.00px] [font-family:'Clash_Display-Semibold',Helvetica] font-normal text-white text-4 tracking-normal leading-normal"
+                >
                   Reply
-                </div>
+                </button>
               </div>
             </div>
           </div>

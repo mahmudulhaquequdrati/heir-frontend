@@ -5,8 +5,9 @@ import { useState } from "react";
 import Card from "./Card";
 import FilterSecton from "./FilterSecton";
 import MyMap from "./Map";
+const { taskData } = require("../GlobalComponents/TaskData");
 
-const TaskSection = () => {
+const TaskSection = ({ originalData }) => {
   const [openFilter, setOpenFilter] = useState(false);
 
   return (
@@ -36,7 +37,6 @@ const TaskSection = () => {
                 </svg>
               </div>
               <input
-                onClick={(e) => setOpenFilter(true)}
                 type="search"
                 id="default-search"
                 className="block w-full p-4 pl-10 pr-10 text-sm text-gray-900 border border-gray-300 focus:border-gray-300 rounded-lg bg-white"
@@ -62,8 +62,6 @@ const TaskSection = () => {
                   className="w-8 h-8 font-bold"
                   xmlns="http://www.w3.org/2000/svg"
                   xmlnsXlink="http://www.w3.org/1999/xlink"
-                  // width={256}
-                  // height={256}
                   viewBox="0 0 256 256"
                   xmlSpace="preserve"
                 >
@@ -234,18 +232,12 @@ const TaskSection = () => {
         </div>
 
         <div className="rounded-xl shadow mt-10">
-          <Link href="/browse-tasks/1">
-            <Card />
-          </Link>
-          <Link href="/browse-tasks/2">
-            <Card />
-          </Link>
-          <Link href="/browse-tasks/3">
-            <Card />
-          </Link>
-          <Link href="/browse-tasks/4">
-            <Card />
-          </Link>
+          {originalData &&
+            originalData.map((item, idx) => (
+              <Link key={idx} href={`/browse-tasks/${item?._id}`}>
+                <Card key={idx} item={item} />
+              </Link>
+            ))}
         </div>
       </div>
 
