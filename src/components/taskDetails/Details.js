@@ -42,7 +42,7 @@ const Details = ({ id }) => {
 
   // Make an Offer
   const makeAnOffer = (id) => {
-    console.log("id ", id);
+    // console.log("id ", id);
     // your function here
   };
 

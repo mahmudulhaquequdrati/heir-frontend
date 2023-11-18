@@ -4,7 +4,7 @@ import Comments from "@/components/taskDetails/Comments";
 import Details from "@/components/taskDetails/Details";
 
 const page = ({ params }) => {
-  console.log("params", params);
+  // console.log("params", params);
   return (
     <div>
       <div className="container mx-auto px-10 md:px-16 lg:px-20">

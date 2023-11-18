@@ -48,19 +48,19 @@ const Comments = ({ id }) => {
 
   // Comments Reply
   const handleCommentReply = (id) => {
-    console.log("id -> ", id);
+    // console.log("id -> ", id);
     // your function
   };
 
   //
   const replySubmitHere = (id) => {
-    console.log("id -> ", id);
+    // console.log("id -> ", id);
     // your function
   };
 
   // upload files
   const handleUpload = (id) => {
-    console.log("id -> ", id);
+    // console.log("id -> ", id);
     // your function
   };
 

@@ -36,7 +36,7 @@ const FilterSecton = ({ filter, setFilter }) => {
     });
   };
 
-  console.log("Filter data ", filter);
+  // console.log("Filter data ", filter);
 
   return (
     <div className="w-full">

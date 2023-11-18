@@ -137,8 +137,11 @@ const Jobs = () => {
           <div className="grid grid-cols-3 gap-5">
             {jobs
               ?.filter((job) => job?.category === jobType)
-              .map((job) => (
-                <div className="w-full items-center self-stretch border border-[color:var(--Stoke,rgba(33,63,97,0.05))] shadow-2xl bg-white flex grow flex-col mx-auto p-6 rounded-2xl border-solid max-md:mt-5 max-md:px-5">
+              .map((job, index) => (
+                <div
+                  key={index}
+                  className="w-full items-center self-stretch border border-[color:var(--Stoke,rgba(33,63,97,0.05))] shadow-2xl bg-white flex grow flex-col mx-auto p-6 rounded-2xl border-solid max-md:mt-5 max-md:px-5"
+                >
                   <div className="text-white text-center text-xl font-medium leading-7 self-stretch justify-center items-center bg-[#213F61] w-full p-4 rounded-xl">
                     {job?.title}
                   </div>{" "}

@@ -18,7 +18,7 @@ const page = () => {
   });
   const [originalData, setOriginalData] = useState(taskData);
 
-  console.log(filter);
+  // console.log(filter);
 
   return (
     <>

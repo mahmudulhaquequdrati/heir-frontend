@@ -10,8 +10,8 @@ const { taskData } = require("../GlobalComponents/TaskData");
 const TaskSection = ({ originalData, filter }) => {
   const [openFilter, setOpenFilter] = useState(false);
   const [filteredData, setFilteredData] = useState(originalData);
-  console.log(filter);
-  console.log(filteredData);
+  // console.log(filter);
+  // console.log(filteredData);
 
   useEffect(() => {
     const applyFilters = () => {
