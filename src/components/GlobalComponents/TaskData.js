@@ -2,7 +2,7 @@ const taskData = [
   {
     _id: "367289340230",
     taskTitle: "Update business documents (We have rebranded)",
-    amount: 200,
+    amount: 10,
     details: `We have rebranded and require our documents to updated
 - Update documents to reflect new brand colours/logo/address/version  etc
 - Provide 2 copies of documents. 1x original format (i.e. word to be edited in the future) and the other a document that can be completed like a form (i.e. certain fields can not be edited)
@@ -10,7 +10,7 @@ const taskData = [
     taskStatus: "Open",
     offered: ["1278889", "234567890"],
     follow: true,
-    carl_category_name: "Furniture Assembly",
+    carl_category_name: "cleaning",
     workType: "Remote",
     location: "Dhaka, Bangladesh",
     mapLocation: {},
@@ -37,7 +37,7 @@ const taskData = [
     taskStatus: "close",
     offered: ["127888459", "234567890", "72348783433"],
     follow: true,
-    carl_category_name: "Copywriting or Editing Services",
+    carl_category_name: "design",
     workType: "Remote",
     location: "Dhaka, Bangladesh",
     mapLocation: {},

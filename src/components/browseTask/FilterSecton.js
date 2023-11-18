@@ -1,56 +1,57 @@
-import { taskData } from "@/components/GlobalComponents/TaskData";
-import Image from "next/image";
-import { useEffect, useState } from "react";
-import Checkbox from "../../assets/logo/checkbox 1.svg";
-import Checked from "../../assets/logo/checked.svg";
+"use client";
+import { useState } from "react";
 
-const FilterSecton = ({ originalData, setOriginalData }) => {
-  const [isChecked, setIsChecked] = useState([]);
-  const [toBeDone, setToBeDone] = useState("all");
-  const [category, setCategory] = useState("available");
-  const [priceSorting, setPriceSorting] = useState("hightolow");
+const categories = ["cleaning", "barbers", "design", "driving", "loundry"];
+
+const FilterSecton = ({ filter, setFilter }) => {
   const [datasorting, setDataSorting] = useState(["earliest", "oldest"]);
-  const handleClickCheckbox = (index) => {
-    if (isChecked.includes(index)) {
-      setIsChecked(isChecked?.filter((fill) => fill !== index));
+
+  // Adding category or removing category
+  const setCategoryInFilter = (category) => {
+    const isExistCategory = filter?.category?.find((cat) => cat === category);
+    if (!isExistCategory) {
+      setFilter((prevFilter) => {
+        const updatedFilter = { ...prevFilter };
+        updatedFilter?.category.push(category);
+        return updatedFilter;
+      });
     } else {
-      setIsChecked([...isChecked, index]);
-    }
-  };
-  const handleDataSorting = (data) => {
-    if (datasorting.includes(data)) {
-      setDataSorting(datasorting?.filter((fill) => fill !== data));
-    } else {
-      setDataSorting([...datasorting, data]);
+      const index = filter?.category?.indexOf(category);
+      setFilter((prevFilter) => {
+        const updatedFilter = { ...prevFilter };
+        updatedFilter?.category.splice(index, 1);
+        return updatedFilter;
+      });
     }
   };
 
-  console.log("originalData ", originalData);
+  const handleClearFilter = () => {
+    setFilter({
+      category: "all",
+      toBeDone: "all",
+      distance: 0,
+      taskPrice: 0,
+      priceSorting: "highToLow",
+      taskCategory: "available",
+    });
+  };
 
-  // To Be Done
-  useEffect(() => {
-    if (toBeDone === "all") {
-      setOriginalData(taskData);
-    } else if (toBeDone === "in_person") {
-      const filtered = originalData.filter(
-        (item) => item.workType === "Remote"
-      );
-      setOriginalData(filtered); // Update the state after filtering
-    } else if (toBeDone === "remotely") {
-      // Handle other cases
-    } else {
-      // Handle other cases
-    }
-  }, [toBeDone, originalData, setOriginalData]);
+  console.log("Filter data ", filter);
 
   return (
     <div className="w-full">
       <div className="flex justify-between items-center w-full">
         <h2 className="text-primary font-bold text-lg">Filter</h2>
-        <p className="text-secondery">Clear all</p>
+        <p
+          className="text-secondery cursor-pointer"
+          onClick={handleClearFilter}
+        >
+          Clear all
+        </p>
       </div>
       <hr className="my-5" />
 
+      {/* Category  */}
       <div className="bg-[#F4F8FD] p-10 rounded-xl lg:p-6">
         <h2 className="mb-3">Category</h2>
         <div className="relative flex flex-row min-w-full">
@@ -89,87 +90,21 @@ const FilterSecton = ({ originalData, setOriginalData }) => {
         </div>
 
         <div className="flex flex-col gap-3 my-3 text-sm">
-          <div
-            onClick={() => handleClickCheckbox(1)}
-            className="flex items-center mt-2"
-          >
-            <Image
-              className="cursor-pointer mr-2"
-              width={18}
-              height={18}
-              alt="checkbox"
-              src={isChecked.includes(1) ? Checked : Checkbox}
-            />
-            <p>Advisory</p>
-          </div>
-          <div
-            onClick={() => handleClickCheckbox(2)}
-            className="flex items-center mt-2"
-          >
-            <Image
-              className="cursor-pointer mr-2"
-              width={18}
-              height={18}
-              alt="checkbox"
-              src={isChecked.includes(2) ? Checked : Checkbox}
-            />
-            <p>Advisory</p>
-          </div>
-          <div
-            onClick={() => handleClickCheckbox(3)}
-            className="flex items-center mt-2"
-          >
-            <Image
-              className="cursor-pointer mr-2"
-              width={18}
-              height={18}
-              alt="checkbox"
-              src={isChecked.includes(3) ? Checked : Checkbox}
-            />
-            <p>Advisory</p>
-          </div>
-          <div
-            onClick={() => handleClickCheckbox(4)}
-            className="flex items-center mt-2"
-          >
-            <Image
-              className="cursor-pointer mr-2"
-              width={18}
-              height={18}
-              alt="checkbox"
-              src={isChecked.includes(4) ? Checked : Checkbox}
-            />
-            <p>Advisory</p>
-          </div>
-          <div
-            onClick={() => handleClickCheckbox(5)}
-            className="flex items-center mt-2"
-          >
-            <Image
-              className="cursor-pointer mr-2"
-              width={18}
-              height={18}
-              alt="checkbox"
-              src={isChecked.includes(5) ? Checked : Checkbox}
-            />
-            <p>Advisory</p>
-          </div>
-          <div
-            onClick={() => handleClickCheckbox(6)}
-            className="flex items-center mt-2"
-          >
-            <Image
-              className="cursor-pointer mr-2"
-              width={18}
-              height={18}
-              alt="checkbox"
-              src={isChecked.includes(6) ? Checked : Checkbox}
-            />
-            <p>Advisory</p>
-          </div>
+          {categories?.map((cat, index) => (
+            <div key={index}>
+              <input
+                type="checkbox"
+                id={cat}
+                className="checkbox"
+                onChange={(e) => setCategoryInFilter(cat)}
+              />
+              <label htmlFor={cat}>{cat}</label>
+            </div>
+          ))}
         </div>
       </div>
 
+      {/* To be done  */}
       <div className="bg-[#f4f8fd] rounded-xl mt-4">
         <div className="flex flex-col items-start gap-6 p-6 relative bg-accent rounded-[24px] overflow-hidden">
           <div className="items-center justify-between w-full flex-[0_0_auto] flex relative">
@@ -179,48 +114,52 @@ const FilterSecton = ({ originalData, setOriginalData }) => {
           </div>
           <div className=" gap-[10px] w-full flex-[0_0_auto] flex flex-wrap relative cursor-pointer">
             <div
-              onClick={() => setToBeDone("all")}
+              onClick={() => setFilter({ ...filter, toBeDone: "all" })}
               className={`min-w-max ${
-                toBeDone === "all"
+                filter?.toBeDone === "all"
                   ? " items-center justify-center  px-3 py-[10px] flex-1 grow bg-primary rounded-xl overflow-hidden flex relative"
                   : " flex items-center px-3 py-[10px]"
               }`}
             >
               <div
                 className={`relative w-fit [font-family:'Clash_Display-Semibold max-w-max',Helvetica] font-normal ${
-                  toBeDone === "all" ? "text-[#fdf3eb]" : "text-primary"
+                  filter?.toBeDone === "all" ? "text-[#fdf3eb]" : "text-primary"
                 } text-base tracking-[0.20px] leading-normal`}
               >
                 All
               </div>
             </div>
             <div
-              onClick={() => setToBeDone("in_person")}
+              onClick={() => setFilter({ ...filter, toBeDone: "in_person" })}
               className={`min-w-max ${
-                toBeDone === "in_person"
+                filter?.toBeDone === "in_person"
                   ? " items-center justify-center  px-3 py-[10px] flex-1 grow bg-primary rounded-xl overflow-hidden flex relative"
                   : " flex items-center px-3 py-[10px]"
               }`}
             >
               <div
                 className={`relative w-fit [font-family:'Clash_Display-Semibold',Helvetica] font-normal ${
-                  toBeDone === "in_person" ? "text-[#fdf3eb]" : "text-primary"
+                  filter?.toBeDone === "in_person"
+                    ? "text-[#fdf3eb]"
+                    : "text-primary"
                 } text-base tracking-[0.20px] leading-normal`}
               >
                 In person
               </div>
             </div>
             <div
-              onClick={() => setToBeDone("remotely")}
+              onClick={() => setFilter({ ...filter, toBeDone: "remotely" })}
               className={`min-w-max ${
-                toBeDone === "remotely"
+                filter?.toBeDone === "remotely"
                   ? " items-center justify-center  px-3 py-[10px] flex-1 grow bg-primary rounded-xl overflow-hidden flex relative"
                   : " flex items-center px-3 py-[10px]"
               }`}
             >
               <div
                 className={`relative w-fit [font-family:'Clash_Display-Semibold',Helvetica] font-normal ${
-                  toBeDone === "remotely" ? "text-[#fdf3eb]" : "text-primary"
+                  filter?.toBeDone === "remotely"
+                    ? "text-[#fdf3eb]"
+                    : "text-primary"
                 } text-base tracking-[0.20px] leading-normal`}
               >
                 Remotely
@@ -230,6 +169,7 @@ const FilterSecton = ({ originalData, setOriginalData }) => {
         </div>
       </div>
 
+      {/* Sub hub  */}
       <div className="bg-[#f4f8fd] mt-4 flex flex-col items-start gap-6 p-6 relative bg-accent rounded-xl overflow-hidden">
         <div className="flex items-center justify-between relative w-full flex-[0_0_auto]">
           <div className="relative w-fit mt-[-1.00px][font-family:'Clash_Display-Medium',Helvetica] font-medium text-primary text-xl tracking-normal leading-normal">
@@ -248,6 +188,7 @@ const FilterSecton = ({ originalData, setOriginalData }) => {
         </div>
       </div>
 
+      {/* Distance  */}
       <div className="bg-[#f4f8fd] rounded-xl mt-4 p-6">
         <div>
           <p className="font-medium text-primary text-xl">Distance</p>
@@ -261,11 +202,16 @@ const FilterSecton = ({ originalData, setOriginalData }) => {
             <input
               className="w-full bg-transparent accent-secondery range-slider"
               type="range"
+              value={filter?.distance}
+              onChange={(e) =>
+                setFilter({ ...filter, distance: e.target.value })
+              }
             />
           </div>
         </div>
       </div>
 
+      {/* Task Price  */}
       <div className="bg-[#f4f8fd] rounded-xl mt-4 p-6">
         <div>
           <p className="font-medium text-primary text-xl">Task Price</p>
@@ -279,11 +225,18 @@ const FilterSecton = ({ originalData, setOriginalData }) => {
             <input
               className="w-full bg-transparent accent-secondery range-slider"
               type="range"
+              value={filter?.taskPrice}
+              min={5}
+              max={500}
+              onChange={(e) =>
+                setFilter({ ...filter, taskPrice: e.target.value })
+              }
             />
           </div>
         </div>
       </div>
 
+      {/* Task Category  */}
       <div className="bg-[#f4f8fd] rounded-xl mt-4">
         <div className="flex flex-col  gap-6 p-6 relative bg-accent rounded-[24px] overflow-hidden">
           <div className="items-center justify-between w-full flex-[0_0_auto] flex relative">
@@ -293,32 +246,40 @@ const FilterSecton = ({ originalData, setOriginalData }) => {
           </div>
           <div className="items-center gap-[16px] w-full flex-[0_0_auto] flex relative cursor-pointer flex-wrap">
             <div
-              onClick={() => setCategory("available")}
+              onClick={() =>
+                setFilter({ ...filter, taskCategory: "available" })
+              }
               className={`min-w-max ${
-                category === "available"
+                filter?.taskCategory === "available"
                   ? " items-center justify-center  px-3 py-[10px] flex-1 grow bg-primary rounded-xl overflow-hidden flex relative"
                   : " flex items-center"
               }`}
             >
               <div
                 className={`relative w-fit [font-family:'Clash_Display-Semibold',Helvetica] font-normal ${
-                  category === "available" ? "text-[#fdf3eb]" : "text-primary"
+                  filter?.taskCategory === "available"
+                    ? "text-[#fdf3eb]"
+                    : "text-primary"
                 } text-base tracking-[0.20px] leading-normal`}
               >
                 Available tasks
               </div>
             </div>
             <div
-              onClick={() => setCategory("unavailable")}
+              onClick={() =>
+                setFilter({ ...filter, taskCategory: "noOfferTask" })
+              }
               className={`min-w-max ${
-                category === "unavailable"
+                filter?.taskCategory === "noOfferTask"
                   ? " items-center justify-center  px-3 py-[10px] flex-1 grow bg-primary rounded-xl overflow-hidden flex relative"
                   : " flex items-center"
               }`}
             >
               <div
                 className={`relative w-fit [font-family:'Clash_Display-Semibold',Helvetica] font-normal ${
-                  category === "unavailable" ? "text-[#fdf3eb]" : "text-primary"
+                  filter?.taskCategory === "noOfferTask"
+                    ? "text-[#fdf3eb]"
+                    : "text-primary"
                 } text-base tracking-[0.20px] leading-normal`}
               >
                 No offers tasks
@@ -328,6 +289,7 @@ const FilterSecton = ({ originalData, setOriginalData }) => {
         </div>
       </div>
 
+      {/* Price Sorting  */}
       <div className="bg-[#f4f8fd] rounded-xl mt-4">
         <div className="flex flex-col items-center gap-6 p-6 relative bg-accent rounded-[24px] overflow-hidden">
           <div className="items-center justify-between w-full flex-[0_0_auto] flex relative">
@@ -337,16 +299,18 @@ const FilterSecton = ({ originalData, setOriginalData }) => {
           </div>
           <div className="items-center gap-6  w-full flex-[0_0_auto] flex relative cursor-pointer flex-wrap">
             <div
-              onClick={() => setPriceSorting("hightolow")}
+              onClick={() =>
+                setFilter({ ...filter, priceSorting: "highToLow" })
+              }
               className={
-                priceSorting === "hightolow"
+                filter?.priceSorting === "highToLow"
                   ? " items-center justify-center  px-3 py-[10px] flex-1 grow bg-primary rounded-xl overflow-hidden flex relative"
                   : " flex items-center "
               }
             >
               <div
                 className={`relative w-fit [font-family:'Clash_Display-Semibold',Helvetica] font-normal ${
-                  priceSorting === "hightolow"
+                  filter?.priceSorting === "highToLow"
                     ? "text-[#fdf3eb]"
                     : "text-primary"
                 } text-base tracking-[0.20px] leading-normal`}
@@ -355,16 +319,18 @@ const FilterSecton = ({ originalData, setOriginalData }) => {
               </div>
             </div>
             <div
-              onClick={() => setPriceSorting("lowtohigh")}
+              onClick={() =>
+                setFilter({ ...filter, priceSorting: "lowToHigh" })
+              }
               className={
-                priceSorting === "lowtohigh"
+                filter?.priceSorting === "lowToHigh"
                   ? " items-center justify-center  px-3 py-[10px] flex-1 grow bg-primary rounded-xl overflow-hidden flex relative"
                   : " flex items-center "
               }
             >
               <div
                 className={`relative w-fit [font-family:'Clash_Display-Semibold',Helvetica] font-normal ${
-                  priceSorting === "lowtohigh"
+                  filter?.priceSorting === "lowToHigh"
                     ? "text-[#fdf3eb]"
                     : "text-primary"
                 } text-base tracking-[0.20px] leading-normal`}

@@ -1,5 +1,5 @@
 /* font Inter */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Tai+Heritage+Pro:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Tai+Heritage+Pro:wght@400;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -9,21 +9,85 @@
     z-index: -10;
 } */
 input {
-    @apply focus:outline-none;
+  @apply focus:outline-none;
 }
 
 .mapfortask {
-    width: 100%;
-    height: 50vh;
-    border-radius: 20px;
+  width: 100%;
+  height: 50vh;
+  border-radius: 20px;
 }
 
 .mapfortaskdetails {
-    width: 100%;
-    height: 40vh;
-    border-radius: 20px;
+  width: 100%;
+  height: 40vh;
+  border-radius: 20px;
 }
 
 .leaflet-control a {
-    display: none !important;
+  display: none !important;
+}
+
+/* custom checkbox */
+
+.checkbox {
+  display: none; /* Hide the default checkbox */
+}
+
+.checkbox + label {
+  position: relative;
+  padding-left: 26px;
+  cursor: pointer;
+  color: #2b2f38;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  line-height: 20px;
+}
+
+@media screen and (max-width: 320px) {
+  .checkbox + label {
+    font-size: 12px;
+  }
+}
+
+.checkbox + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  border: 2px solid #b9bdc7;
+  background: transparent;
+}
+
+.checkbox:checked + label:before {
+  border-radius: 3px;
+  border: 2px solid #ff9209;
+  background: transparent;
+}
+
+.checkbox + label:after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 3px;
+  width: 6px;
+  height: 10px;
+  flex-shrink: 0;
+  border: solid #ff9209;
+  border-width: 0 2px 2px 0;
+  border-radius: 1px;
+  transform: rotate(45deg);
+  opacity: 0;
+}
+
+.checkbox:checked + label:after {
+  opacity: 1;
+}
+
+.checkbox:checked + label:after {
+  opacity: 1;
 }
