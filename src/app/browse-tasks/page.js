@@ -9,16 +9,22 @@ import { useState } from "react";
 
 const page = () => {
   const [filter, setFilter] = useState({
+    taskTitle: "",
     category: [],
     toBeDone: "all",
     distance: 1,
-    taskPrice: 5,
+    taskPrice: 250,
     priceSorting: "highToLow",
     taskCategory: "available",
+    location: "",
   });
-  const [originalData, setOriginalData] = useState(taskData);
 
-  // console.log(filter);
+  const handleSearchSubmit = (searchValue) => {
+    searchValue.preventDeafult();
+    console.log(searchValue);
+  };
+
+  const [originalData, setOriginalData] = useState(taskData);
 
   return (
     <>
@@ -29,7 +35,12 @@ const page = () => {
               <FilterSection filter={filter} setFilter={setFilter} />
             </div>
             <div className="col-span-12 md:col-span-7 lg:col-span-8 py-10 max-w-full">
-              <TaskSection originalData={originalData} filter={filter} />
+              <TaskSection
+                originalData={originalData}
+                filter={filter}
+                setFilter={setFilter}
+                handleSearchSubmit={handleSearchSubmit}
+              />
             </div>
           </div>
         </div>

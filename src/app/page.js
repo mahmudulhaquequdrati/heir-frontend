@@ -139,10 +139,8 @@ export default function Home() {
         </div>
         {/* See what others are getting done */}
         <BoostBusiness />
-
         <ChooseUs />
         <Jobs />
-
         <VerifiedTalents />
         <Review />
         <Footer />

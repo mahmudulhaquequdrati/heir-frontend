@@ -1,11 +1,8 @@
 "use client";
-import { useState } from "react";
 
 const categories = ["cleaning", "barbers", "design", "driving", "loundry"];
 
 const FilterSecton = ({ filter, setFilter }) => {
-  const [datasorting, setDataSorting] = useState(["earliest", "oldest"]);
-
   // Adding category or removing category
   const setCategoryInFilter = (category) => {
     const isExistCategory = filter?.category?.find((cat) => cat === category);
@@ -27,16 +24,16 @@ const FilterSecton = ({ filter, setFilter }) => {
 
   const handleClearFilter = () => {
     setFilter({
-      category: "all",
+      taskTitle: "",
+      category: [],
       toBeDone: "all",
-      distance: 0,
-      taskPrice: 0,
+      distance: 1,
+      taskPrice: 250,
       priceSorting: "highToLow",
       taskCategory: "available",
+      location: "",
     });
   };
-
-  // console.log("Filter data ", filter);
 
   return (
     <div className="w-full">
@@ -171,20 +168,25 @@ const FilterSecton = ({ filter, setFilter }) => {
 
       {/* Sub hub  */}
       <div className="bg-[#f4f8fd] mt-4 flex flex-col items-start gap-6 p-6 relative bg-accent rounded-xl overflow-hidden">
-        <div className="flex items-center justify-between relative w-full flex-[0_0_auto]">
-          <div className="relative w-fit mt-[-1.00px][font-family:'Clash_Display-Medium',Helvetica] font-medium text-primary text-xl tracking-normal leading-normal">
-            Sub hub
+        <div className="flex items-center justify-between w-full">
+          <div className="[font-family:'Clash_Display-Medium',Helvetica] font-medium text-primary text-xl tracking-normal leading-normal">
+            Location
           </div>
-          <div className="relative w-fit mt-[-1.00px] opacity-0 [font-family:'Clash_Display-Semibold',Helvetica] font-normal text-primary text-xl tracking-[0.20px] leading-normal">
+          <div
+            className="cursor-pointer [font-family:'Clash_Display-Semibold',Helvetica] font-normal text-primary text-base tracking-[0.20px] leading-normal"
+            onClick={(e) => setFilter({ ...filter, location: "" })}
+          >
             Clear all
           </div>
         </div>
         <div className="h-[60px] w-full rounded-xl overflow-hidden flex items-center relative self-stretch">
-          <div className="gap-[10px] pl-[16px] pr-[36px] py-[20px] flex-1 grow bg-white flex items-center relative self-stretch">
-            <div className="relative w-fit mt-[-1.00px] [font-family:'Clash_Display-Regular',Helvetica] font-normal text-primary text-base tracking-normal leading-normal">
-              Dhaka, Bangladesh
-            </div>
-          </div>
+          <input
+            type="text"
+            placeholder="Dhaka, Bangladesh"
+            className="w-full py-4 px-5 bg-white [font-family:'Clash_Display-Regular',Helvetica] font-normal text-primary text-base tracking-normal leading-normal rounded-xl"
+            value={filter?.location}
+            onChange={(e) => setFilter({ ...filter, location: e.target.value })}
+          />
         </div>
       </div>
 
@@ -342,7 +344,7 @@ const FilterSecton = ({ filter, setFilter }) => {
         </div>
       </div>
 
-      <div className="bg-[#f4f8fd] rounded-xl mt-4">
+      {/* <div className="bg-[#f4f8fd] rounded-xl mt-4">
         <div className="flex flex-col items-start gap-6 p-6 relative bg-accent rounded-[24px] overflow-hidden">
           <div className="items-center justify-between w-full flex-[0_0_auto] flex relative">
             <div className="relative w-fit mt-[-1.00px] [font-family:'Clash_Display-Medium',Helvetica] font-medium text-primary text-xl tracking-normal leading-normal">
@@ -426,7 +428,7 @@ const FilterSecton = ({ filter, setFilter }) => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

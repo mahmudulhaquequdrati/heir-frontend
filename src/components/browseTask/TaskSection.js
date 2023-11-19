@@ -5,29 +5,44 @@ import { useEffect, useState } from "react";
 import Card from "./Card";
 import FilterSecton from "./FilterSecton";
 import MyMap from "./Map";
-const { taskData } = require("../GlobalComponents/TaskData");
 
-const TaskSection = ({ originalData, filter }) => {
+const TaskSection = ({
+  originalData,
+  filter,
+  setFilter,
+  handleSearchSubmit,
+}) => {
   const [openFilter, setOpenFilter] = useState(false);
   const [filteredData, setFilteredData] = useState(originalData);
-  // console.log(filter);
-  // console.log(filteredData);
 
   useEffect(() => {
     const applyFilters = () => {
       const filteredResult = originalData
         ?.filter((item) => {
           return (
-            (filter.category?.length === 0 ||
-              filter.category?.includes(item?.carl_category_name)) &&
-            (filter.taskPrice === "" ||
-              parseInt(item.amount) <= parseInt(filter.taskPrice)) &&
-            (filter.toBeDone === "all" || item?.toBeDone === filter.toBeDone)
+            (filter?.taskTitle === "" ||
+              item?.taskTitle
+                .toLowerCase()
+                .includes(filter?.taskTitle?.toLowerCase())) &&
+            (filter?.category?.length === 0 ||
+              filter?.category?.includes(item?.carl_category_name)) &&
+            (filter?.taskPrice === "" ||
+              parseInt(item?.amount) <= parseInt(filter?.taskPrice)) &&
+            (filter?.toBeDone === "all" ||
+              item?.toBeDone === filter?.toBeDone) &&
+            (filter?.taskCategory === "available"
+              ? item?.taskStatus === "Open"
+              : filter?.taskCategory === "noOfferTask" &&
+                item?.offered?.length === 0) &&
+            (filter?.location === "" ||
+              item?.location
+                .toLowerCase()
+                .includes(filter?.location?.toLowerCase()))
           );
         })
         .sort((a, b) => {
-          const sortOrder = filter.priceSorting === "highToLow" ? -1 : 1;
-          return sortOrder * (parseInt(a.amount) - parseInt(b.amount));
+          const sortOrder = filter?.priceSorting === "highToLow" ? -1 : 1;
+          return sortOrder * (parseInt(a?.amount) - parseInt(b?.amount));
         });
 
       setFilteredData(filteredResult);
@@ -35,16 +50,6 @@ const TaskSection = ({ originalData, filter }) => {
 
     applyFilters();
   }, [filter, originalData]);
-
-  // (filter.maxMile === "" ||
-  //   parseInt(item.Mileage) <= parseInt(filter.maxMile)) &&
-  // (filter.minMile === "" ||
-  //   parseInt(item.Mileage) <= parseInt(filter.minMile)) &&
-  // (filter.keyword === "" ||
-  //   item.title.toLowerCase().includes(filter.keyword.toLowerCase()) ||
-  //   item.description
-  //     .toLowerCase()
-  //     .includes(filter.keyword.toLowerCase()))
 
   return (
     <div className="relative">
@@ -77,11 +82,16 @@ const TaskSection = ({ originalData, filter }) => {
                 id="default-search"
                 className="block w-full p-4 pl-10 pr-10 text-sm text-gray-900 border border-gray-300 focus:border-gray-300 rounded-lg bg-white"
                 placeholder="Search here..."
+                value={filter?.taskTitle}
+                onChange={(e) =>
+                  setFilter({ ...filter, taskTitle: e.target.value })
+                }
                 required
               />
               <button
                 type="submit"
                 className="text-white absolute right-0 bottom-0 bg-secondery hover:bg-secondery font-medium rounded-lg text-sm px-10 py-[16.5px] "
+                onClick={() => handleSearchSubmit(filter?.taskTitle)}
               >
                 Search
               </button>
@@ -268,13 +278,17 @@ const TaskSection = ({ originalData, filter }) => {
         </div>
 
         <div className="rounded-xl shadow mt-10">
-          {filteredData?.length > 0
-            ? filteredData.map((item, idx) => (
-                <Link key={idx} href={`/browse-tasks/${item?._id}`}>
-                  <Card key={idx} item={item} />
-                </Link>
-              ))
-            : "No Data found!"}
+          {filteredData?.length > 0 ? (
+            filteredData.map((item, idx) => (
+              <Link key={idx} href={`/browse-tasks/${item?._id}`}>
+                <Card key={idx} item={item} />
+              </Link>
+            ))
+          ) : (
+            <div className="flex justify-center py-6 px-3">
+              <h2 className="text-center text-[22px]">No job found!</h2>
+            </div>
+          )}
         </div>
       </div>
 
