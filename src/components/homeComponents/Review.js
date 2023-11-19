@@ -5,6 +5,7 @@ import bg from "../../assets/bg.png";
 import BG from "../../assets/clientImage/BG.svg";
 import Checked from "../../assets/clientImage/Checked.svg";
 import Stars from "../../assets/clientImage/starts.svg";
+import Link from "next/link";
 
 export default function Review() {
   return (
@@ -161,15 +162,20 @@ export default function Review() {
                       Connect with the right person to get it done.
                     </div>
                   </div>
-                  <div className="w-full flex items-center flex-col sm:flex-row gap-4 mt-12">
-                    <div className="max-w-[300px] w-full bg-orange-400 px-8 sm:px-20 py-4 sm:py-5 rounded-[50px] max-md:px-5 flex justify-center items-center">
-                      <p className="text-white text-base font-bold ">
-                        Post a task
-                      </p>
-                    </div>
-                    <div className="max-w-[300px] w-full text-orange-400 text-[14px] sm:text-base font-medium bg-orange-400 bg-opacity-10 py-4 sm:py-5 px-8 sm:px-20 rounded-[500px] flex justify-center items-center">
-                      <p>Become a tasker</p>
-                    </div>
+                  <div className="items-start self-stretch flex justify-between gap-5 mt-10 max-md:max-w-full max-md:flex-wrap max-md:mt-10">
+                    <Link
+                      href={"/create-task"}
+                      className="w-full flex justify-center items-center bg-orange-400 rounded-[50px] px-20 py-5 text-white text-base font-bold self-center whitespace-nowrap"
+                    >
+                      Post a task
+                    </Link>
+
+                    <Link
+                      href={"/signin"}
+                      className="w-full flex justify-center items-center px-20 py-5 rounded-[500px] max-md:px-5 bg-opacity-10 bg-orange-400 text-orange-400 text-base font-medium self-center whitespace-nowrap"
+                    >
+                      Become a tasker
+                    </Link>
                   </div>
                 </div>
               </div>

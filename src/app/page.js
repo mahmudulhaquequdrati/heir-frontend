@@ -16,6 +16,7 @@ import Satisfaction from "../assets/clientImage/satisfaction 1.svg";
 import PeopleGroup from "../assets/clientImage/user 1.svg";
 import Hero from "../assets/h.png";
 import Jobs from "@/components/homeComponents/Jobs";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -31,16 +32,19 @@ export default function Home() {
               </p>
 
               <div className="w-[90%] sm:w-[50%] flex justify-center sm:justify-between gap-5 mt-8 max-md:max-w-full max-md:flex-wrap max-md:mt-10">
-                <div className="justify-center items-center bg-orange-400 flex flex-col grow shrink-0 basis-auto flex-1 md:px-8 lg:px-20 py-5 rounded-[50px] max-md:px-5">
-                  <div className="text-white text-base font-bold self-center whitespace-nowrap">
-                    Post a task
-                  </div>
-                </div>
-                <div className="justify-center items-center bg-orange-400 bg-opacity-10 flex flex-col grow shrink-0 basis-auto flex-1 md:px-8 lg:px-20 py-5 rounded-[500px] max-md:px-5">
-                  <div className="text-orange-400 text-base font-medium self-center whitespace-nowrap">
-                    Become a tasker
-                  </div>
-                </div>
+                <Link
+                  href={"/create-task"}
+                  className="w-full flex justify-center items-center bg-orange-400 text-white text-base font-bold self-center whitespace-nowrap md:px-8 lg:px-20 py-5 rounded-[50px] max-md:px-5"
+                >
+                  Post a task
+                </Link>
+
+                <Link
+                  href={"/signin"}
+                  className="w-full flex justify-center items-center md:px-8 lg:px-20 py-5 rounded-[500px] max-md:px-5 text-orange-400 bg-orange-400 bg-opacity-10 text-base font-medium self-center whitespace-nowrap"
+                >
+                  Become a tasker
+                </Link>
               </div>
             </div>
             <div className="w-full md:w-[38%] flex justify-center order-1 sm:order-2">

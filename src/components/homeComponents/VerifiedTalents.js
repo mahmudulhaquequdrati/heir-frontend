@@ -4,6 +4,7 @@ import React from "react";
 import Talents from "../../assets/clientImage/talents.svg";
 import Start1 from "../../assets/clientImage/Star1.svg";
 import Image from "next/image";
+import Link from "next/link";
 export default function VerifiedTalents() {
   return (
     <div className="bg-orange-50 self-stretch flex w-full flex-col mt-44 pt-24 pb-12 px-20 max-md:max-w-full max-md:mt-10 max-md:px-5">
@@ -42,16 +43,19 @@ export default function VerifiedTalents() {
                         exceptional support to achieve your career goals.
                       </div>{" "}
                       <div className="items-start self-stretch flex justify-between gap-5 mt-10 max-md:max-w-full max-md:flex-wrap max-md:mt-10">
-                        <div className="justify-center items-center bg-orange-400 flex flex-col grow shrink-0 basis-auto flex-1 px-20 py-5 rounded-[50px] max-md:px-5">
-                          <div className="text-white text-base font-bold self-center whitespace-nowrap">
-                            Post a task
-                          </div>
-                        </div>{" "}
-                        <div className="justify-center items-center bg-orange-400 bg-opacity-10 flex flex-col grow shrink-0 basis-auto flex-1 px-20 py-5 rounded-[500px] max-md:px-5">
-                          <div className="text-orange-400 text-base font-medium self-center whitespace-nowrap">
-                            Become a tasker
-                          </div>
-                        </div>
+                        <Link
+                          href={"/create-task"}
+                          className="w-full flex justify-center items-center bg-orange-400 rounded-[50px] px-20 py-5 text-white text-base font-bold self-center whitespace-nowrap"
+                        >
+                          Post a task
+                        </Link>
+
+                        <Link
+                          href={"/signin"}
+                          className="w-full flex justify-center items-center px-20 py-5 rounded-[500px] max-md:px-5 bg-opacity-10 bg-orange-400 text-orange-400 text-base font-medium self-center whitespace-nowrap"
+                        >
+                          Become a tasker
+                        </Link>
                       </div>
                     </div>{" "}
                     <Image
