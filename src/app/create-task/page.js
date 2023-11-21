@@ -2,65 +2,82 @@
 
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import OpenAI from 'openai';
+import OpenAI from "openai";
 
 const openai = new OpenAI({
-  apiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY, dangerouslyAllowBrowser: true // defaults to process.env["OPENAI_API_KEY"]
+  apiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY,
+  dangerouslyAllowBrowser: true, // defaults to process.env["OPENAI_API_KEY"]
 });
 export default function CreateTask() {
   const [selectedFile, setSelectedFile] = useState(null);
   const [inputData, setInputData] = useState({});
   const [aiQuisions, setAiQuistions] = useState([]);
-  const [isLoading, setIsLoading] = useState(false)
-  const router = useRouter()
+  const [isLoading, setIsLoading] = useState(false);
+  const router = useRouter();
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     setSelectedFile(file);
   };
   const handleInputChange = (event) => {
-    setInputData((inputs) => ({ ...inputs, [event.target.name]: event.target.value }));
-
+    setInputData((inputs) => ({
+      ...inputs,
+      [event.target.name]: event.target.value,
+    }));
   };
 
   async function askedquistionbyAi() {
     const completion = await openai.chat.completions.create({
       messages: [
         {
-          "role": "user", "content": `one user wants to ${inputData?.what}, in ${inputData?.who} , in ${inputData?.when}, in ${inputData?.where} with the budget of ${inputData?.budget}$. I asked the title , in person or remote, when , where budget and details. Now what could be some other questions that might be important but we did not include .give me the list of question max(6) Just give me question lists`
-        }],
+          role: "user",
+          content: `one user wants to ${inputData?.what}, in ${inputData?.who} , in ${inputData?.when}, in ${inputData?.where} with the budget of ${inputData?.budget}$. I asked the title , in person or remote, when , where budget and details. Now what could be some other questions that might be important but we did not include .give me the list of question max(6) Just give me question lists`,
+        },
+      ],
       model: "gpt-3.5-turbo",
     });
 
-    return (completion.choices[0]);
+    return completion.choices[0];
   }
 
   const handleSubmitData = (event) => {
     setIsLoading(true);
     event.preventDefault();
     const data = askedquistionbyAi();
-    data.then(res => {
-      const quisionData = res?.message?.content;
-      const questions = quisionData.split('\n').map(question => question.replace(/^\d+\.\s*/, '').trim());
-      setAiQuistions(questions);
-      setIsLoading(false);
-    })
-  }
-  console.log(aiQuisions);
+    data
+      .then((res) => {
+        const quisionData = res?.message?.content;
+        const questions = quisionData
+          .split("\n")
+          .map((question) => question.replace(/^\d+\.\s*/, "").trim());
+        setAiQuistions(questions);
+        setIsLoading(false);
+      })
+      .catch((err) => {
+        setIsLoading(false);
+      });
+  };
+  // console.log(aiQuisions);
   return (
     <>
-      {
-        isLoading &&
+      {isLoading && (
         <div className="w-full h-full fixed top-0 left-0 bg-white opacity-75 z-50">
           <div className="flex justify-center items-center mt-[50vh]">
-            <svg fill='none' className="w-20 h-20 animate-spin" viewBox="0 0 32 32" xmlns='http://www.w3.org/2000/svg'>
-              <path clipRule='evenodd'
-                d='M15.165 8.53a.5.5 0 01-.404.58A7 7 0 1023 16a.5.5 0 011 0 8 8 0 11-9.416-7.874.5.5 0 01.58.404z'
-                fill='currentColor' fillRule='evenodd' />
+            <svg
+              fill="none"
+              className="w-20 h-20 animate-spin"
+              viewBox="0 0 32 32"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clipRule="evenodd"
+                d="M15.165 8.53a.5.5 0 01-.404.58A7 7 0 1023 16a.5.5 0 011 0 8 8 0 11-9.416-7.874.5.5 0 01.58.404z"
+                fill="currentColor"
+                fillRule="evenodd"
+              />
             </svg>
           </div>
         </div>
-
-      }
+      )}
       <div className="container mx-auto mb-[100px]">
         <div className="pt-[35px] px-4 md:px-[30px] bg-[#F4F8FD] rounded-2xl mt-8">
           <div className="flex items-center justify-between">
@@ -105,9 +122,7 @@ export default function CreateTask() {
                       </div>
                     </div>
                     <div>
-                      <span className="block pb-4">
-                        When do you need done?
-                      </span>
+                      <span className="block pb-4">When do you need done?</span>
                       <div>
                         <input
                           onChange={handleInputChange}
@@ -126,16 +141,26 @@ export default function CreateTask() {
                   </h3>
                   <div className="flex flex-col gap-5">
                     <div>
-                      <span className="block pb-4">
-                        Who do you need done?
-                      </span>
+                      <span className="block pb-4">Who do you need done?</span>
                       <div className="flex flex-col sm:flex-row gap-4">
                         <div className="w-full sm:w-1/2 flex items-center gap-2 bg-[#F4F8FD] py-3 md:py-5 px-[18px] rounded-2xl">
-                          <input onChange={handleInputChange} type="radio" name="who" value="In Persion" id="InPerson" />
+                          <input
+                            onChange={handleInputChange}
+                            type="radio"
+                            name="who"
+                            value="In Persion"
+                            id="InPerson"
+                          />
                           <label htmlFor="InPerson">In person</label>
                         </div>
                         <div className="w-full sm:w-1/2 flex items-center gap-2 bg-[#F4F8FD] py-3 md:py-5 px-[18px] rounded-2xl">
-                          <input onChange={handleInputChange} type="radio" name="who" value="Who" id="Online" />
+                          <input
+                            onChange={handleInputChange}
+                            type="radio"
+                            name="who"
+                            value="Who"
+                            id="Online"
+                          />
                           <label htmlFor="Online">Online</label>
                         </div>
                       </div>
@@ -158,11 +183,12 @@ export default function CreateTask() {
               </div>
 
               <div className="grid grid-cols-2 gap-9">
-                {
-                  aiQuisions?.filter(question => question.trim() !== '')?.map((ques, i) => (
+                {aiQuisions
+                  ?.filter((question) => question.trim() !== "")
+                  ?.map((ques, i) => (
                     <div key={i} className="w-full">
                       <div className="flex flex-col gap-5">
-                        <div >
+                        <div>
                           <span className="block pb-4">
                             {ques}{" "}
                             <span className="text-[#E78C3B]">(optional)</span>
@@ -178,8 +204,7 @@ export default function CreateTask() {
                         </div>
                       </div>
                     </div>
-                  ))
-                }
+                  ))}
               </div>
 
               <div>
@@ -312,7 +337,10 @@ export default function CreateTask() {
             </div>
             <div className="flex justify-center py-[60px]">
               <div className="flex flex-col sm:flex-row items-center gap-4">
-                <button onClick={() => router.back()} className="w-full sm:w-[220px] flex justify-center items-center gap-[10px] py-[21px] px-[20px] bg-[#E78C3B40] rounded-full">
+                <button
+                  onClick={() => router.back()}
+                  className="w-full sm:w-[220px] flex justify-center items-center gap-[10px] py-[21px] px-[20px] bg-[#E78C3B40] rounded-full"
+                >
                   <span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -344,7 +372,10 @@ export default function CreateTask() {
                   </span>
                 </button>
 
-                <button type="submit" className="w-full sm:w-[220px] flex justify-center items-center gap-[10px] bg-[#E78C3B] py-[21px] px-[20px] rounded-full">
+                <button
+                  type="submit"
+                  className="w-full sm:w-[220px] flex justify-center items-center gap-[10px] bg-[#E78C3B] py-[21px] px-[20px] rounded-full"
+                >
                   <span className="text-white text-[16px] font-semibold">
                     Procced task
                   </span>
@@ -487,8 +518,6 @@ export default function CreateTask() {
             </div>
           </div>
         </div> */}
-
-
         </div>
       </div>
     </>
