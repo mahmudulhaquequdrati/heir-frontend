@@ -87,7 +87,7 @@ export default function ChooseUs() {
                 </div>
                 <div className="flex flex-col items-stretch w-[52%] ml-5 max-md:w-full max-md:ml-0">
                   <div className="text-cyan-900 text-base leading-8  my-auto max-md:mt-5">
-                    We ensure the authenticity of users' profiles, so you can
+                    We ensure the authenticity of users profiles, so you can
                     trust the people you connect with.
                   </div>
                 </div>
