@@ -53,9 +53,9 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="container flex justify-center items-center mx-auto md:shadow-2xl bg-white md:self-stretch md:-translate-y-2/4 pl-28 pr-16 md:py-12 md:rounded-[500px] max-md:max-w-full max-md:mt-10 max-md:px-5">
-          <div className="gap-5 flex max-md:flex-col max-md:gap-0">
-            <div className="flex flex-col w-1/5 max-md:w-full max-md:ml-0">
+        <div className="container mt-24 mb-36 lg:mt-0 lg:mb-0 flex justify-center items-center mx-auto md:shadow-2xl bg-white md:self-stretch md:-translate-y-2/4 pl-28 pr-16 md:py-12 md:rounded-[500px] max-md:max-w-full max-md:px-5">
+          <div className="gap-5 w-full flex justify-between max-md:flex-col max-md:gap-0">
+            <div className="flex items-center justify-center flex-col w-1/5 max-md:w-full max-md:ml-0">
               <div className="flex items-center gap-5 max-md:mt-10">
                 <Image
                   loading="lazy"
@@ -65,7 +65,7 @@ export default function Home() {
                   alt="jobicon"
                   className="aspect-square object-contain object-center w-[50px] overflow-hidden max-w-full"
                 />
-                <div className="flex flex-col items-start">
+                <div className="flex flex-col items-center">
                   <div className="text-cyan-900 text-center text-2xl font-semibold leading-9 whitespace-nowrap">
                     500k
                   </div>
@@ -75,7 +75,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col w-[24%] ml-5 max-md:w-full max-md:ml-0">
+            <div className="flex items-center justify-center flex-col w-[24%] ml-5 max-md:w-full max-md:ml-0">
               <div className="flex items-center gap-5 my-auto max-md:mt-10">
                 <Image
                   loading="lazy"
@@ -85,7 +85,7 @@ export default function Home() {
                   src={PeopleGroup}
                   className="aspect-square object-contain object-center w-[55px] overflow-hidden max-w-full self-start"
                 />
-                <div className="flex flex-col items-start">
+                <div className="flex flex-col items-center">
                   <div className="text-cyan-900 text-center text-2xl font-semibold leading-9 whitespace-nowrap">
                     1 Million
                   </div>
@@ -95,7 +95,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col w-[24%] ml-5 max-md:w-full max-md:ml-0">
+            <div className="flex items-center justify-center flex-col w-[24%] ml-5 max-md:w-full max-md:ml-0">
               <div className="flex items-center gap-5 my-auto max-md:mt-10">
                 <Image
                   loading="lazy"
@@ -105,7 +105,7 @@ export default function Home() {
                   alt="invoices"
                   className="aspect-square object-contain object-center w-[61px] overflow-hidden max-w-full"
                 />
-                <div className="flex flex-col items-start">
+                <div className="flex flex-col items-center">
                   <div className="text-cyan-900 text-center text-2xl font-semibold leading-9 whitespace-nowrap">
                     8 Million
                   </div>
@@ -115,7 +115,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col w-[32%] ml-5 max-md:w-full max-md:ml-0">
+            <div className="flex items-center justify-center flex-col w-[32%] ml-5 max-md:w-full max-md:ml-0">
               <div className="flex items-center gap-3 my-auto max-md:mt-10">
                 <Image
                   loading="lazy"
@@ -125,7 +125,7 @@ export default function Home() {
                   alt="satisfaction"
                   className="aspect-square object-contain object-center w-[68px] overflow-hidden max-w-full"
                 />
-                <div className="flex flex-col items-start">
+                <div className="flex flex-col items-center">
                   <div className="text-cyan-900 text-center text-2xl font-semibold leading-9 whitespace-nowrap">
                     99%
                   </div>

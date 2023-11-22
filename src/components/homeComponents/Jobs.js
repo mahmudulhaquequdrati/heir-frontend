@@ -134,7 +134,7 @@ const Jobs = () => {
       </div>
       <div className="items-start self-stretch flex grow flex-col mt-16 max-md:max-w-full max-md:mt-10">
         <div className="self-stretch px-5 max-md:max-w-full">
-          <div className="grid grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
             {jobs
               ?.filter((job) => job?.category === jobType)
               .map((job, index) => (

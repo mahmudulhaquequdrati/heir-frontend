@@ -9,8 +9,8 @@ import Link from "next/link";
 
 export default function Review() {
   return (
-    <div className="self-center z-[1] flex w-full max-w-[1324px] flex-col mt-40 max-md:max-w-full max-md:mt-10">
-      <div className="items-center self-stretch flex flex-col max-md:max-w-full">
+    <div className=" z-[1] flex w-full  flex-col mt-40 container mx-auto">
+      <div className="items-center self-stretch flex flex-col max-lg:max-w-full">
         <div className="items-center self-center flex w-[930px] max-w-full flex-col px-5">
           <div className="text-cyan-900 text-center text-2xl sm:text-5xl font-semibold">
             Trusted by millions <br />
@@ -18,8 +18,8 @@ export default function Review() {
           </div>{" "}
           <div className="bg-orange-400 self-center flex max-w-[250px] sm:max-w-[329px] w-full h-[5px] sm:h-[9px] flex-col mt-4 rounded-[50px]" />
         </div>{" "}
-        <div className="self-stretch mt-16 px-5 max-md:max-w-full max-md:mt-10">
-          <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
+        <div className=" mt-16 px-5 max-md:max-w-full max-md:mt-10">
+          <div className="gap-5 flex max-lg:flex-col items-center max-md:gap-0">
             <div className="flex flex-col items-stretch w-[35%] max-md:w-full max-md:ml-0">
               <div className="flex grow flex-col max-md:mt-10">
                 <Image
@@ -86,7 +86,7 @@ export default function Review() {
           </div>
         </div>
       </div>{" "}
-      <div className="items-start self-stretch flex flex-col mt-56 max-md:mt-10 ">
+      <div className="w-full items-start self-stretch flex flex-col mt-56 max-md:mt-10 ">
         <div className="items-center self-center flex max-w-[924px] w-full flex-col">
           <div className="items-center self-stretch flex flex-col px-4">
             <div className="text-cyan-900 text-center text-2xl sm:text-4xl font-semibold tracking-wider">
@@ -98,9 +98,10 @@ export default function Review() {
           </div>{" "}
           <div className="bg-orange-400 self-center flex max-w-[250px] sm:max-w-[329px] w-full h-[5px] sm:h-[9px] flex-col mt-4 rounded-[50px]" />
         </div>{" "}
+        {/*  */}
         <div className="self-stretch mt-24  max-md:max-w-full max-md:mt-10 px-4">
           <div className="gap-8 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-            <div className="flex flex-col items-stretch w-[48%] max-md:w-full max-md:ml-0">
+            <div className="flex flex-col items-stretch w-[48%] max-lg:w-full max-lg:ml-0">
               <Image
                 loading="lazy"
                 width={100}
@@ -110,7 +111,7 @@ export default function Review() {
                 className="aspect-[1.16] object-contain object-center w-full overflow-hidden grow max-md:max-w-full max-md:mt-10"
               />
             </div>{" "}
-            <div className="flex flex-col items-stretch w-[52%] ml-5 max-md:w-full max-md:ml-0">
+            <div className="flex flex-col items-stretch w-[52%] ml-5 max-lg:w-full max-lg:ml-0">
               <div className="items-start flex flex-col pb-24 max-md:max-w-full max-md:mt-10">
                 <div className="items-start self-stretch flex flex-col max-md:max-w-full">
                   <div className="text-cyan-900 text-2xl sm:text-4xl font-semibold leading-[32.02px] self-stretch max-md:max-w-full">
@@ -165,14 +166,14 @@ export default function Review() {
                   <div className="items-start self-stretch flex justify-between gap-5 mt-10 max-md:max-w-full max-md:flex-wrap max-md:mt-10">
                     <Link
                       href={"/create-task"}
-                      className="w-full flex justify-center items-center bg-orange-400 rounded-[50px] px-20 py-5 text-white text-base font-bold self-center whitespace-nowrap"
+                      className="w-full flex justify-center items-center bg-orange-400 rounded-[50px] px-10 py-5 text-white text-base font-bold self-center whitespace-nowrap"
                     >
                       Post a task
                     </Link>
 
                     <Link
                       href={"/signin"}
-                      className="w-full flex justify-center items-center px-20 py-5 rounded-[500px] max-md:px-5 bg-opacity-10 bg-orange-400 text-orange-400 text-base font-medium self-center whitespace-nowrap"
+                      className="w-full flex justify-center items-center px-10 py-5 rounded-[500px] max-md:px-5 bg-opacity-10 bg-orange-400 text-orange-400 text-base font-medium self-center whitespace-nowrap"
                     >
                       Become a tasker
                     </Link>
@@ -182,6 +183,7 @@ export default function Review() {
             </div>
           </div>
         </div>
+        {/*  */}
       </div>
       <div className="flex-col my-[100px] relative flex pt-2 pb-4 max-md:max-w-full mx-4 rounded-2xl overflow-hidden">
         <Image
@@ -200,12 +202,12 @@ export default function Review() {
           <div className="text-white text-center text-lg leading-8 self-center ml-0 max-w-[831px] mt-4 max-md:max-w-full">
             Subscribe here, we’ll let you know when we added them.
           </div>
-          <div className="flex flex-col sm:flex-row items-center w-full md:w-[70%] gap-0  mt-11 md:rounded-[500px] overflow-hidden max-md:mt-10 ">
+          <div className="flex flex-col sm:flex-row items-center w-full md:w-[70%] gap-6  mt-11   max-md:mt-10 ">
             <input
-              className="w-full text-cyan-900 text-base items-center bg-white grow basis-auto pl-9 pr-20 py-2 rounded md:py-6 max-md:max-w-full max-md:px-5 outline-none"
+              className="w-full text-cyan-900 text-base items-center bg-white rounded-xl  md:rounded-l-[500px] outline-none block py-4  md:py-6 px-6 md:12"
               placeholder="Enter your mail here.."
             ></input>
-            <button className="text-white  md:text-xl font-semibold tracking-wide bg-cyan-900 w-full md:w-[188px] max-w-full rounded sm:rounded-none md:pl-11 md:pr-10 py-2 md:py-6 max-md:px-2 mt-2 sm:m-0">
+            <button className="text-white   font-semibold tracking-wide bg-cyan-900  rounded-full md:rounded-r-[500px] py-4  md:py-6 px-12 w-full md:w-auto">
               Subscribe
             </button>
           </div>
