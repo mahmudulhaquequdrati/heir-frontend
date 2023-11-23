@@ -1,13 +1,16 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable jsx-a11y/alt-text */
+"use client";
 import Image from "next/image";
 import bg from "../../assets/bg.png";
 import BG from "../../assets/clientImage/BG.svg";
 import Checked from "../../assets/clientImage/Checked.svg";
 import Stars from "../../assets/clientImage/starts.svg";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Review() {
+  const [subscribe, setSubscribe] = useState("");
   return (
     <div className=" z-[1] flex w-full  flex-col mt-40 container mx-auto">
       <div className="items-center self-stretch flex flex-col max-lg:max-w-full">
@@ -202,12 +205,19 @@ export default function Review() {
           <div className="text-white text-center text-lg leading-8 self-center ml-0 max-w-[831px] mt-4 max-md:max-w-full">
             Subscribe here, we’ll let you know when we added them.
           </div>
-          <div className="flex flex-col sm:flex-row items-center w-full md:w-[70%] gap-6  mt-11   max-md:mt-10 ">
+          <div className="flex flex-col sm:flex-row items-center w-full md:w-[70%] gap-6 lg:gap-0  mt-11   max-md:mt-10 ">
             <input
-              className="w-full text-cyan-900 text-base items-center bg-white rounded-xl  md:rounded-l-[500px] outline-none block py-4  md:py-6 px-6 md:12"
+              className="w-full text-cyan-900 text-base items-center bg-white rounded-xl  md:rounded-l-[500px] outline-none block py-4  md:py-6 px-6 lg:px-12 md:12"
               placeholder="Enter your mail here.."
+              value={subscribe}
+              onChange={(e) => setSubscribe(e.target.value)}
             ></input>
-            <button className="text-white   font-semibold tracking-wide bg-cyan-900  rounded-full md:rounded-r-[500px] py-4  md:py-6 px-12 w-full md:w-auto">
+            <button
+              className="text-white   font-semibold tracking-wide bg-cyan-900  rounded-full md:rounded-l-[500px] py-4  md:py-6 px-12 w-full md:w-auto"
+              onClick={() => {
+                setSubscribe("");
+              }}
+            >
               Subscribe
             </button>
           </div>
