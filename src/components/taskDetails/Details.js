@@ -139,9 +139,12 @@ const Details = ({ id }) => {
                 <Image
                   width={100}
                   height={100}
-                  className="relative w-[32px] h-[32px] object-cover"
+                  className="relative w-[32px] h-[32px] object-cover cursor-pointer"
                   alt="Ellipse"
                   src={User}
+                  onClick={() => {
+                    navigate.push("/person-details");
+                  }}
                 />
                 <div className="inline-flex items-start gap-[10px] px-[13px] py-[6px] relative flex-[0_0_auto] bg-primary rounded-[500px] overflow-hidden">
                   <div className="relative w-fit mt-[-1.00px] font-normal text-white text-4 tracking-normal leading-normal">
