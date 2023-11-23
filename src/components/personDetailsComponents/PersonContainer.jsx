@@ -1,7 +1,9 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 
 const PersonContainer = () => {
+  const [state, setState] = useState("tasker");
   return (
     <div className="w-full pb-[20px] md:pb-[30px] flex items-stretch justify-stretch gap-5 flex-wrap">
       {/* person profile */}
@@ -99,62 +101,127 @@ const PersonContainer = () => {
             Rating
           </h1>
           <div className="px-[6px] py-[5px] rounded-full w-fit flex items-center gap-1">
-            <button className="bg-primary text-white rounded-[6px] text-xs py-[6px] px-4 font-clash">
+            <button
+              className={`${
+                state === "tasker"
+                  ? "bg-primary text-white"
+                  : "bg-white text-secondery"
+              } rounded-[6px] text-xs py-[6px] px-4 font-clash`}
+              onClick={() => setState("tasker")}
+            >
               Tasker
             </button>
-            <button className="bg-white text-secondery rounded-[6px] text-xs py-[6px] px-4 font-clash">
+            <button
+              className={`${
+                state === "poster"
+                  ? "bg-primary text-white"
+                  : "bg-white text-secondery"
+              } rounded-[6px] text-xs py-[6px] px-4 font-clash`}
+              onClick={() => setState("poster")}
+            >
               Poster
             </button>
           </div>
         </div>
-        <div className="pt-[20px] grid grid-cols-2 gap-2">
-          <div className="p-4 w-full h-full bg-white rounded-[16px] flex flex-col justify-between">
-            <div className="">
-              <div className="flex items-center gap-2">
-                <h1 className="text-primary text-sm font-clash font-medium">
-                  Completion rate
-                </h1>
-                <Image
-                  src={"/icons/info.svg"}
-                  alt="info"
-                  width={14}
-                  height={14}
-                />
+        {state === "tasker" ? (
+          <div className="pt-[20px] grid grid-cols-2 gap-2">
+            <div className="p-4 w-full h-full bg-white rounded-[16px] flex flex-col justify-between">
+              <div className="">
+                <div className="flex items-center gap-2">
+                  <h1 className="text-primary text-sm font-clash font-medium">
+                    Completion rate
+                  </h1>
+                  <Image
+                    src={"/icons/info.svg"}
+                    alt="info"
+                    width={14}
+                    height={14}
+                  />
+                </div>
+                <p className="text-xs text-[#213F61B2]">184 tasks</p>
               </div>
-              <p className="text-xs text-[#213F61B2]">184 tasks</p>
+              <div className="flex items-center gap-2 pt-[14px]">
+                <Image
+                  src={"/icons/star.svg"}
+                  alt="star"
+                  width={35}
+                  height={35}
+                />
+                <h1 className="text-primary text-2xl font-clash font-semibold pt-1">
+                  4.6
+                </h1>
+              </div>
             </div>
-            <div className="flex items-center gap-2 pt-[14px]">
-              <Image
-                src={"/icons/star.svg"}
-                alt="star"
-                width={35}
-                height={35}
-              />
-              <h1 className="text-primary text-2xl font-clash font-semibold pt-1">
-                4.6
+            <div className="p-4 w-full h-full bg-white rounded-[16px] flex flex-col justify-between">
+              <div className="">
+                <div className="flex items-center gap-2">
+                  <h1 className="text-primary text-sm font-clash font-medium">
+                    overall rating
+                  </h1>
+                  <Image
+                    src={"/icons/info.svg"}
+                    alt="info"
+                    width={14}
+                    height={14}
+                  />
+                </div>
+                <p className="text-xs text-[#213F61B2]">156 rating</p>
+              </div>
+              <h1 className="text-secondery text-2xl font-clash font-semibold pt-[14px]">
+                99%
               </h1>
             </div>
           </div>
-          <div className="p-4 w-full h-full bg-white rounded-[16px] flex flex-col justify-between">
-            <div className="">
-              <div className="flex items-center gap-2">
-                <h1 className="text-primary text-sm font-clash font-medium">
-                  overall rating
-                </h1>
-                <Image
-                  src={"/icons/info.svg"}
-                  alt="info"
-                  width={14}
-                  height={14}
-                />
+        ) : (
+          <div className="pt-[20px] grid grid-cols-2 gap-2">
+            <div className="p-4 w-full h-full bg-white rounded-[16px] flex flex-col justify-between">
+              <div className="">
+                <div className="flex items-center gap-2">
+                  <h1 className="text-primary text-sm font-clash font-medium">
+                    Completion rate
+                  </h1>
+                  <Image
+                    src={"/icons/info.svg"}
+                    alt="info"
+                    width={14}
+                    height={14}
+                  />
+                </div>
+                <p className="text-xs text-[#213F61B2]">154 tasks</p>
               </div>
-              <p className="text-xs text-[#213F61B2]">156 rating</p>
+              <div className="flex items-center gap-2 pt-[14px]">
+                <Image
+                  src={"/icons/star.svg"}
+                  alt="star"
+                  width={35}
+                  height={35}
+                />
+                <h1 className="text-primary text-2xl font-clash font-semibold pt-1">
+                  4.8
+                </h1>
+              </div>
             </div>
-            <h1 className="text-secondery text-2xl font-clash font-semibold pt-[14px]">
-              99%
-            </h1>
+            <div className="p-4 w-full h-full bg-white rounded-[16px] flex flex-col justify-between">
+              <div className="">
+                <div className="flex items-center gap-2">
+                  <h1 className="text-primary text-sm font-clash font-medium">
+                    overall rating
+                  </h1>
+                  <Image
+                    src={"/icons/info.svg"}
+                    alt="info"
+                    width={14}
+                    height={14}
+                  />
+                </div>
+                <p className="text-xs text-[#213F61B2]">13 rating</p>
+              </div>
+              <h1 className="text-secondery text-2xl font-clash font-semibold pt-[14px]">
+                92%
+              </h1>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );
