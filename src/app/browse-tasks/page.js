@@ -21,7 +21,6 @@ const page = () => {
 
   const handleSearchSubmit = (searchValue) => {
     searchValue.preventDeafult();
-    console.log(searchValue);
   };
 
   const [originalData, setOriginalData] = useState(taskData);

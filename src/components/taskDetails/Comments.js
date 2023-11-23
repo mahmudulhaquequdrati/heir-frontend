@@ -53,9 +53,12 @@ const Comments = ({ id }) => {
   };
 
   //
+  const [comment, setComment] = useState("");
+
   const replySubmitHere = (id) => {
     // console.log("id -> ", id);
     // your function
+    setComment("");
   };
 
   // upload files
@@ -158,9 +161,17 @@ const Comments = ({ id }) => {
               />
             </div>
             <div className="flex flex-col items-start gap-[14px] p-4 relative flex-1 grow bg-white rounded-2xl overflow-hidden w-full">
-              <div className="relative h-[63px] mt-[-1.00px] [font-family:'DM_Sans-Regular',Helvetica] font-normal text-primary text-4 tracking-normal leading-normal w-full">
-                If you.....
-              </div>
+              <textarea
+                style={{
+                  resize: "none",
+                }}
+                className="relative  mt-[-1.00px] [font-family:'DM_Sans-Regular',Helvetica] font-normal text-primary text-4 tracking-normal leading-normal w-full outline-none bg-transparent"
+                placeholder="If you....."
+                value={comment}
+                onChange={(e) => {
+                  setComment(e.target.value);
+                }}
+              ></textarea>
               <div className="flex flex-col-reverse md:flex-col-reverse sm:flex-row lg:flex-row justify-between items-start w-full gap-2">
                 <div className="inline-flex items-start gap-2 relative flex-[0_0_auto]">
                   <Image
@@ -173,7 +184,7 @@ const Comments = ({ id }) => {
                   />
                   <div
                     onClick={() => replySubmitHere(_id)}
-                    className="inline-flex items-center justify-center gap-[10px] px-5 py-2 bg-secondery rounded-[50px] relative flex-[0_0_auto]"
+                    className="inline-flex items-center justify-center gap-[10px] px-5 py-2 bg-secondery rounded-[50px] relative flex-[0_0_auto] cursor-pointer"
                   >
                     <div className="relative w-fit mt-[-1.00px] [font-family:'Clash_Display-Semibold',Helvetica] font-normal text-white text-4 tracking-normal leading-normal">
                       Reply

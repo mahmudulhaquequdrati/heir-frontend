@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+
 const categories = ["cleaning", "barbers", "design", "driving", "loundry"];
 
 const FilterSecton = ({ filter, setFilter }) => {
@@ -34,6 +36,8 @@ const FilterSecton = ({ filter, setFilter }) => {
       location: "",
     });
   };
+
+  const [catSearch, setCatSearch] = useState("");
 
   return (
     <div className="w-full">
@@ -76,6 +80,8 @@ const FilterSecton = ({ filter, setFilter }) => {
               className="block w-full p-3 pl-10 text-sm text-gray-900 border border-gray-300 focus:border-gray-300 rounded-l-lg bg-white"
               placeholder="Search here..."
               required
+              value={catSearch}
+              onChange={(e) => setCatSearch(e.target.value)}
             />
           </div>
           <button
@@ -87,17 +93,21 @@ const FilterSecton = ({ filter, setFilter }) => {
         </div>
 
         <div className="flex flex-col gap-3 my-3 text-sm">
-          {categories?.map((cat, index) => (
-            <div key={index}>
-              <input
-                type="checkbox"
-                id={cat}
-                className="checkbox"
-                onChange={(e) => setCategoryInFilter(cat)}
-              />
-              <label htmlFor={cat}>{cat}</label>
-            </div>
-          ))}
+          {categories
+            .filter((c) => {
+              return c.toLowerCase().includes(catSearch.toLowerCase());
+            })
+            .map((cat, index) => (
+              <div key={index}>
+                <input
+                  type="checkbox"
+                  id={cat}
+                  className="checkbox"
+                  onChange={(e) => setCategoryInFilter(cat)}
+                />
+                <label htmlFor={cat}>{cat}</label>
+              </div>
+            ))}
         </div>
       </div>
 

@@ -20,24 +20,24 @@ const TaskSection = ({
       const filteredResult = originalData
         ?.filter((item) => {
           return (
-            (filter?.taskTitle === "" ||
+            ((filter?.taskTitle === "" ||
               item?.taskTitle
                 .toLowerCase()
                 .includes(filter?.taskTitle?.toLowerCase())) &&
-            (filter?.category?.length === 0 ||
-              filter?.category?.includes(item?.carl_category_name)) &&
-            (filter?.taskPrice === "" ||
-              parseInt(item?.amount) <= parseInt(filter?.taskPrice)) &&
-            (filter?.toBeDone === "all" ||
-              item?.toBeDone === filter?.toBeDone) &&
-            (filter?.taskCategory === "available"
-              ? item?.taskStatus === "Open"
-              : filter?.taskCategory === "noOfferTask" &&
-                item?.offered?.length === 0) &&
-            (filter?.location === "" ||
-              item?.location
-                .toLowerCase()
-                .includes(filter?.location?.toLowerCase()))
+              (filter?.category?.length === 0 ||
+                filter?.category?.includes(item?.carl_category_name)) &&
+              (filter?.taskPrice === "" ||
+                parseInt(item?.amount) <= parseInt(filter?.taskPrice)) &&
+              (filter?.taskCategory === "available"
+                ? item?.taskStatus === "Open"
+                : filter?.taskCategory === "noOfferTask" &&
+                  item?.offered?.length === 0) &&
+              (filter?.location === "" ||
+                item?.location
+                  .toLowerCase()
+                  .includes(filter?.location?.toLowerCase())) &&
+              filter?.toBeDone === "all") ||
+            item?.toBeDone === filter?.toBeDone
           );
         })
         .sort((a, b) => {
