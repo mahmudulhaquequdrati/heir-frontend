@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 export default function VerifiedTalents() {
   return (
-    <div className="bg-orange-50 self-stretch flex w-full flex-col mt-44 pt-24 pb-12 px-20 max-md:max-w-full max-md:mt-10 max-md:px-5">
+    <div className="bg-orange-50 self-center flex w-full flex-col mt-44 pt-24 pb-12 px-20 max-md:max-w-full max-md:mt-10 max-md:px-5">
       <div className="self-center w-full max-w-[1170px] max-md:max-w-full">
         <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
           <div className="flex flex-col items-stretch w-[85%] max-md:w-full max-md:ml-0">
@@ -42,7 +42,7 @@ export default function VerifiedTalents() {
                         Circuit is flexible and affordable and offers you
                         exceptional support to achieve your career goals.
                       </div>{" "}
-                      <div className="items-start self-stretch flex justify-between gap-5 mt-10 max-md:max-w-full max-md:flex-wrap max-md:mt-10">
+                      <div className="items-start  flex justify-center gap-5 mt-10  max-md:mt-10">
                         <Link
                           href={"/create-task"}
                           className="w-full flex justify-center items-center bg-orange-400 rounded-[50px] px-20 py-5 text-white text-base font-bold self-center whitespace-nowrap"
