@@ -1,11 +1,12 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import OpenAI from "openai";
 
 const openai = new OpenAI({
-  apiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY,
+  apiKey: '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',
+  // apiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY,
   dangerouslyAllowBrowser: true, // defaults to process.env["OPENAI_API_KEY"]
 });
 export default function CreateTask() {
@@ -19,11 +20,27 @@ export default function CreateTask() {
     const file = e.target.files[0];
     setSelectedFile(file);
   };
+  useEffect(() => {
+    const data = JSON.parse(localStorage.getItem('inputData'));
+    const qsn = JSON.parse(localStorage.getItem('questions'));
+    console.log(data);
+    console.log(qsn)
+    if (data) {
+      setInputData(data)
+    }
+    if (qsn) {
+      setAiQuistions(qsn)
+    }
+  }, [])
   const handleInputChange = (event) => {
     setInputData((inputs) => ({
       ...inputs,
       [event.target.name]: event.target.value,
     }));
+    localStorage.setItem('inputData', JSON.stringify({
+      ...inputData,
+      [event.target.name]: event.target.value,
+    }))
   };
 
   const [dataAdded, setDataAdded] = useState({
@@ -58,6 +75,7 @@ export default function CreateTask() {
           .split("\n")
           .map((question) => question.replace(/^\d+\.\s*/, "").trim());
         setAiQuistions(questions);
+        localStorage.setItem('questions', JSON.stringify(questions))
         setIsLoading(false);
       })
       .catch((err) => {
@@ -72,8 +90,9 @@ export default function CreateTask() {
       });
       setJobType("Details");
     }, 1000);
+
   };
-  // console.log(aiQuisions);
+  console.log(aiQuisions);
   return (
     <>
       {isLoading && (
@@ -120,13 +139,12 @@ export default function CreateTask() {
           <div className="flex justify-center mb-6">
             <div className="justify-center items-start border border-[color:var(--Stoke,rgba(33,63,97,0.05))] bg-white flex gap-2 mt-1 px-8 py-2  border-solid">
               <button
-                className={`text-center cursor-pointer text-base font-medium whitespace-nowrap justify-center items-center flex-1 px-4 py-2.5  ${
-                  jobType === "Basics"
-                    ? " border-b-2 border-cyan-900 "
-                    : dataAdded.basic === true
+                className={`text-center cursor-pointer text-base font-medium whitespace-nowrap justify-center items-center flex-1 px-4 py-2.5  ${jobType === "Basics"
+                  ? " border-b-2 border-cyan-900 "
+                  : dataAdded.basic === true
                     ? "text-gray-800 "
                     : "text-gray-400 "
-                }`}
+                  }`}
                 onClick={(e) => {
                   setJobType("Basics");
                 }}
@@ -134,13 +152,12 @@ export default function CreateTask() {
                 Basics
               </button>{" "}
               <button
-                className={`text-center cursor-pointer text-base font-medium whitespace-nowrap justify-center items-center flex-1 px-4 py-2.5  ${
-                  jobType === "Details"
-                    ? "border-b-2 border-cyan-900 "
-                    : dataAdded.details === true
+                className={`text-center cursor-pointer text-base font-medium whitespace-nowrap justify-center items-center flex-1 px-4 py-2.5  ${jobType === "Details"
+                  ? "border-b-2 border-cyan-900 "
+                  : dataAdded.details === true
                     ? "text-gray-800 "
                     : "text-gray-400 "
-                }`}
+                  }`}
                 onClick={(e) => {
                   setJobType("Details");
                 }}
@@ -150,13 +167,12 @@ export default function CreateTask() {
               </button>{" "}
               <button
                 disabled={!dataAdded.details}
-                className={`text-center cursor-pointer text-base font-medium whitespace-nowrap justify-center items-center flex-1 px-4 py-2.5  ${
-                  jobType === "Budget"
-                    ? "border-b-2 border-cyan-900 "
-                    : dataAdded.budget === true
+                className={`text-center cursor-pointer text-base font-medium whitespace-nowrap justify-center items-center flex-1 px-4 py-2.5  ${jobType === "Budget"
+                  ? "border-b-2 border-cyan-900 "
+                  : dataAdded.budget === true
                     ? "text-gray-800 "
                     : "text-gray-400 "
-                }`}
+                  }`}
                 onClick={(e) => {
                   setJobType("Budget");
                 }}
@@ -165,13 +181,12 @@ export default function CreateTask() {
               </button>{" "}
               <button
                 disabled={!dataAdded.summury}
-                className={`text-center cursor-pointer text-base font-medium whitespace-nowrap justify-center items-center flex-1 px-4 py-2.5  ${
-                  jobType === "Summury"
-                    ? "border-b-2 border-cyan-900 "
-                    : dataAdded.summury === true
+                className={`text-center cursor-pointer text-base font-medium whitespace-nowrap justify-center items-center flex-1 px-4 py-2.5  ${jobType === "Summury"
+                  ? "border-b-2 border-cyan-900 "
+                  : dataAdded.summury === true
                     ? "text-gray-800 "
                     : "text-gray-400 "
-                }`}
+                  }`}
                 onClick={(e) => {
                   setJobType("Summury");
                 }}
@@ -196,6 +211,7 @@ export default function CreateTask() {
                         <div>
                           <input
                             onChange={handleInputChange}
+                            value={inputData?.what}
                             name="what"
                             type="text"
                             className="w-full bg-[#F4F8FD] py-3 md:py-5 px-[18px] rounded-2xl outline-none border border-[#F4F8FD] focus:border-[#E78C3B]"
@@ -209,6 +225,7 @@ export default function CreateTask() {
                         <div>
                           <input
                             onChange={handleInputChange}
+                            value={inputData?.when}
                             name="when"
                             type="date"
                             className="w-full bg-[#F4F8FD] py-3 md:py-5 px-[18px] rounded-2xl outline-none border border-[#F4F8FD] focus:border-[#E78C3B]"
@@ -233,7 +250,8 @@ export default function CreateTask() {
                               onChange={handleInputChange}
                               type="radio"
                               name="who"
-                              value="In Persion"
+                              value='InPerson'
+                              checked={inputData?.who == 'InPerson'}
                               id="InPerson"
                             />
                             <label htmlFor="InPerson">In person</label>
@@ -243,7 +261,8 @@ export default function CreateTask() {
                               onChange={handleInputChange}
                               type="radio"
                               name="who"
-                              value="Who"
+                              value='Online'
+                              checked={inputData?.who == 'Online'}
                               id="Online"
                             />
                             <label htmlFor="Online">Online</label>
@@ -259,6 +278,7 @@ export default function CreateTask() {
                             onChange={handleInputChange}
                             type="text"
                             name="where"
+                            value={inputData?.where}
                             className="w-full bg-[#F4F8FD] py-3 md:py-5 px-[18px] rounded-2xl outline-none border border-[#F4F8FD] focus:border-[#E78C3B]"
                           />
                         </div>
@@ -632,6 +652,7 @@ export default function CreateTask() {
                       onChange={handleInputChange}
                       name="details"
                       id=""
+                      value={inputData?.details}
                       placeholder="Write your task summery here..."
                       className="w-full max-h-[225px] h-[225px] resize-none bg-[#F4F8FD] py-5 px-[18px] rounded-2xl outline-none border border-[#F4F8FD] focus:border-[#E78C3B]"
                     ></textarea>
@@ -820,6 +841,7 @@ export default function CreateTask() {
                     <span className="block pb-4">What is your budget?</span>
                     <input
                       onChange={handleInputChange}
+                      value={inputData?.budget}
                       name="budget"
                       type="text"
                       className="w-full bg-[#F4F8FD] py-3 md:py-5 px-[18px] rounded-2xl outline-none border border-[#F4F8FD] focus:border-[#E78C3B]"
@@ -927,6 +949,7 @@ export default function CreateTask() {
                           <input
                             onChange={handleInputChange}
                             name="what"
+                            value={inputData?.what}
                             type="text"
                             className="w-full bg-[#F4F8FD] py-3 md:py-5 px-[18px] rounded-2xl outline-none border border-[#F4F8FD] focus:border-[#E78C3B]"
                           />
@@ -939,6 +962,7 @@ export default function CreateTask() {
                         <div>
                           <input
                             onChange={handleInputChange}
+                            value={inputData?.when}
                             name="when"
                             type="date"
                             className="w-full bg-[#F4F8FD] py-3 md:py-5 px-[18px] rounded-2xl outline-none border border-[#F4F8FD] focus:border-[#E78C3B]"
@@ -963,7 +987,8 @@ export default function CreateTask() {
                               onChange={handleInputChange}
                               type="radio"
                               name="who"
-                              value="In Persion"
+                              value='InPerson'
+                              checked={inputData?.who == 'InPerson'}
                               id="InPerson"
                             />
                             <label htmlFor="InPerson">In person</label>
@@ -973,7 +998,8 @@ export default function CreateTask() {
                               onChange={handleInputChange}
                               type="radio"
                               name="who"
-                              value="Who"
+                              value='Online'
+                              checked={inputData?.who == 'Online'}
                               id="Online"
                             />
                             <label htmlFor="Online">Online</label>
@@ -989,6 +1015,7 @@ export default function CreateTask() {
                             onChange={handleInputChange}
                             type="text"
                             name="where"
+                            value={inputData?.where}
                             className="w-full bg-[#F4F8FD] py-3 md:py-5 px-[18px] rounded-2xl outline-none border border-[#F4F8FD] focus:border-[#E78C3B]"
                           />
                         </div>
@@ -1012,6 +1039,7 @@ export default function CreateTask() {
                               <input
                                 name={`aiQuistion${i + 1}`}
                                 onChange={handleInputChange}
+                                value={inputData[`aiQuistion${i + 1}`]}
                                 type="text"
                                 className="w-full bg-[#F4F8FD] py-3 md:py-5 px-[18px] rounded-2xl outline-none border border-[#F4F8FD] focus:border-[#E78C3B]"
                               />
@@ -1035,6 +1063,7 @@ export default function CreateTask() {
                         <textarea
                           onChange={handleInputChange}
                           name="details"
+                          value={inputData?.details}
                           id=""
                           placeholder="Write your task summery here..."
                           className="w-full max-h-[225px] h-[225px] resize-none bg-[#F4F8FD] py-5 px-[18px] rounded-2xl outline-none border border-[#F4F8FD] focus:border-[#E78C3B]"
@@ -1143,6 +1172,7 @@ export default function CreateTask() {
                         <span className="block pb-4">What is your budget?</span>
                         <input
                           onChange={handleInputChange}
+                          value={inputData?.budget}
                           name="budget"
                           type="text"
                           className="w-full bg-[#F4F8FD] py-3 md:py-5 px-[18px] rounded-2xl outline-none border border-[#F4F8FD] focus:border-[#E78C3B]"
