@@ -5,8 +5,7 @@ import { useEffect, useState } from "react";
 import OpenAI from "openai";
 
 const openai = new OpenAI({
-  apiKey: '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',
-  // apiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY,
+   apiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY,
   dangerouslyAllowBrowser: true, // defaults to process.env["OPENAI_API_KEY"]
 });
 export default function CreateTask() {
