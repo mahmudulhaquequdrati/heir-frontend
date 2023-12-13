@@ -1,6 +1,40 @@
-import React from "react";
+"use client"
+
+import Link from "next/link";
+import React, { useState } from "react";
+import { signIn } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 export default function SignPage() {
+  const router = useRouter();
+  const [formData, setFormData] = useState({
+    email: '',
+    password: '',
+    redirect: false,
+  });
+  const handleInputChange = (event) => {
+    setFormData((inputs) => ({
+      ...inputs,
+      [event.target.name]: event.target.value,
+    }));
+  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const res = await signIn("credentials", formData);
+
+      if (res.error) {
+        setError("Invalid Credentials");
+        return;
+      }
+
+      router.replace("/");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div className="flex items-center h-screen">
       <div className="p-12 bg-white mx-auto rounded-2xl w-full sm:w-3/4 md:w-[60%] lg:w-[40%] shadow-xl  ">
@@ -15,7 +49,10 @@ export default function SignPage() {
             </label>
             <input
               className=" w-full text-base px-4 py-2 border  border-gray-300 rounded-lg focus:outline-none focus:border-blue-400"
-              type=""
+              type="email"
+              onChange={handleInputChange}
+              value={formData?.email}
+              name="email"
               placeholder="mail@gmail.com"
             />
           </div>
@@ -25,7 +62,10 @@ export default function SignPage() {
             </label>
             <input
               className="w-full content-center text-base px-4 py-2 border  border-gray-300 rounded-lg focus:outline-none focus:border-blue-400"
-              type=""
+              type="password"
+              onChange={handleInputChange}
+              value={formData?.password}
+              name="password"
               placeholder="Enter your password"
             />
           </div>
@@ -52,11 +92,21 @@ export default function SignPage() {
           </div>
           <div>
             <button
+              onClick={handleSubmit}
               type="submit"
               className="w-full flex justify-center bg-blue-400  hover:bg-blue-500 text-gray-100 p-3  rounded-full tracking-wide font-semibold  shadow-lg cursor-pointer transition ease-in duration-500"
             >
               Sign in
             </button>
+          </div>
+          <div className="text-center">
+            <Link
+              className="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
+              href="/signup"
+            >
+              Don&apos;t have an account?{" "}
+              <span className="underline">Sign Up</span>
+            </Link>
           </div>
         </div>
       </div>
