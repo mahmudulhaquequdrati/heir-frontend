@@ -4,8 +4,14 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import { getServerSession } from "next-auth";
+import { redirect } from "next/navigation";
+import { authOptions } from "../api/auth/[...nextauth]/route";
 
 export default function SignPage() {
+  const session = getServerSession(authOptions);
+  console.log(session);
+  // if (session) redirect("/");
   const router = useRouter();
   const [formData, setFormData] = useState({
     email: '',
