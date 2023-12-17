@@ -30,7 +30,7 @@ const Card = ({ item }) => {
         </div>
 
         {/* Price */}
-        <strong className="[font-family:'Clash_Display-Semibold',Helvetica] w-fit mt-[-1.00px] tracking-normal text-2xl text-secondery font-bold leading-normal relative">
+        <strong className="[font-family:'Clash_Display-Semibold',Helvetica] w-fit mt-[-1.00px] tracking-normal text-2xl text-secondary font-bold leading-normal relative">
           ${amount}
         </strong>
       </div>
@@ -61,7 +61,7 @@ const Card = ({ item }) => {
           src={User}
         />
         <div
-          className={`inline-flex items-start gap-[10px] flex-[0_0_auto] px-[13px] py-[6px] overflow-hidden rounded-[500px] relative bg-secondery`}
+          className={`inline-flex items-start gap-[10px] flex-[0_0_auto] px-[13px] py-[6px] overflow-hidden rounded-[500px] relative bg-secondary`}
         >
           <div className="[font-family:'Clash_Display-Semibold',Helvetica] w-fit mt-[-1.00px] tracking-normal text-base text-white font-normal leading-normal relative">
             {taskStatus}

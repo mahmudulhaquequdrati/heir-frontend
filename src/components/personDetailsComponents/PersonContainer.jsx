@@ -105,7 +105,7 @@ const PersonContainer = () => {
               className={`${
                 state === "tasker"
                   ? "bg-primary text-white"
-                  : "bg-white text-secondery"
+                  : "bg-white text-secondary"
               } rounded-[6px] text-xs py-[6px] px-4 font-clash`}
               onClick={() => setState("tasker")}
             >
@@ -115,7 +115,7 @@ const PersonContainer = () => {
               className={`${
                 state === "poster"
                   ? "bg-primary text-white"
-                  : "bg-white text-secondery"
+                  : "bg-white text-secondary"
               } rounded-[6px] text-xs py-[6px] px-4 font-clash`}
               onClick={() => setState("poster")}
             >
@@ -167,7 +167,7 @@ const PersonContainer = () => {
                 </div>
                 <p className="text-xs text-[#213F61B2]">156 rating</p>
               </div>
-              <h1 className="text-secondery text-2xl font-clash font-semibold pt-[14px]">
+              <h1 className="text-secondary text-2xl font-clash font-semibold pt-[14px]">
                 99%
               </h1>
             </div>
@@ -216,7 +216,7 @@ const PersonContainer = () => {
                 </div>
                 <p className="text-xs text-[#213F61B2]">13 rating</p>
               </div>
-              <h1 className="text-secondery text-2xl font-clash font-semibold pt-[14px]">
+              <h1 className="text-secondary text-2xl font-clash font-semibold pt-[14px]">
                 92%
               </h1>
             </div>

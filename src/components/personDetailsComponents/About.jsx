@@ -24,7 +24,9 @@ const About = () => {
           readable content of a page when looking at its layout. The point of
           using Lorem Ipsum is that it has a more-or-less normal distribution of
           letters, as opposed to using &apos;Content here, content here..{" "}
-          <span className="text-secondery font-medium cursor-pointer">Read more</span>
+          <span className="text-secondary font-medium cursor-pointer">
+            Read more
+          </span>
         </p>
       </div>
     </div>

@@ -16,7 +16,7 @@ const Reviews = () => {
             className={`${
               state === "tasker"
                 ? "bg-primary text-white"
-                : "bg-white text-secondery"
+                : "bg-white text-secondary"
             } rounded-[6px] text-xs py-[6px] px-4 font-clash`}
             onClick={() => setState("tasker")}
           >
@@ -26,7 +26,7 @@ const Reviews = () => {
             className={`${
               state === "poster"
                 ? "bg-primary text-white"
-                : "bg-white text-secondery"
+                : "bg-white text-secondary"
             } rounded-[6px] text-xs py-[6px] px-4 font-clash`}
             onClick={() => setState("poster")}
           >

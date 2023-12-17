@@ -90,7 +90,7 @@ const TaskSection = ({
               />
               <button
                 type="submit"
-                className="text-white absolute right-0 bottom-0 bg-secondery hover:bg-secondery font-medium rounded-lg text-sm px-10 py-[16.5px] "
+                className="text-white absolute right-0 bottom-0 bg-secondary hover:bg-secondary font-medium rounded-lg text-sm px-10 py-[16.5px] "
                 onClick={() => handleSearchSubmit(filter?.taskTitle)}
               >
                 Search

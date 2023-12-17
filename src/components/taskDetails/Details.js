@@ -71,7 +71,7 @@ const Details = ({ id }) => {
             </button>
 
             <div className="inline-flex items-start gap-[10px] relative flex-[0_0_auto]">
-              <div className="relative w-fit mt-[-1.00px] [font-family:'DM_Sans-Medium',Helvetica] font-medium text-primary text-4 tracking-normal leading-normal">
+              <div className="relative w-fit mt-[-1.00px] [font-family:'DM_Sans-Medium',Helvetica] font-medium text-gray-900 text-4 tracking-normal leading-normal">
                 {timeCalculation(created_at)} hours ago
               </div>
             </div>
@@ -79,20 +79,20 @@ const Details = ({ id }) => {
           <div className="flex flex-col items-start gap-10 relative w-full flex-[0_0_auto]">
             <div className="flex flex-col items-start gap-6 relative w-full flex-[0_0_auto]">
               <div className="flex gap-[15px] items-start justify-center pb-6 pt-0 px-0 w-full">
-                <p className="relative flex-1 mt-[-1.00px] text-primary font-bold text-2xl md:text-3xl lg:text-4xl tracking-normal leading-normal">
+                <p className="relative flex-1 mt-[-1.00px] text-secondary font-bold text-2xl md:text-3xl lg:text-4xl tracking-normal leading-normal">
                   {taskTitle}
                 </p>
-                <div className="relative w-fit mt-[-1.00px] text-secondery font-bold text-3xl md:text-4xl lg:text-5xl tracking-normal leading-normal">
+                <div className="relative w-fit mt-[-1.00px] text-secondary font-bold text-3xl md:text-4xl lg:text-5xl tracking-normal leading-normal">
                   ${amount}
                 </div>
               </div>
-              <div className="relative font-normal text-primary text-5 tracking-normal leading-normal">
+              <div className="relative font-normal text-gray-900 text-5 tracking-normal leading-normal">
                 Details:
               </div>
-              <p className="relative [font-family:'DM_Sans-Regular',Helvetica] font-normal text-primary text-4 tracking-normal leading-normal">
+              <p className="relative [font-family:'DM_Sans-Regular',Helvetica] font-normal text-gray-900 text-4 tracking-normal leading-normal">
                 {details}
               </p>
-              <p className="relative [font-family:'DM_Sans-Regular',Helvetica] font-normal text-primary text-4 tracking-normal leading-normal">
+              <p className="relative [font-family:'DM_Sans-Regular',Helvetica] font-normal text-gray-900 text-4 tracking-normal leading-normal">
                 {details}
               </p>
             </div>
@@ -106,7 +106,7 @@ const Details = ({ id }) => {
                     alt="Marker"
                     src={Marker}
                   />
-                  <div className="relative w-fit mt-[-1.00px] [font-family:'DM_Sans-Medium',Helvetica] font-medium text-primary text-4 tracking-normal leading-normal">
+                  <div className="relative w-fit mt-[-1.00px] [font-family:'DM_Sans-Medium',Helvetica] font-medium text-gray-900 text-4 tracking-normal leading-normal">
                     {workType}
                   </div>
                 </div>
@@ -118,7 +118,7 @@ const Details = ({ id }) => {
                     alt="Calendar"
                     src={Calender}
                   />
-                  <div className="relative w-fit mt-[-1.00px] [font-family:'DM_Sans-Medium',Helvetica] font-medium text-primary text-4 tracking-normal leading-normal">
+                  <div className="relative w-fit mt-[-1.00px] [font-family:'DM_Sans-Medium',Helvetica] font-medium text-gray-900 text-4 tracking-normal leading-normal">
                     Before Tomorrow
                   </div>
                 </div>
@@ -130,7 +130,7 @@ const Details = ({ id }) => {
                     alt="Time fast"
                     src={Timer}
                   />
-                  <div className="relative w-fit mt-[-1.00px] [font-family:'DM_Sans-Medium',Helvetica] font-medium text-primary text-4 tracking-normal leading-normal">
+                  <div className="relative w-fit mt-[-1.00px] [font-family:'DM_Sans-Medium',Helvetica] font-medium text-gray-900 text-4 tracking-normal leading-normal">
                     {workTime}
                   </div>
                 </div>
@@ -168,7 +168,7 @@ const Details = ({ id }) => {
         <div className="inline-flex items-start gap-2 relative flex-[0_0_auto]">
           <button
             onClick={() => makeAnOffer(_id)}
-            className="cursor-pointer flex w-[249px] items-center justify-center gap-[10px] px-6 py-[16px] relative bg-secondery rounded-[50px]"
+            className="cursor-pointer flex w-[249px] items-center justify-center gap-[10px] px-6 py-[16px] relative bg-secondary rounded-[50px]"
           >
             <div className="relative w-fit mt-[-1.00px] font-normal text-[#ffffff] text-4 tracking-normal leading-normal">
               Make an offer

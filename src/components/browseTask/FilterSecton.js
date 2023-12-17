@@ -42,9 +42,9 @@ const FilterSecton = ({ filter, setFilter }) => {
   return (
     <div className="w-full">
       <div className="flex justify-between items-center w-full">
-        <h2 className="text-primary font-bold text-lg">Filter</h2>
+        <h2 className="text-secondary font-bold text-lg">Filter</h2>
         <p
-          className="text-secondery cursor-pointer"
+          className="text-secondary cursor-pointer"
           onClick={handleClearFilter}
         >
           Clear all
@@ -86,7 +86,7 @@ const FilterSecton = ({ filter, setFilter }) => {
           </div>
           <button
             type="submit"
-            className="text-white bg-secondery hover:bg-secondery font-medium rounded-r-lg text-sm px-5 py-3"
+            className="text-white bg-secondary hover:bg-secondary font-medium rounded-r-lg text-sm px-5 py-3"
           >
             Search
           </button>
@@ -115,7 +115,7 @@ const FilterSecton = ({ filter, setFilter }) => {
       <div className="bg-[#f4f8fd] rounded-xl mt-4">
         <div className="flex flex-col items-start gap-6 p-6 relative bg-accent rounded-[24px] overflow-hidden">
           <div className="items-center justify-between w-full flex-[0_0_auto] flex relative">
-            <div className="relative w-fit mt-[-1.00px] [font-family:'Clash_Display-Medium',Helvetica] font-medium text-primary text-xl tracking-normal leading-normal">
+            <div className="relative w-fit mt-[-1.00px] [font-family:'Clash_Display-Medium',Helvetica] font-medium text-secondary text-xl tracking-normal leading-normal">
               To Be Done
             </div>
           </div>
@@ -124,13 +124,15 @@ const FilterSecton = ({ filter, setFilter }) => {
               onClick={() => setFilter({ ...filter, toBeDone: "all" })}
               className={`min-w-max ${
                 filter?.toBeDone === "all"
-                  ? " items-center justify-center  px-3 py-[10px] flex-1 grow bg-primary rounded-xl overflow-hidden flex relative"
+                  ? " items-center justify-center  px-3 py-[10px] flex-1 grow bg-secondary rounded-xl overflow-hidden flex relative"
                   : " flex items-center px-3 py-[10px]"
               }`}
             >
               <div
                 className={`relative w-fit [font-family:'Clash_Display-Semibold max-w-max',Helvetica] font-normal ${
-                  filter?.toBeDone === "all" ? "text-[#fdf3eb]" : "text-primary"
+                  filter?.toBeDone === "all"
+                    ? "text-[#fdf3eb]"
+                    : "text-secondary"
                 } text-base tracking-[0.20px] leading-normal`}
               >
                 All
@@ -140,7 +142,7 @@ const FilterSecton = ({ filter, setFilter }) => {
               onClick={() => setFilter({ ...filter, toBeDone: "in_person" })}
               className={`min-w-max ${
                 filter?.toBeDone === "in_person"
-                  ? " items-center justify-center  px-3 py-[10px] flex-1 grow bg-primary rounded-xl overflow-hidden flex relative"
+                  ? " items-center justify-center  px-3 py-[10px] flex-1 grow bg-secondary rounded-xl overflow-hidden flex relative"
                   : " flex items-center px-3 py-[10px]"
               }`}
             >
@@ -148,7 +150,7 @@ const FilterSecton = ({ filter, setFilter }) => {
                 className={`relative w-fit [font-family:'Clash_Display-Semibold',Helvetica] font-normal ${
                   filter?.toBeDone === "in_person"
                     ? "text-[#fdf3eb]"
-                    : "text-primary"
+                    : "text-secondary"
                 } text-base tracking-[0.20px] leading-normal`}
               >
                 In person
@@ -158,7 +160,7 @@ const FilterSecton = ({ filter, setFilter }) => {
               onClick={() => setFilter({ ...filter, toBeDone: "remotely" })}
               className={`min-w-max ${
                 filter?.toBeDone === "remotely"
-                  ? " items-center justify-center  px-3 py-[10px] flex-1 grow bg-primary rounded-xl overflow-hidden flex relative"
+                  ? " items-center justify-center  px-3 py-[10px] flex-1 grow bg-secondary rounded-xl overflow-hidden flex relative"
                   : " flex items-center px-3 py-[10px]"
               }`}
             >
@@ -166,7 +168,7 @@ const FilterSecton = ({ filter, setFilter }) => {
                 className={`relative w-fit [font-family:'Clash_Display-Semibold',Helvetica] font-normal ${
                   filter?.toBeDone === "remotely"
                     ? "text-[#fdf3eb]"
-                    : "text-primary"
+                    : "text-secondary"
                 } text-base tracking-[0.20px] leading-normal`}
               >
                 Remotely
@@ -179,11 +181,11 @@ const FilterSecton = ({ filter, setFilter }) => {
       {/* Sub hub  */}
       <div className="bg-[#f4f8fd] mt-4 flex flex-col items-start gap-6 p-6 relative bg-accent rounded-xl overflow-hidden">
         <div className="flex items-center justify-between w-full">
-          <div className="[font-family:'Clash_Display-Medium',Helvetica] font-medium text-primary text-xl tracking-normal leading-normal">
+          <div className="[font-family:'Clash_Display-Medium',Helvetica] font-medium text-secondary text-xl tracking-normal leading-normal">
             Location
           </div>
           <div
-            className="cursor-pointer [font-family:'Clash_Display-Semibold',Helvetica] font-normal text-primary text-base tracking-[0.20px] leading-normal"
+            className="cursor-pointer [font-family:'Clash_Display-Semibold',Helvetica] font-normal text-secondary text-base tracking-[0.20px] leading-normal"
             onClick={(e) => setFilter({ ...filter, location: "" })}
           >
             Clear all
@@ -193,7 +195,7 @@ const FilterSecton = ({ filter, setFilter }) => {
           <input
             type="text"
             placeholder="Dhaka, Bangladesh"
-            className="w-full py-4 px-5 bg-white [font-family:'Clash_Display-Regular',Helvetica] font-normal text-primary text-base tracking-normal leading-normal rounded-xl"
+            className="w-full py-4 px-5 bg-white [font-family:'Clash_Display-Regular',Helvetica] font-normal text-secondary text-base tracking-normal leading-normal rounded-xl"
             value={filter?.location}
             onChange={(e) => setFilter({ ...filter, location: e.target.value })}
           />
@@ -203,7 +205,7 @@ const FilterSecton = ({ filter, setFilter }) => {
       {/* Distance  */}
       <div className="bg-[#f4f8fd] rounded-xl mt-4 p-6">
         <div>
-          <p className="font-medium text-primary text-xl">Distance</p>
+          <p className="font-medium text-secondary text-xl">Distance</p>
         </div>
         <div className="mt-5">
           <div className="flex justify-between items-center">
@@ -212,7 +214,7 @@ const FilterSecton = ({ filter, setFilter }) => {
           </div>
           <div>
             <input
-              className="w-full bg-transparent accent-secondery range-slider"
+              className="w-full bg-transparent accent-secondary range-slider"
               type="range"
               value={filter?.distance}
               onChange={(e) =>
@@ -226,7 +228,7 @@ const FilterSecton = ({ filter, setFilter }) => {
       {/* Task Price  */}
       <div className="bg-[#f4f8fd] rounded-xl mt-4 p-6">
         <div>
-          <p className="font-medium text-primary text-xl">Task Price</p>
+          <p className="font-medium text-secondary text-xl">Task Price</p>
         </div>
         <div className="mt-5">
           <div className="flex justify-between items-center">
@@ -235,7 +237,7 @@ const FilterSecton = ({ filter, setFilter }) => {
           </div>
           <div>
             <input
-              className="w-full bg-transparent accent-secondery range-slider"
+              className="w-full bg-transparent accent-secondary range-slider"
               type="range"
               value={filter?.taskPrice}
               min={5}
@@ -252,7 +254,7 @@ const FilterSecton = ({ filter, setFilter }) => {
       <div className="bg-[#f4f8fd] rounded-xl mt-4">
         <div className="flex flex-col  gap-6 p-6 relative bg-accent rounded-[24px] overflow-hidden">
           <div className="items-center justify-between w-full flex-[0_0_auto] flex relative">
-            <div className="relative w-fit mt-[-1.00px] [font-family:'Clash_Display-Medium',Helvetica] font-medium text-primary text-xl tracking-normal leading-normal">
+            <div className="relative w-fit mt-[-1.00px] [font-family:'Clash_Display-Medium',Helvetica] font-medium text-secondary text-xl tracking-normal leading-normal">
               Task catagory
             </div>
           </div>
@@ -263,7 +265,7 @@ const FilterSecton = ({ filter, setFilter }) => {
               }
               className={`min-w-max ${
                 filter?.taskCategory === "available"
-                  ? " items-center justify-center  px-3 py-[10px] flex-1 grow bg-primary rounded-xl overflow-hidden flex relative"
+                  ? " items-center justify-center  px-3 py-[10px] flex-1 grow bg-secondary rounded-xl overflow-hidden flex relative"
                   : " flex items-center"
               }`}
             >
@@ -271,7 +273,7 @@ const FilterSecton = ({ filter, setFilter }) => {
                 className={`relative w-fit [font-family:'Clash_Display-Semibold',Helvetica] font-normal ${
                   filter?.taskCategory === "available"
                     ? "text-[#fdf3eb]"
-                    : "text-primary"
+                    : "text-secondary"
                 } text-base tracking-[0.20px] leading-normal`}
               >
                 Available tasks
@@ -283,7 +285,7 @@ const FilterSecton = ({ filter, setFilter }) => {
               }
               className={`min-w-max ${
                 filter?.taskCategory === "noOfferTask"
-                  ? " items-center justify-center  px-3 py-[10px] flex-1 grow bg-primary rounded-xl overflow-hidden flex relative"
+                  ? " items-center justify-center  px-3 py-[10px] flex-1 grow bg-secondary rounded-xl overflow-hidden flex relative"
                   : " flex items-center"
               }`}
             >
@@ -291,7 +293,7 @@ const FilterSecton = ({ filter, setFilter }) => {
                 className={`relative w-fit [font-family:'Clash_Display-Semibold',Helvetica] font-normal ${
                   filter?.taskCategory === "noOfferTask"
                     ? "text-[#fdf3eb]"
-                    : "text-primary"
+                    : "text-secondary"
                 } text-base tracking-[0.20px] leading-normal`}
               >
                 No offers tasks
@@ -305,7 +307,7 @@ const FilterSecton = ({ filter, setFilter }) => {
       <div className="bg-[#f4f8fd] rounded-xl mt-4">
         <div className="flex flex-col items-center gap-6 p-6 relative bg-accent rounded-[24px] overflow-hidden">
           <div className="items-center justify-between w-full flex-[0_0_auto] flex relative">
-            <div className="relative w-fit mt-[-1.00px] [font-family:'Clash_Display-Medium',Helvetica] font-medium text-primary text-xl tracking-normal leading-normal">
+            <div className="relative w-fit mt-[-1.00px] [font-family:'Clash_Display-Medium',Helvetica] font-medium text-secondary text-xl tracking-normal leading-normal">
               Price Sorting
             </div>
           </div>
@@ -316,7 +318,7 @@ const FilterSecton = ({ filter, setFilter }) => {
               }
               className={
                 filter?.priceSorting === "highToLow"
-                  ? " items-center justify-center  px-3 py-[10px] flex-1 grow bg-primary rounded-xl overflow-hidden flex relative"
+                  ? " items-center justify-center  px-3 py-[10px] flex-1 grow bg-secondary rounded-xl overflow-hidden flex relative"
                   : " flex items-center "
               }
             >
@@ -324,7 +326,7 @@ const FilterSecton = ({ filter, setFilter }) => {
                 className={`relative w-fit [font-family:'Clash_Display-Semibold',Helvetica] font-normal ${
                   filter?.priceSorting === "highToLow"
                     ? "text-[#fdf3eb]"
-                    : "text-primary"
+                    : "text-secondary"
                 } text-base tracking-[0.20px] leading-normal`}
               >
                 high to low
@@ -336,7 +338,7 @@ const FilterSecton = ({ filter, setFilter }) => {
               }
               className={
                 filter?.priceSorting === "lowToHigh"
-                  ? " items-center justify-center  px-3 py-[10px] flex-1 grow bg-primary rounded-xl overflow-hidden flex relative"
+                  ? " items-center justify-center  px-3 py-[10px] flex-1 grow bg-secondary rounded-xl overflow-hidden flex relative"
                   : " flex items-center "
               }
             >
@@ -344,7 +346,7 @@ const FilterSecton = ({ filter, setFilter }) => {
                 className={`relative w-fit [font-family:'Clash_Display-Semibold',Helvetica] font-normal ${
                   filter?.priceSorting === "lowToHigh"
                     ? "text-[#fdf3eb]"
-                    : "text-primary"
+                    : "text-secondary"
                 } text-base tracking-[0.20px] leading-normal`}
               >
                 low to high
@@ -357,7 +359,7 @@ const FilterSecton = ({ filter, setFilter }) => {
       {/* <div className="bg-[#f4f8fd] rounded-xl mt-4">
         <div className="flex flex-col items-start gap-6 p-6 relative bg-accent rounded-[24px] overflow-hidden">
           <div className="items-center justify-between w-full flex-[0_0_auto] flex relative">
-            <div className="relative w-fit mt-[-1.00px] [font-family:'Clash_Display-Medium',Helvetica] font-medium text-primary text-xl tracking-normal leading-normal">
+            <div className="relative w-fit mt-[-1.00px] [font-family:'Clash_Display-Medium',Helvetica] font-medium text-secondary text-xl tracking-normal leading-normal">
               Date Sorting
             </div>
           </div>
@@ -366,7 +368,7 @@ const FilterSecton = ({ filter, setFilter }) => {
               onClick={() => handleDataSorting("earliest")}
               className={`min-w-max ${
                 datasorting.includes("earliest")
-                  ? " items-center justify-center  px-3 py-[10px] flex-1 grow bg-primary rounded-xl overflow-hidden flex relative"
+                  ? " items-center justify-center  px-3 py-[10px] flex-1 grow bg-secondary rounded-xl overflow-hidden flex relative"
                   : " flex items-center px-3 py-[10px]"
               }`}
             >
@@ -374,7 +376,7 @@ const FilterSecton = ({ filter, setFilter }) => {
                 className={`relative w-fit [font-family:'Clash_Display-Semibold',Helvetica] font-normal ${
                   datasorting.includes("earliest")
                     ? "text-[#fdf3eb]"
-                    : "text-primary"
+                    : "text-secondary"
                 } text-base tracking-[0.20px] leading-normal`}
               >
                 Earliest
@@ -384,7 +386,7 @@ const FilterSecton = ({ filter, setFilter }) => {
               onClick={() => handleDataSorting("lowest")}
               className={`min-w-max ${
                 datasorting.includes("lowest")
-                  ? " items-center justify-center  px-3 py-[10px] flex-1 grow bg-primary rounded-xl overflow-hidden flex relative"
+                  ? " items-center justify-center  px-3 py-[10px] flex-1 grow bg-secondary rounded-xl overflow-hidden flex relative"
                   : " flex items-center px-3 py-[10px]"
               }`}
             >
@@ -392,7 +394,7 @@ const FilterSecton = ({ filter, setFilter }) => {
                 className={`relative w-fit [font-family:'Clash_Display-Semibold',Helvetica] font-normal ${
                   datasorting.includes("lowest")
                     ? "text-[#fdf3eb]"
-                    : "text-primary"
+                    : "text-secondary"
                 } text-xl tracking-[0.20px] leading-normal`}
               >
                 Latest
@@ -404,7 +406,7 @@ const FilterSecton = ({ filter, setFilter }) => {
               onClick={() => handleDataSorting("oldest")}
               className={`min-w-max ${
                 datasorting.includes("oldest")
-                  ? " items-center justify-center  px-3 py-[10px] flex-1 grow bg-primary rounded-xl overflow-hidden flex relative"
+                  ? " items-center justify-center  px-3 py-[10px] flex-1 grow bg-secondary rounded-xl overflow-hidden flex relative"
                   : " flex items-center px-3 py-[10px]"
               }`}
             >
@@ -412,7 +414,7 @@ const FilterSecton = ({ filter, setFilter }) => {
                 className={`relative w-fit [font-family:'Clash_Display-Semibold',Helvetica] font-normal ${
                   datasorting.includes("oldest")
                     ? "text-[#fdf3eb]"
-                    : "text-primary"
+                    : "text-secondary"
                 } text-base tracking-[0.20px] leading-normal`}
               >
                 Oldest task
@@ -422,7 +424,7 @@ const FilterSecton = ({ filter, setFilter }) => {
               onClick={() => handleDataSorting("close")}
               className={`min-w-max ${
                 datasorting.includes("close")
-                  ? " items-center justify-center  px-3 py-[10px] flex-1 grow bg-primary rounded-xl overflow-hidden flex relative"
+                  ? " items-center justify-center  px-3 py-[10px] flex-1 grow bg-secondary rounded-xl overflow-hidden flex relative"
                   : " flex items-center px-3 py-[10px]"
               }`}
             >
@@ -430,7 +432,7 @@ const FilterSecton = ({ filter, setFilter }) => {
                 className={`relative w-fit [font-family:'Clash_Display-Semibold',Helvetica] font-normal ${
                   datasorting.includes("close")
                     ? "text-[#fdf3eb]"
-                    : "text-primary"
+                    : "text-secondary"
                 } text-base tracking-[0.20px] leading-normal`}
               >
                 Close to me

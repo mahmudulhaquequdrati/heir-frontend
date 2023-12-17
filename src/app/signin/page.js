@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import React, { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import axios from "axios";
 import { Button } from "@/components/ui/button";
 
@@ -20,8 +20,15 @@ export default function SignPage() {
     }));
   };
   const [loading, setLoading] = useState(false);
-  const redirectUrl =
-    new URLSearchParams(window?.location?.search)?.get("redirect") || "/";
+
+  // const redirectUrl =
+  //   new URLSearchParams(window?.location?.search)?.get("redirect") || "/";
+  // const redirectUrl2 = router.que;
+  const searchParams = useSearchParams();
+
+  const redirectUrl = searchParams.get("redirect") || "/";
+  console.log(redirectUrl);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -33,7 +40,6 @@ export default function SignPage() {
         if (redirectUrl !== "/") window.location.href = redirectUrl;
         else router.push(redirectUrl);
       }
-      // toast.success("Login success");
     } catch (error) {
       console.error(error.message);
     } finally {

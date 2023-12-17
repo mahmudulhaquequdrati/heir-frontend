@@ -89,7 +89,7 @@ const Comments = ({ id }) => {
       </Map>
       <div className="flex flex-col  items-start gap-4 relative mt-10">
         <div className="inline-flex items-center gap-2 relative flex-[0_0_auto]">
-          <div className="relative w-fit [font-family:'Clash_Display-Semibold',Helvetica] font-normal text-primary text-xl tracking-normal leading-normal">
+          <div className="relative w-fit [font-family:'Clash_Display-Semibold',Helvetica] font-normal text-gray-900 text-xl tracking-normal leading-normal">
             Offers
           </div>
           <div className="inline-flex items-start gap-[10px] px-[13px] py-py-1.5 bg-[#94b6ef] rounded-[500px] overflow-hidden relative flex-[0_0_auto]">
@@ -109,7 +109,7 @@ const Comments = ({ id }) => {
                 src={User}
               />
               <div className="inline-flex flex-col items-start gap-1 relative flex-[0_0_auto]">
-                <div className="relative w-fit mt-[-1.00px] [font-family:'Clash_Display-Semibold',Helvetica] font-normal text-primary text-xl tracking-normal leading-normal">
+                <div className="relative w-fit mt-[-1.00px] [font-family:'Clash_Display-Semibold',Helvetica] font-normal text-gray-900 text-xl tracking-normal leading-normal">
                   {postedUser?.name}
                 </div>
                 <div className="inline-flex items-center justify-center gap-[10px] px-[10px] py-1 bg-primary rounded-[50px] overflow-hidden relative flex-[0_0_auto]">
@@ -119,17 +119,17 @@ const Comments = ({ id }) => {
                 </div>
               </div>
             </div>
-            <div className="relative w-fit mt-[-1.00px] [font-family:'DM_Sans-Medium',Helvetica] font-medium text-primary text-4 text-right tracking-normal leading-[34px] whitespace-nowrap">
+            <div className="relative w-fit mt-[-1.00px] [font-family:'DM_Sans-Medium',Helvetica] font-medium text-gray-900 text-4 text-right tracking-normal leading-[34px] whitespace-nowrap">
               {timeCalculation(postedUser?.created_at)} hours ago
             </div>
           </div>
           <div className="flex flex-col items-start gap-[14px]  w-full relative flex-[0_0_auto]">
-            <p className="relative  mt-[-1.00px] [font-family:'DM_Sans-Regular',Helvetica] font-normal text-primary text-4 tracking-normal leading-normal">
+            <p className="relative  mt-[-1.00px] [font-family:'DM_Sans-Regular',Helvetica] font-normal text-gray-900 text-4 tracking-normal leading-normal">
               {postedUser?.text}
             </p>
             <button
               onClick={() => handleCommentReply(postedUser?._id)}
-              className="inline-flex items-center justify-center gap-[10px] px-5 py-2 bg-secondery rounded-[50px] relative flex-[0_0_auto]"
+              className="inline-flex items-center justify-center gap-[10px] px-5 py-2 bg-secondary rounded-[50px] relative flex-[0_0_auto]"
             >
               <div className="relative w-fit mt-[-1.00px] [font-family:'Clash_Display-Semibold',Helvetica] font-normal text-white text-4 tracking-normal leading-normal">
                 Reply
@@ -140,7 +140,7 @@ const Comments = ({ id }) => {
       </div>
       <div className="flex flex-col items-start gap-3 relative mt-5">
         <div className="inline-flex items-center gap-2 relative flex-[0_0_auto]">
-          <div className="relative w-fit [font-family:'Clash_Display-Semibold',Helvetica] font-normal text-primary text-xl tracking-normal leading-normal">
+          <div className="relative w-fit [font-family:'Clash_Display-Semibold',Helvetica] font-normal text-gray-900 text-xl tracking-normal leading-normal">
             Questions
           </div>
           <div className="inline-flex items-start gap-[10px] px-[13px] py-1.5 bg-[#e78c3b] rounded-[500px] overflow-hidden relative flex-[0_0_auto]">
@@ -165,7 +165,7 @@ const Comments = ({ id }) => {
                 style={{
                   resize: "none",
                 }}
-                className="relative  mt-[-1.00px] [font-family:'DM_Sans-Regular',Helvetica] font-normal text-primary text-4 tracking-normal leading-normal w-full outline-none bg-transparent"
+                className="relative  mt-[-1.00px] [font-family:'DM_Sans-Regular',Helvetica] font-normal text-gray-900 text-4 tracking-normal leading-normal w-full outline-none bg-transparent"
                 placeholder="If you....."
                 value={comment}
                 onChange={(e) => {
@@ -184,14 +184,14 @@ const Comments = ({ id }) => {
                   />
                   <div
                     onClick={() => replySubmitHere(_id)}
-                    className="inline-flex items-center justify-center gap-[10px] px-5 py-2 bg-secondery rounded-[50px] relative flex-[0_0_auto] cursor-pointer"
+                    className="inline-flex items-center justify-center gap-[10px] px-5 py-2 bg-secondary rounded-[50px] relative flex-[0_0_auto] cursor-pointer"
                   >
                     <div className="relative w-fit mt-[-1.00px] [font-family:'Clash_Display-Semibold',Helvetica] font-normal text-white text-4 tracking-normal leading-normal">
                       Reply
                     </div>
                   </div>
                 </div>
-                <div className="min-w-min opacity-50 [font-family:'DM_Sans-Regular',Helvetica] text-primary text-3 font-normal tracking-normal leading-normal">
+                <div className="min-w-min opacity-50 [font-family:'DM_Sans-Regular',Helvetica] text-gray-900 text-3 font-normal tracking-normal leading-normal">
                   1500 max
                 </div>
               </div>
@@ -209,7 +209,7 @@ const Comments = ({ id }) => {
                 src={User}
               />
               <div className="inline-flex flex-col items-start gap-1 relative flex-[0_0_auto]">
-                <div className="relative w-fit mt-[-1.00px] [font-family:'Clash_Display-Semibold',Helvetica] font-normal text-primary text-xl tracking-normal leading-normal">
+                <div className="relative w-fit mt-[-1.00px] [font-family:'Clash_Display-Semibold',Helvetica] font-normal text-gray-900 text-xl tracking-normal leading-normal">
                   {postedUser?.name}
                 </div>
                 <div className="inline-flex items-center justify-center gap-[10px] px-[10px] py-1 bg-primary rounded-[50px] overflow-hidden relative flex-[0_0_auto]">
@@ -219,12 +219,12 @@ const Comments = ({ id }) => {
                 </div>
               </div>
             </div>
-            <div className="relative w-fit mt-[-1.00px] [font-family:'DM_Sans-Medium',Helvetica] font-medium text-primary text-4 text-right tracking-normal leading-[34px] whitespace-nowrap">
+            <div className="relative w-fit mt-[-1.00px] [font-family:'DM_Sans-Medium',Helvetica] font-medium text-gray-900 text-4 text-right tracking-normal leading-[34px] whitespace-nowrap">
               {timeCalculation(postedUser?.created_at)} hours ago
             </div>
           </div>
           <div className="flex flex-col items-start gap-[14px]  w-full relative flex-[0_0_auto]">
-            <p className="relative  mt-[-1.00px] [font-family:'DM_Sans-Regular',Helvetica] font-normal text-primary text-4 tracking-normal leading-normal">
+            <p className="relative  mt-[-1.00px] [font-family:'DM_Sans-Regular',Helvetica] font-normal text-gray-900 text-4 tracking-normal leading-normal">
               {postedUser?.text}
             </p>
             <div className="inline-flex items-center gap-2 relative flex-[0_0_auto]">
@@ -235,7 +235,7 @@ const Comments = ({ id }) => {
                 alt="Frame"
                 src={Report}
               />
-              <div className="inline-flex items-center justify-center gap-[10px] px-5 py-2 bg-secondery rounded-[50px] relative flex-[0_0_auto]">
+              <div className="inline-flex items-center justify-center gap-[10px] px-5 py-2 bg-secondary rounded-[50px] relative flex-[0_0_auto]">
                 <button
                   onClick={() => replySubmitHere(_id)}
                   className="relative w-fit mt-[-1.00px] [font-family:'Clash_Display-Semibold',Helvetica] font-normal text-white text-4 tracking-normal leading-normal"
@@ -257,7 +257,7 @@ const Comments = ({ id }) => {
                 src={User}
               />
               <div className="inline-flex flex-col items-start gap-1 relative flex-[0_0_auto]">
-                <div className="relative w-fit mt-[-1.00px] [font-family:'Clash_Display-Semibold',Helvetica] font-normal text-primary text-xl tracking-normal leading-normal">
+                <div className="relative w-fit mt-[-1.00px] [font-family:'Clash_Display-Semibold',Helvetica] font-normal text-gray-900 text-xl tracking-normal leading-normal">
                   {postedUser?.name}
                 </div>
                 <div className="inline-flex items-center justify-center gap-[10px] px-[10px] py-1 bg-primary rounded-[50px] overflow-hidden relative flex-[0_0_auto]">
@@ -267,12 +267,12 @@ const Comments = ({ id }) => {
                 </div>
               </div>
             </div>
-            <div className="relative w-fit mt-[-1.00px] [font-family:'DM_Sans-Medium',Helvetica] font-medium text-primary text-4 text-right tracking-normal leading-[34px] whitespace-nowrap">
+            <div className="relative w-fit mt-[-1.00px] [font-family:'DM_Sans-Medium',Helvetica] font-medium text-gray-900 text-4 text-right tracking-normal leading-[34px] whitespace-nowrap">
               {timeCalculation(postedUser?.created_at)} hours ago
             </div>
           </div>
           <div className="flex flex-col items-start gap-[14px]  w-full relative flex-[0_0_auto]">
-            <p className="relative  mt-[-1.00px] [font-family:'DM_Sans-Regular',Helvetica] font-normal text-primary text-4 tracking-normal leading-normal">
+            <p className="relative  mt-[-1.00px] [font-family:'DM_Sans-Regular',Helvetica] font-normal text-gray-900 text-4 tracking-normal leading-normal">
               {postedUser?.text}
             </p>
             <div className="inline-flex items-start gap-2 relative flex-[0_0_auto]">
@@ -283,7 +283,7 @@ const Comments = ({ id }) => {
                 alt="Frame"
                 src={Report}
               />
-              <div className="inline-flex items-center justify-center gap-[10px] px-5 py-2 bg-secondery rounded-[50px] relative flex-[0_0_auto]">
+              <div className="inline-flex items-center justify-center gap-[10px] px-5 py-2 bg-secondary rounded-[50px] relative flex-[0_0_auto]">
                 <button
                   onClick={() => replySubmitHere(_id)}
                   className="relative w-fit mt-[-1.00px] [font-family:'Clash_Display-Semibold',Helvetica] font-normal text-white text-4 tracking-normal leading-normal"

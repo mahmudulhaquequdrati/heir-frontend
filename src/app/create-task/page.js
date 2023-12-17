@@ -100,6 +100,22 @@ export default function CreateTask() {
     }, 1000);
   };
   // console.log(aiQuisions);
+  useEffect(() => {
+    if (date) {
+      setInputData({
+        ...inputData,
+        when: "",
+      });
+      localStorage.setItem(
+        "inputData",
+        JSON.stringify({
+          ...inputData,
+          when: "",
+          date: date,
+        })
+      );
+    }
+  }, [date]);
   return (
     <>
       {isLoading && (
@@ -238,16 +254,6 @@ export default function CreateTask() {
                             <DatePicker
                               date={date}
                               setDate={setDate}
-                              onClick={() =>
-                                setInputData({
-                                  ...inputData,
-                                  when: "",
-                                })
-                              }
-                              // onChange={handleInputChange}
-                              // type="date"
-                              // name="when"
-                              // value={inputData?.when}
                               className="w-full py-8 rounded-2xl bg-[#F4F8FD]  border border-[#F4F8FD] focus:border-[#E78C3B]"
                             />
                           </div>
@@ -255,20 +261,29 @@ export default function CreateTask() {
                         <div className="w-[40%]">
                           <span className="block pb-4">I&rsquo;m Flexible</span>
                           <div>
+                            {/* {console.log(inputData)} */}
                             <Button
                               onClick={() => {
                                 setInputData({
                                   ...inputData,
                                   when: "flexible",
                                 });
+                                localStorage.setItem(
+                                  "inputData",
+                                  JSON.stringify({
+                                    ...inputData,
+                                    when: "flexible",
+                                    date: null,
+                                  })
+                                );
                                 setDate(null);
                               }}
                               name="when"
                               type="button"
                               variant="outline"
-                              className={`py-8 w-full border-[#E78C3B] hover:text-white hover:bg-[#db9558] ${
-                                inputData?.when !== ""
-                                  ? "bg-[#db9558] text-white"
+                              className={`py-8 w-full border-secondary hover:text-white hover:bg-secondary ${
+                                inputData?.when === "flexible"
+                                  ? "bg-secondary text-white"
                                   : ""
                               }  `}
                             >
