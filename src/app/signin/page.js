@@ -1,21 +1,16 @@
-"use client"
+"use client";
 
 import Link from "next/link";
 import React, { useState } from "react";
-import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
-import { getServerSession } from "next-auth";
-import { redirect } from "next/navigation";
-import { authOptions } from "../api/auth/[...nextauth]/route";
+import axios from "axios";
+import { Button } from "@/components/ui/button";
 
 export default function SignPage() {
-  const session = getServerSession(authOptions);
-  console.log(session);
-  // if (session) redirect("/");
   const router = useRouter();
   const [formData, setFormData] = useState({
-    email: '',
-    password: '',
+    email: "",
+    password: "",
     redirect: false,
   });
   const handleInputChange = (event) => {
@@ -24,20 +19,25 @@ export default function SignPage() {
       [event.target.name]: event.target.value,
     }));
   };
+  const [loading, setLoading] = useState(false);
+  const redirectUrl =
+    new URLSearchParams(window?.location?.search)?.get("redirect") || "/";
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      const res = await signIn("credentials", formData);
+      setLoading(true);
+      const response = await axios.post("/api/users/login", formData);
 
-      if (res.error) {
-        setError("Invalid Credentials");
-        return;
+      if (("Login success", response.data.success)) {
+        if (redirectUrl !== "/") window.location.href = redirectUrl;
+        else router.push(redirectUrl);
       }
-
-      router.replace("/");
+      // toast.success("Login success");
     } catch (error) {
-      console.log(error);
+      console.error(error.message);
+    } finally {
+      setLoading(false);
     }
   };
 
