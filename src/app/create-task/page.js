@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import OpenAI from "openai";
 import { DatePicker } from "@/components/calendar_date_picker";
 import { Button } from "@/components/ui/button";
+import axios from "axios";
 
 const openai = new OpenAI({
   apiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY,
@@ -13,11 +14,11 @@ const openai = new OpenAI({
 export default function CreateTask() {
   const [selectedFile, setSelectedFile] = useState(null);
   const [inputData, setInputData] = useState({});
-  const [date, setDate] = useState(null);
   // const [flexible]
   const [aiQuisions, setAiQuistions] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
+  const [date, setDate] = useState(null);
   const [jobType, setJobType] = useState("Basics");
   const handleFileChange = (e) => {
     const file = e.target.files[0];
@@ -26,15 +27,19 @@ export default function CreateTask() {
   useEffect(() => {
     const data = JSON.parse(localStorage.getItem("inputData"));
     const qsn = JSON.parse(localStorage.getItem("questions"));
-    // console.log(data);
     // console.log(qsn)
     if (data) {
       setInputData(data);
+      if (data?.date) {
+        setDate(new Date(data?.date));
+      }
     }
     if (qsn) {
       setAiQuistions(qsn);
     }
   }, []);
+  // console.log(date);
+
   const handleInputChange = (event) => {
     setInputData((inputs) => ({
       ...inputs,
@@ -103,11 +108,12 @@ export default function CreateTask() {
 
   useEffect(() => {
     if (date) {
+      // console.log(date);
       setInputData((prevInputData) => {
         const updatedInputData = {
           ...prevInputData,
           when: "",
-          date: date,
+          date: new Date(date),
         };
 
         localStorage.setItem("inputData", JSON.stringify(updatedInputData));
@@ -116,6 +122,52 @@ export default function CreateTask() {
       });
     }
   }, [date]);
+
+  // console.log(inputData);
+  // console.log(aiQuisions);
+
+  const handleCreateTask = async () => {
+    const res = await axios.post("http://localhost:5000/api/v1/tasks", {
+      what: inputData?.what,
+      who: inputData?.who,
+      where: inputData?.where,
+      when: inputData?.when || "",
+      date: inputData?.date,
+      details: inputData?.details,
+      budget: inputData?.budget,
+      aiQuisions: [
+        {
+          question: aiQuisions[0] || "",
+          answer: inputData?.aiQuistion1 || "",
+        },
+        {
+          question: aiQuisions[1] || "",
+          answer: inputData?.aiQuistion2 || "",
+        },
+        {
+          question: aiQuisions[2] || "",
+          answer: inputData?.aiQuistion3 || "",
+        },
+        {
+          question: aiQuisions[3] || "",
+          answer: inputData?.aiQuistion4 || "",
+        },
+        {
+          question: aiQuisions[4] || "",
+          answer: inputData?.aiQuistion5 || "",
+        },
+        {
+          question: aiQuisions[5] || "",
+          answer: inputData?.aiQuistion6 || "",
+        },
+      ],
+    });
+    if (res.data?._id) {
+      alert("success");
+      localStorage.clear();
+      router.push("/");
+    }
+  };
 
   return (
     <>
@@ -715,12 +767,17 @@ export default function CreateTask() {
                         </span>
                         <div>
                           <DatePicker
+                            date={date}
+                            setDate={setDate}
+                            className="w-full py-8 rounded-2xl bg-[#F4F8FD]  border border-[#F4F8FD] focus:border-[#E78C3B]"
+                          />
+                          {/* <DatePicker
                             // onChange={handleInputChange}
                             // type="date"
                             // name="when"
                             // value={inputData?.when}
                             className="w-full bg-[#F4F8FD] py-3 md:py-5 px-[18px] rounded-2xl outline-none border border-[#F4F8FD] focus:border-[#E78C3B]"
-                          />
+                          /> */}
                         </div>
                       </div>
                     </div>
@@ -939,7 +996,7 @@ export default function CreateTask() {
               <div className="flex justify-center py-[60px]">
                 <div className="flex flex-col sm:flex-row items-center gap-4">
                   <button
-                    onClick={() => router.back()}
+                    onClick={() => setJobType("Budget")}
                     className="w-full sm:w-[220px] flex justify-center items-center gap-[10px] py-[21px] px-[20px] bg-[#E78C3B40] rounded-full"
                   >
                     <span>
@@ -974,7 +1031,8 @@ export default function CreateTask() {
                   </button>
 
                   <button
-                    type="submit"
+                    type="button"
+                    onClick={handleCreateTask}
                     className="w-full sm:w-[220px] flex justify-center items-center gap-[10px] bg-[#E78C3B] py-[21px] px-[20px] rounded-full"
                   >
                     <span className="text-white text-[16px] font-semibold">

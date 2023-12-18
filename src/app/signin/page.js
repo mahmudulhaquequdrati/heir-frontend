@@ -4,7 +4,6 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import axios from "axios";
-import { Button } from "@/components/ui/button";
 
 export default function SignPage() {
   const router = useRouter();
@@ -21,9 +20,6 @@ export default function SignPage() {
   };
   const [loading, setLoading] = useState(false);
 
-  // const redirectUrl =
-  //   new URLSearchParams(window?.location?.search)?.get("redirect") || "/";
-  // const redirectUrl2 = router.que;
   const searchParams = useSearchParams();
 
   const redirectUrl = searchParams.get("redirect") || "/";

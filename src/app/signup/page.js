@@ -1,5 +1,6 @@
-"use client"
+"use client";
 
+import axios from "axios";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
@@ -64,23 +65,23 @@ export default function SignUpPage() {
 
     return Object.values(errors).every((error) => !error);
   };
+  const [loading, setLoading] = useState(false);
 
-  const handleRegister = async () => {
+  const handleRegister = async (e) => {
+    e.preventDefault();
     if (validateForm()) {
-      // Perform your registration logic
-      const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_LINK}/user/register`, {
-        method: "POST",
-        body: JSON.stringify(formData),
-        headers: { "Content-Type": "application/json" },
-      });
-      if (res.ok) {
-        router.push('/signin')
-      } else if (res.status === 403) {
-        alert('User Already regesterd')
-      } else {
-        alert('Something is wrong please try again')
-      }
+      try {
+        setLoading(true);
+        const response = await axios.post("/api/users/signup", formData);
 
+        if (response.data.success) {
+          router.push("/signin");
+        }
+      } catch (error) {
+        console.error(error.message);
+      } finally {
+        setLoading(false);
+      }
     }
   };
 
@@ -93,7 +94,10 @@ export default function SignUpPage() {
             Please sign up your account here.
           </p>
         </div>
-        <form className="px-8 pt-6 pb-8 bg-white rounded">
+        <form
+          className="px-8 pt-6 pb-8 bg-white rounded"
+          onSubmit={handleRegister}
+        >
           <div className="mb-4 md:flex md:justify-between md:gap-4 space-y-2 md:space-y-0">
             <div className="space-y-2">
               <label className="text-sm font-medium text-gray-700 tracking-wide">
@@ -180,9 +184,8 @@ export default function SignUpPage() {
           </div>
           <div className="mb-6 text-center">
             <button
-              onClick={handleRegister}
               className="w-full px-4 py-2 font-bold text-white bg-blue-400 rounded-full hover:bg-blue-500 focus:outline-none focus:shadow-outline"
-              type="button"
+              type="submit"
             >
               Sign Up
             </button>
@@ -203,4 +206,3 @@ export default function SignUpPage() {
     </div>
   );
 }
-
