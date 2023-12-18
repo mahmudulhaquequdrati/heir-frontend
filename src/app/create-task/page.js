@@ -100,22 +100,23 @@ export default function CreateTask() {
     }, 1000);
   };
   // console.log(aiQuisions);
+
   useEffect(() => {
     if (date) {
-      setInputData({
-        ...inputData,
-        when: "",
-      });
-      localStorage.setItem(
-        "inputData",
-        JSON.stringify({
-          ...inputData,
+      setInputData((prevInputData) => {
+        const updatedInputData = {
+          ...prevInputData,
           when: "",
           date: date,
-        })
-      );
+        };
+
+        localStorage.setItem("inputData", JSON.stringify(updatedInputData));
+
+        return updatedInputData;
+      });
     }
   }, [date]);
+
   return (
     <>
       {isLoading && (
